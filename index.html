@@ -140,31 +140,40 @@
       margin-top:14px;
     }
 
+    /* БУТОНИ */
     .btn{
       display:inline-flex;
       align-items:center;
       justify-content:center;
       gap:8px;
-      padding:11px 13px;
+      padding:11px 14px;
       border-radius:14px;
-      border:1px solid rgba(15,23,42,0.10);
+      border:1px solid rgba(15,23,42,0.16);
       text-decoration:none;
       font-weight:900;
       font-size:14px;
-      background:rgba(255,255,255,0.92);
-      transition:transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease;
+      background:linear-gradient(180deg, #ffffff, #f8fafc);
+      box-shadow:0 12px 26px rgba(2,6,23,0.10);
+      transition:transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease, background 0.12s ease;
       outline:none;
-      box-shadow:0 10px 22px rgba(2,6,23,0.08);
+      cursor:pointer;
+      user-select:none;
     }
 
     .btn:hover{
       transform:translateY(-1px);
-      border-color:rgba(15,23,42,0.16);
-      box-shadow:0 14px 28px rgba(2,6,23,0.12);
+      border-color:rgba(15,23,42,0.22);
+      box-shadow:0 16px 34px rgba(2,6,23,0.14);
+      background:linear-gradient(180deg, #ffffff, #eef2ff);
+    }
+
+    .btn:active{
+      transform:translateY(0px);
+      box-shadow:0 10px 22px rgba(2,6,23,0.12);
     }
 
     .btn:focus-visible{
-      box-shadow: 0 0 0 4px rgba(37,99,235,0.18), 0 14px 28px rgba(2,6,23,0.12);
+      box-shadow: 0 0 0 4px rgba(37,99,235,0.18), 0 16px 34px rgba(2,6,23,0.14);
       border-color:#cbd5ff;
     }
 
@@ -172,22 +181,57 @@
       background:linear-gradient(90deg, var(--accent), #1d4ed8);
       color:#fff;
       border-color:transparent;
+      box-shadow:0 18px 42px rgba(37,99,235,0.26);
+    }
+
+    .btnPrimary:hover{
+      box-shadow:0 22px 52px rgba(37,99,235,0.32);
+      background:linear-gradient(90deg, #1d4ed8, var(--accent2));
     }
 
     .btnSecondary{
-      background:linear-gradient(180deg, #eef2ff, #ffffff);
       color:var(--text);
-      border-color:#dbeafe;
-      box-shadow:0 10px 22px rgba(2,6,23,0.07);
+      border-color:rgba(37,99,235,0.30);
+      background:linear-gradient(180deg, #ffffff, #eef2ff);
+      box-shadow:0 12px 26px rgba(37,99,235,0.12);
+    }
+
+    .btnSecondary:hover{
+      box-shadow:0 16px 34px rgba(37,99,235,0.18);
+      background:linear-gradient(180deg, #ffffff, #e0e7ff);
+      border-color:rgba(37,99,235,0.38);
     }
 
     .btnPurple{
-      background:linear-gradient(180deg, #f3e8ff, #ffffff);
       color:var(--text);
-      border-color:#e9d5ff;
-      box-shadow:0 10px 22px rgba(2,6,23,0.07);
+      border-color:rgba(124,58,237,0.30);
+      background:linear-gradient(180deg, #ffffff, #f3e8ff);
+      box-shadow:0 12px 26px rgba(124,58,237,0.12);
     }
 
+    .btnPurple:hover{
+      box-shadow:0 16px 34px rgba(124,58,237,0.18);
+      background:linear-gradient(180deg, #ffffff, #ede9fe);
+      border-color:rgba(124,58,237,0.38);
+    }
+
+    /* Ясно да личи, че са кликаеми */
+    .btn::after{
+      content:"";
+      width:10px;
+      height:10px;
+      border-right:2px solid currentColor;
+      border-bottom:2px solid currentColor;
+      transform:rotate(-45deg);
+      opacity:0.55;
+      margin-left:2px;
+    }
+
+    .btnPrimary::after{opacity:0.85}
+    .btnSecondary::after{opacity:0.55}
+    .btnPurple::after{opacity:0.55}
+
+    /* ПИЛЧЕТА В BADGE */
     .badgeRow{
       display:flex;
       gap:8px;
