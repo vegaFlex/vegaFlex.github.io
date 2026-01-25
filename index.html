@@ -8,115 +8,174 @@
 
   <style>
     :root{
-      --pageBg1:#f6f8ff
-      --pageBg2:#f2f6ff
+      --page1:#f6f8ff;
+      --page2:#f2f6ff;
 
-      --card:#ffffff
-      --text:#0f172a
-      --muted:#475569
-      --line:#e6eaf3
-      --shadow: 0 14px 40px rgba(2,6,23,0.10)
+      --text:#0f172a;
+      --muted:#475569;
 
-      --accent:#2563eb
-      --accent2:#7c3aed
+      --card:#ffffff;
+      --card2:#fbfcff;
 
-      --ok:#16a34a
-      --warn:#f59e0b
-      --info:#0ea5e9
+      --line:#e6eaf3;
+      --line2:#dde3f2;
 
-      --radius:18px
+      --accent:#2563eb;
+      --accent2:#7c3aed;
 
-      --s1:#eef2ff
-      --s2:#f5f3ff
-      --s3:#ecfeff
-      --s4:#ecfdf5
-      --s5:#fffbeb
-      --s6:#f1f5f9
+      --ok:#16a34a;
+      --warn:#f59e0b;
+      --info:#0ea5e9;
+
+      --shadow1: 0 18px 50px rgba(2,6,23,0.10);
+      --shadow2: 0 10px 26px rgba(2,6,23,0.08);
+
+      --radius:18px;
+
+      --sAbout1:#eef2ff;
+      --sAbout2:#ffffff;
+
+      --sProjects1:#f5f3ff;
+      --sProjects2:#ffffff;
+
+      --sWork1:#ecfdf5;
+      --sWork2:#ffffff;
+
+      --sTech1:#f1f5f9;
+      --sTech2:#ffffff;
+
+      --sFooter1:#fffbeb;
+      --sFooter2:#ffffff;
     }
 
     *{box-sizing:border-box}
 
     body{
-      margin:0
-      font-family:Arial,Helvetica,sans-serif
-      color:var(--text)
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif;
+      color:var(--text);
       background:
-        radial-gradient(900px 420px at 10% 0%, rgba(37,99,235,0.10), transparent 55%),
-        radial-gradient(900px 420px at 90% 0%, rgba(124,58,237,0.10), transparent 55%),
-        linear-gradient(180deg, var(--pageBg1), var(--pageBg2))
+        radial-gradient(900px 420px at 10% 0%, rgba(37,99,235,0.11), transparent 55%),
+        radial-gradient(900px 420px at 90% 0%, rgba(124,58,237,0.11), transparent 55%),
+        linear-gradient(180deg, var(--page1), var(--page2));
     }
 
     a{color:inherit}
 
-    .wrap{max-width:1100px;margin:0 auto;padding:28px}
+    .wrap{
+      max-width:1100px;
+      margin:0 auto;
+      padding:28px;
+    }
 
     .panel{
-      background:var(--card)
-      border:1px solid var(--line)
-      border-radius:var(--radius)
-      box-shadow:var(--shadow)
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow1);
     }
 
     .hero{
-      padding:22px
-      overflow:hidden
-      position:relative
+      padding:22px;
+      overflow:hidden;
+      position:relative;
     }
+
     .hero::before{
-      content:""
-      position:absolute
-      inset:-2px
+      content:"";
+      position:absolute;
+      inset:-2px;
       background:
-        radial-gradient(550px 180px at 20% 0%, rgba(37,99,235,0.22), transparent 60%),
-        radial-gradient(550px 180px at 80% 0%, rgba(124,58,237,0.22), transparent 60%)
-      pointer-events:none
+        radial-gradient(700px 210px at 18% 0%, rgba(37,99,235,0.20), transparent 62%),
+        radial-gradient(700px 210px at 82% 0%, rgba(124,58,237,0.20), transparent 62%);
+      pointer-events:none;
     }
+
     .hero > *{position:relative}
 
-    .topRow{display:flex;gap:18px;flex-wrap:wrap;align-items:flex-start;justify-content:space-between}
+    .topRow{
+      display:flex;
+      gap:18px;
+      flex-wrap:wrap;
+      align-items:flex-start;
+      justify-content:space-between;
+    }
+
     .idBlock{min-width:280px}
 
-    h1{margin:0 0 8px 0;font-size:30px;letter-spacing:0.2px}
-    .sub{margin:0;color:var(--muted);font-size:15px;line-height:1.45}
+    h1{
+      margin:0 0 8px 0;
+      font-size:30px;
+      letter-spacing:0.2px;
+    }
 
-    .ctaRow{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:14px}
+    .sub{
+      margin:0;
+      color:var(--muted);
+      font-size:15px;
+      line-height:1.5;
+    }
+
+    .ctaRow{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+      margin-top:14px;
+    }
+
     .btn{
-      display:inline-flex
-      align-items:center
-      justify-content:center
-      gap:8px
-      padding:11px 13px
-      border-radius:14px
-      border:1px solid var(--line)
-      text-decoration:none
-      font-weight:700
-      font-size:14px
-      background:var(--card)
-      transition:transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      padding:11px 13px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      text-decoration:none;
+      font-weight:800;
+      font-size:14px;
+      background:var(--card);
+      transition:transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease;
+      outline:none;
     }
-    .btn:hover{
-      transform:translateY(-1px)
-      border-color:#d7def0
-      box-shadow:0 10px 22px rgba(2,6,23,0.10)
-    }
-    .btnPrimary{background:var(--accent);color:#fff;border-color:var(--accent)}
-    .btnSecondary{background:var(--s1);color:var(--text);border-color:#dbeafe}
-    .btnPurple{background:var(--s2);color:var(--text);border-color:#e9d5ff}
 
-    .badgeRow{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
-    .badge{
-      display:inline-flex
-      align-items:center
-      gap:8px
-      padding:8px 10px
-      border-radius:999px
-      border:1px solid rgba(15,23,42,0.08)
-      background:rgba(255,255,255,0.85)
-      color:var(--muted)
-      font-size:13px
-      font-weight:700
-      backdrop-filter: blur(6px)
+    .btn:hover{
+      transform:translateY(-1px);
+      border-color:var(--line2);
+      box-shadow:var(--shadow2);
     }
+
+    .btn:focus-visible{
+      box-shadow: 0 0 0 4px rgba(37,99,235,0.18), var(--shadow2);
+      border-color:#cbd5ff;
+    }
+
+    .btnPrimary{background:var(--accent);color:#fff;border-color:var(--accent)}
+    .btnSecondary{background:#eef2ff;color:var(--text);border-color:#dbeafe}
+    .btnPurple{background:#f3e8ff;color:var(--text);border-color:#e9d5ff}
+
+    .badgeRow{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      margin-top:14px;
+    }
+
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid rgba(15,23,42,0.10);
+      background:rgba(255,255,255,0.80);
+      color:var(--muted);
+      font-size:13px;
+      font-weight:800;
+      backdrop-filter: blur(8px);
+    }
+
     .dot{width:10px;height:10px;border-radius:50%}
     .dotOk{background:var(--ok)}
     .dotInfo{background:var(--info)}
@@ -125,71 +184,77 @@
     .section{margin-top:18px}
 
     .sectionTitle{
-      margin:0 0 10px 0
-      font-size:16px
-      color:var(--text)
-      letter-spacing:0.2px
+      margin:0 0 10px 0;
+      font-size:16px;
+      letter-spacing:0.2px;
     }
 
-    .sectionBlock{
-      border-radius:var(--radius)
-      border:1px solid rgba(15,23,42,0.08)
-      box-shadow:0 12px 28px rgba(2,6,23,0.06)
-      padding:18px
-      position:relative
-      overflow:hidden
+    .sectionBox{
+      position:relative;
+      border-radius:var(--radius);
+      border:1px solid rgba(15,23,42,0.08);
+      box-shadow:var(--shadow2);
+      overflow:hidden;
+      padding:18px;
     }
 
-    .sectionBlock::before{
-      content:""
-      position:absolute
-      inset:0
-      background:radial-gradient(900px 240px at 10% 0%, rgba(255,255,255,0.65), transparent 60%)
-      pointer-events:none
+    .sectionBox::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        radial-gradient(900px 230px at 10% 0%, rgba(255,255,255,0.68), transparent 60%),
+        radial-gradient(900px 230px at 90% 0%, rgba(255,255,255,0.58), transparent 60%);
+      pointer-events:none;
     }
-    .sectionBlock > *{position:relative}
 
-    .sectionAbout{background:linear-gradient(180deg, var(--s1), #ffffff)}
-    .sectionProjects{background:linear-gradient(180deg, var(--s2), #ffffff)}
-    .sectionWhatIDo{background:linear-gradient(180deg, var(--s4), #ffffff)}
-    .sectionTech{background:linear-gradient(180deg, var(--s6), #ffffff)}
+    .sectionBox > *{position:relative}
 
-    .accentBar{
-      position:absolute
-      left:0
-      top:0
-      bottom:0
-      width:10px
-      background:linear-gradient(180deg, var(--accent), var(--accent2))
-      opacity:0.9
+    .sectionBox::after{
+      content:"";
+      position:absolute;
+      left:0;
+      top:0;
+      right:0;
+      height:4px;
+      background:linear-gradient(90deg, var(--accent), var(--accent2));
+      opacity:0.95;
+      pointer-events:none;
     }
+
+    .aboutBg{background:linear-gradient(180deg, var(--sAbout1), var(--sAbout2))}
+    .projectsBg{background:linear-gradient(180deg, var(--sProjects1), var(--sProjects2))}
+    .workBg{background:linear-gradient(180deg, var(--sWork1), var(--sWork2))}
+    .techBg{background:linear-gradient(180deg, var(--sTech1), var(--sTech2))}
 
     .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
     .grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
 
     .card{
-      background:rgba(255,255,255,0.92)
-      border:1px solid rgba(15,23,42,0.10)
-      border-radius:var(--radius)
-      padding:18px
-      box-shadow:0 12px 28px rgba(2,6,23,0.06)
-      backdrop-filter: blur(6px)
+      background:rgba(255,255,255,0.92);
+      border:1px solid rgba(15,23,42,0.10);
+      border-radius:var(--radius);
+      padding:18px;
+      box-shadow:0 10px 26px rgba(2,6,23,0.08);
+      backdrop-filter: blur(10px);
     }
 
     .card h2{margin:0 0 10px 0;font-size:18px}
-    .desc{margin:0 0 14px 0;color:var(--muted);line-height:1.5}
+    .desc{margin:0 0 14px 0;color:var(--muted);line-height:1.55}
 
     .tagRow{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 14px 0}
+
     .tag{
-      display:inline-flex
-      padding:7px 10px
-      border-radius:999px
-      border:1px solid rgba(15,23,42,0.10)
-      color:#1f2937
-      font-size:12px
-      font-weight:700
-      background:#ffffff
+      display:inline-flex;
+      padding:7px 10px;
+      border-radius:999px;
+      border:1px solid rgba(15,23,42,0.10);
+      background:#ffffff;
+      color:#1f2937;
+      font-size:12px;
+      font-weight:900;
     }
+
     .tagBlue{background:#eff6ff;border-color:#dbeafe}
     .tagPurple{background:#f5f3ff;border-color:#e9d5ff}
     .tagGreen{background:#ecfdf5;border-color:#bbf7d0}
@@ -198,50 +263,56 @@
     .btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
 
     .list{margin:0;padding:0;list-style:none}
+
     .li{
-      display:flex
-      gap:10px
-      padding:10px 0
-      border-top:1px solid rgba(15,23,42,0.08)
-      color:var(--muted)
-      line-height:1.45
+      display:flex;
+      gap:10px;
+      padding:10px 0;
+      border-top:1px solid rgba(15,23,42,0.08);
+      color:var(--muted);
+      line-height:1.5;
     }
+
     .li:first-child{border-top:none}
     .li strong{color:var(--text)}
 
     .tick{
-      width:20px
-      height:20px
-      border-radius:7px
-      background:#eff6ff
-      border:1px solid #dbeafe
-      display:inline-flex
-      align-items:center
-      justify-content:center
-      color:var(--accent)
-      font-weight:900
-      flex:0 0 auto
-      margin-top:1px
+      width:20px;
+      height:20px;
+      border-radius:7px;
+      background:#eff6ff;
+      border:1px solid #dbeafe;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      color:var(--accent);
+      font-weight:900;
+      flex:0 0 auto;
+      margin-top:1px;
     }
 
     .split{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+
     .skill{
-      border:1px solid rgba(15,23,42,0.10)
-      background:rgba(255,255,255,0.92)
-      border-radius:16px
-      padding:12px
+      border:1px solid rgba(15,23,42,0.10);
+      background:rgba(255,255,255,0.92);
+      border-radius:16px;
+      padding:12px;
     }
+
     .skillTitle{margin:0 0 6px 0;font-weight:900;font-size:13px}
     .skillText{margin:0;color:var(--muted);font-size:13px;line-height:1.45}
 
     .footer{
-      margin-top:18px
-      padding:16px
-      text-align:center
-      color:var(--muted)
-      font-size:13px
-      background:linear-gradient(180deg, var(--s5), #ffffff)
-      border:1px solid rgba(15,23,42,0.08)
+      margin-top:18px;
+      padding:16px;
+      text-align:center;
+      color:var(--muted);
+      font-size:13px;
+      background:linear-gradient(180deg, var(--sFooter1), var(--sFooter2));
+      border:1px solid rgba(15,23,42,0.08);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow2);
     }
 
     @media (max-width:980px){
@@ -295,8 +366,7 @@
 
     <div class="section">
       <h2 class="sectionTitle">За мен</h2>
-      <div class="sectionBlock sectionAbout">
-        <div class="accentBar" aria-hidden="true"></div>
+      <div class="sectionBox aboutBg">
         <p class="desc" style="margin:0">
           Аз съм Python Django разработчик и бизнес анализатор с опит в изграждане на цялостни уеб системи от база данни и бизнес логика до потребителски интерфейс и внедряване.
           Работя с Django, PostgreSQL, TailwindCSS и JavaScript за създаване на системи, които решават реални бизнес задачи.
@@ -307,9 +377,7 @@
 
     <div class="section">
       <h2 class="sectionTitle">Проекти</h2>
-      <div class="sectionBlock sectionProjects">
-        <div class="accentBar" aria-hidden="true"></div>
-
+      <div class="sectionBox projectsBg">
         <div class="grid3">
           <div class="card">
             <h2>BookZone</h2>
@@ -383,15 +451,12 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
 
     <div class="section">
       <h2 class="sectionTitle">Какво правя</h2>
-      <div class="sectionBlock sectionWhatIDo">
-        <div class="accentBar" aria-hidden="true"></div>
-
+      <div class="sectionBox workBg">
         <div class="grid2">
           <div class="card">
             <h2>Разработка</h2>
@@ -413,15 +478,12 @@
             </ul>
           </div>
         </div>
-
       </div>
     </div>
 
     <div class="section">
       <h2 class="sectionTitle">Технологии</h2>
-      <div class="sectionBlock sectionTech">
-        <div class="accentBar" aria-hidden="true"></div>
-
+      <div class="sectionBox techBg">
         <div class="split">
           <div class="skill">
             <p class="skillTitle">Back end</p>
@@ -448,7 +510,6 @@
             <p class="skillText">Stripe API, Google Maps API, QR логика</p>
           </div>
         </div>
-
       </div>
     </div>
 
@@ -463,7 +524,7 @@
   </div>
 
   <script>
-    document.getElementById("y").textContent = new Date().getFullYear()
+    document.getElementById("y").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
