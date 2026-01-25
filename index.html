@@ -8,99 +8,114 @@
 
   <style>
     :root{
-      --bg:#f6f8ff;
-      --bg2:#f3f6ff;
-      --card:#ffffff;
-      --text:#0f172a;
-      --muted:#475569;
-      --line:#e6eaf3;
-      --shadow: 0 14px 40px rgba(2,6,23,0.10);
+      --pageBg1:#f6f8ff
+      --pageBg2:#f2f6ff
 
-      --accent:#2563eb;
-      --accent2:#7c3aed;
-      --soft:#eef2ff;
-      --soft2:#f3e8ff;
+      --card:#ffffff
+      --text:#0f172a
+      --muted:#475569
+      --line:#e6eaf3
+      --shadow: 0 14px 40px rgba(2,6,23,0.10)
 
-      --ok:#16a34a;
-      --warn:#f59e0b;
-      --info:#0ea5e9;
+      --accent:#2563eb
+      --accent2:#7c3aed
 
-      --radius:18px;
+      --ok:#16a34a
+      --warn:#f59e0b
+      --info:#0ea5e9
+
+      --radius:18px
+
+      --s1:#eef2ff
+      --s2:#f5f3ff
+      --s3:#ecfeff
+      --s4:#ecfdf5
+      --s5:#fffbeb
+      --s6:#f1f5f9
     }
 
     *{box-sizing:border-box}
+
     body{
-      margin:0;
-      font-family:Arial,Helvetica,sans-serif;
-      color:var(--text);
+      margin:0
+      font-family:Arial,Helvetica,sans-serif
+      color:var(--text)
       background:
-        radial-gradient(900px 420px at 10% 0%, rgba(37,99,235,0.12), transparent 55%),
-        radial-gradient(900px 420px at 90% 0%, rgba(124,58,237,0.12), transparent 55%),
-        linear-gradient(180deg, var(--bg), var(--bg2));
+        radial-gradient(900px 420px at 10% 0%, rgba(37,99,235,0.10), transparent 55%),
+        radial-gradient(900px 420px at 90% 0%, rgba(124,58,237,0.10), transparent 55%),
+        linear-gradient(180deg, var(--pageBg1), var(--pageBg2))
     }
 
     a{color:inherit}
+
     .wrap{max-width:1100px;margin:0 auto;padding:28px}
+
     .panel{
-      background:var(--card);
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
+      background:var(--card)
+      border:1px solid var(--line)
+      border-radius:var(--radius)
+      box-shadow:var(--shadow)
     }
 
     .hero{
-      padding:22px;
-      overflow:hidden;
-      position:relative;
+      padding:22px
+      overflow:hidden
+      position:relative
     }
     .hero::before{
-      content:"";
-      position:absolute;
-      inset:-2px;
+      content:""
+      position:absolute
+      inset:-2px
       background:
         radial-gradient(550px 180px at 20% 0%, rgba(37,99,235,0.22), transparent 60%),
-        radial-gradient(550px 180px at 80% 0%, rgba(124,58,237,0.22), transparent 60%);
-      pointer-events:none;
+        radial-gradient(550px 180px at 80% 0%, rgba(124,58,237,0.22), transparent 60%)
+      pointer-events:none
     }
     .hero > *{position:relative}
 
     .topRow{display:flex;gap:18px;flex-wrap:wrap;align-items:flex-start;justify-content:space-between}
     .idBlock{min-width:280px}
+
     h1{margin:0 0 8px 0;font-size:30px;letter-spacing:0.2px}
     .sub{margin:0;color:var(--muted);font-size:15px;line-height:1.45}
 
     .ctaRow{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:14px}
     .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:8px;
-      padding:11px 13px;
-      border-radius:14px;
-      border:1px solid var(--line);
-      text-decoration:none;
-      font-weight:700;
-      font-size:14px;
-      background:var(--card);
-      transition:transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease;
+      display:inline-flex
+      align-items:center
+      justify-content:center
+      gap:8px
+      padding:11px 13px
+      border-radius:14px
+      border:1px solid var(--line)
+      text-decoration:none
+      font-weight:700
+      font-size:14px
+      background:var(--card)
+      transition:transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease
     }
-    .btn:hover{transform:translateY(-1px);border-color:#d7def0;box-shadow:0 10px 22px rgba(2,6,23,0.10)}
+    .btn:hover{
+      transform:translateY(-1px)
+      border-color:#d7def0
+      box-shadow:0 10px 22px rgba(2,6,23,0.10)
+    }
     .btnPrimary{background:var(--accent);color:#fff;border-color:var(--accent)}
-    .btnSecondary{background:var(--soft);color:var(--text);border-color:#dbeafe}
-    .btnPurple{background:var(--soft2);color:var(--text);border-color:#e9d5ff}
+    .btnSecondary{background:var(--s1);color:var(--text);border-color:#dbeafe}
+    .btnPurple{background:var(--s2);color:var(--text);border-color:#e9d5ff}
 
     .badgeRow{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
     .badge{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding:8px 10px;
-      border-radius:999px;
-      border:1px solid var(--line);
-      background:#fff;
-      color:var(--muted);
-      font-size:13px;
-      font-weight:700;
+      display:inline-flex
+      align-items:center
+      gap:8px
+      padding:8px 10px
+      border-radius:999px
+      border:1px solid rgba(15,23,42,0.08)
+      background:rgba(255,255,255,0.85)
+      color:var(--muted)
+      font-size:13px
+      font-weight:700
+      backdrop-filter: blur(6px)
     }
     .dot{width:10px;height:10px;border-radius:50%}
     .dotOk{background:var(--ok)}
@@ -108,35 +123,72 @@
     .dotWarn{background:var(--warn)}
 
     .section{margin-top:18px}
+
     .sectionTitle{
-      margin:0 0 10px 0;
-      font-size:16px;
-      color:var(--text);
-      letter-spacing:0.2px;
+      margin:0 0 10px 0
+      font-size:16px
+      color:var(--text)
+      letter-spacing:0.2px
+    }
+
+    .sectionBlock{
+      border-radius:var(--radius)
+      border:1px solid rgba(15,23,42,0.08)
+      box-shadow:0 12px 28px rgba(2,6,23,0.06)
+      padding:18px
+      position:relative
+      overflow:hidden
+    }
+
+    .sectionBlock::before{
+      content:""
+      position:absolute
+      inset:0
+      background:radial-gradient(900px 240px at 10% 0%, rgba(255,255,255,0.65), transparent 60%)
+      pointer-events:none
+    }
+    .sectionBlock > *{position:relative}
+
+    .sectionAbout{background:linear-gradient(180deg, var(--s1), #ffffff)}
+    .sectionProjects{background:linear-gradient(180deg, var(--s2), #ffffff)}
+    .sectionWhatIDo{background:linear-gradient(180deg, var(--s4), #ffffff)}
+    .sectionTech{background:linear-gradient(180deg, var(--s6), #ffffff)}
+
+    .accentBar{
+      position:absolute
+      left:0
+      top:0
+      bottom:0
+      width:10px
+      background:linear-gradient(180deg, var(--accent), var(--accent2))
+      opacity:0.9
     }
 
     .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
     .grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+
     .card{
-      background:var(--card);
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      padding:18px;
-      box-shadow:0 12px 28px rgba(2,6,23,0.06);
+      background:rgba(255,255,255,0.92)
+      border:1px solid rgba(15,23,42,0.10)
+      border-radius:var(--radius)
+      padding:18px
+      box-shadow:0 12px 28px rgba(2,6,23,0.06)
+      backdrop-filter: blur(6px)
     }
+
     .card h2{margin:0 0 10px 0;font-size:18px}
     .desc{margin:0 0 14px 0;color:var(--muted);line-height:1.5}
 
     .tagRow{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 14px 0}
     .tag{
-      display:inline-flex;
-      padding:7px 10px;
-      border-radius:999px;
-      background:#f8fafc;
-      border:1px solid var(--line);
-      color:#1f2937;
-      font-size:12px;
-      font-weight:700;
+      display:inline-flex
+      padding:7px 10px
+      border-radius:999px
+      border:1px solid rgba(15,23,42,0.10)
+      color:#1f2937
+      font-size:12px
+      font-weight:700
+      background:#ffffff
     }
     .tagBlue{background:#eff6ff;border-color:#dbeafe}
     .tagPurple{background:#f5f3ff;border-color:#e9d5ff}
@@ -145,57 +197,56 @@
 
     .btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
 
-    .twoCol{
-      display:grid;
-      grid-template-columns:1.2fr 0.8fr;
-      gap:16px;
-      align-items:stretch;
-    }
-
     .list{margin:0;padding:0;list-style:none}
     .li{
-      display:flex;
-      gap:10px;
-      padding:10px 0;
-      border-top:1px solid var(--line);
-      color:var(--muted);
-      line-height:1.45;
+      display:flex
+      gap:10px
+      padding:10px 0
+      border-top:1px solid rgba(15,23,42,0.08)
+      color:var(--muted)
+      line-height:1.45
     }
     .li:first-child{border-top:none}
     .li strong{color:var(--text)}
+
     .tick{
-      width:20px;height:20px;border-radius:7px;
-      background:var(--soft);
-      border:1px solid #dbeafe;
-      display:inline-flex;align-items:center;justify-content:center;
-      color:var(--accent);
-      font-weight:900;
-      flex:0 0 auto;
-      margin-top:1px;
+      width:20px
+      height:20px
+      border-radius:7px
+      background:#eff6ff
+      border:1px solid #dbeafe
+      display:inline-flex
+      align-items:center
+      justify-content:center
+      color:var(--accent)
+      font-weight:900
+      flex:0 0 auto
+      margin-top:1px
     }
 
     .split{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
     .skill{
-      border:1px solid var(--line);
-      background:#fff;
-      border-radius:16px;
-      padding:12px;
+      border:1px solid rgba(15,23,42,0.10)
+      background:rgba(255,255,255,0.92)
+      border-radius:16px
+      padding:12px
     }
     .skillTitle{margin:0 0 6px 0;font-weight:900;font-size:13px}
     .skillText{margin:0;color:var(--muted);font-size:13px;line-height:1.45}
 
     .footer{
-      margin-top:18px;
-      padding:16px;
-      text-align:center;
-      color:var(--muted);
-      font-size:13px;
+      margin-top:18px
+      padding:16px
+      text-align:center
+      color:var(--muted)
+      font-size:13px
+      background:linear-gradient(180deg, var(--s5), #ffffff)
+      border:1px solid rgba(15,23,42,0.08)
     }
 
     @media (max-width:980px){
       .grid3{grid-template-columns:1fr}
       .grid2{grid-template-columns:1fr}
-      .twoCol{grid-template-columns:1fr}
       .split{grid-template-columns:1fr}
       .wrap{padding:18px}
       h1{font-size:26px}
@@ -244,7 +295,8 @@
 
     <div class="section">
       <h2 class="sectionTitle">За мен</h2>
-      <div class="panel" style="padding:18px">
+      <div class="sectionBlock sectionAbout">
+        <div class="accentBar" aria-hidden="true"></div>
         <p class="desc" style="margin:0">
           Аз съм Python Django разработчик и бизнес анализатор с опит в изграждане на цялостни уеб системи от база данни и бизнес логика до потребителски интерфейс и внедряване.
           Работя с Django, PostgreSQL, TailwindCSS и JavaScript за създаване на системи, които решават реални бизнес задачи.
@@ -255,124 +307,121 @@
 
     <div class="section">
       <h2 class="sectionTitle">Проекти</h2>
+      <div class="sectionBlock sectionProjects">
+        <div class="accentBar" aria-hidden="true"></div>
 
-      <div class="grid3">
-        <div class="card">
-          <h2>BookZone</h2>
-          <p class="desc">
-            Онлайн книжарница с каталог, търсене, количка, поръчки и отстъпки.
-          </p>
+        <div class="grid3">
+          <div class="card">
+            <h2>BookZone</h2>
+            <p class="desc">Онлайн книжарница с каталог, търсене, количка, поръчки и отстъпки.</p>
 
-          <div class="tagRow">
-            <span class="tag tagBlue">Django</span>
-            <span class="tag tagBlue">PostgreSQL</span>
-            <span class="tag tagPurple">TailwindCSS</span>
-            <span class="tag tagAmber">Stripe</span>
+            <div class="tagRow">
+              <span class="tag tagBlue">Django</span>
+              <span class="tag tagBlue">PostgreSQL</span>
+              <span class="tag tagPurple">TailwindCSS</span>
+              <span class="tag tagAmber">Stripe</span>
+            </div>
+
+            <ul class="list">
+              <li class="li"><span class="tick">✓</span><span><strong>Количка</strong> с поръчка и управление</span></li>
+              <li class="li"><span class="tick">✓</span><span><strong>Админ</strong> управление на продукти и поръчки</span></li>
+              <li class="li"><span class="tick">✓</span><span><strong>Отстъпки</strong> и промоции</span></li>
+            </ul>
+
+            <div class="btns">
+              <a class="btn btnPrimary" href="https://vegata.pythonanywhere.com/" target="_blank" rel="noopener">Live demo</a>
+              <a class="btn btnSecondary" href="https://github.com/vegaFlex" target="_blank" rel="noopener">Source</a>
+            </div>
           </div>
 
-          <ul class="list">
-            <li class="li"><span class="tick">✓</span><span><strong>Количка</strong> с поръчка и управление</span></li>
-            <li class="li"><span class="tick">✓</span><span><strong>Админ</strong> управление на продукти и поръчки</span></li>
-            <li class="li"><span class="tick">✓</span><span><strong>Отстъпки</strong> и промоции</span></li>
-          </ul>
+          <div class="card">
+            <h2>EventHub</h2>
+            <p class="desc">Платформа за събития с билети, онлайн плащане, карта и QR валидация.</p>
 
-          <div class="btns">
-            <a class="btn btnPrimary" href="https://vegata.pythonanywhere.com/" target="_blank" rel="noopener">Live demo</a>
+            <div class="tagRow">
+              <span class="tag tagBlue">Django</span>
+              <span class="tag tagBlue">PostgreSQL</span>
+              <span class="tag tagPurple">TailwindCSS</span>
+              <span class="tag tagAmber">Stripe</span>
+              <span class="tag tagGreen">QR</span>
+              <span class="tag tagGreen">Maps</span>
+            </div>
 
-            <!-- Смени линка с точния repo за BookZone, ако искаш -->
-            <a class="btn btnSecondary" href="https://github.com/vegaFlex" target="_blank" rel="noopener">Source</a>
-          </div>
-        </div>
+            <ul class="list">
+              <li class="li"><span class="tick">✓</span><span><strong>Продажба</strong> на билети и поръчки</span></li>
+              <li class="li"><span class="tick">✓</span><span><strong>QR</strong> проверка на билет</span></li>
+              <li class="li"><span class="tick">✓</span><span><strong>Локации</strong> и интеграции</span></li>
+            </ul>
 
-        <div class="card">
-          <h2>EventHub</h2>
-          <p class="desc">
-            Платформа за събития с билети, онлайн плащане, карта и QR валидация.
-          </p>
-
-          <div class="tagRow">
-            <span class="tag tagBlue">Django</span>
-            <span class="tag tagBlue">PostgreSQL</span>
-            <span class="tag tagPurple">TailwindCSS</span>
-            <span class="tag tagAmber">Stripe</span>
-            <span class="tag tagGreen">QR</span>
-            <span class="tag tagGreen">Maps</span>
+            <div class="btns">
+              <a class="btn btnPrimary" href="https://eventhub-vegata.pythonanywhere.com/bg/" target="_blank" rel="noopener">Live demo</a>
+              <a class="btn btnSecondary" href="https://github.com/vegaFlex" target="_blank" rel="noopener">Source</a>
+            </div>
           </div>
 
-          <ul class="list">
-            <li class="li"><span class="tick">✓</span><span><strong>Продажба</strong> на билети и поръчки</span></li>
-            <li class="li"><span class="tick">✓</span><span><strong>QR</strong> проверка на билет</span></li>
-            <li class="li"><span class="tick">✓</span><span><strong>Локации</strong> и интеграции</span></li>
-          </ul>
+          <div class="card">
+            <h2>Paradise Food Order App</h2>
+            <p class="desc">Вътрешна система за поръчки на храна с количества, лимити и админ справки.</p>
 
-          <div class="btns">
-            <a class="btn btnPrimary" href="https://eventhub-vegata.pythonanywhere.com/bg/" target="_blank" rel="noopener">Live demo</a>
+            <div class="tagRow">
+              <span class="tag tagBlue">Django</span>
+              <span class="tag tagBlue">PostgreSQL</span>
+              <span class="tag tagPurple">TailwindCSS</span>
+              <span class="tag tagGreen">Custom Admin</span>
+              <span class="tag tagGreen">Reporting</span>
+            </div>
 
-            <!-- Смени линка с точния repo за EventHub, ако искаш -->
-            <a class="btn btnSecondary" href="https://github.com/vegaFlex" target="_blank" rel="noopener">Source</a>
-          </div>
-        </div>
+            <ul class="list">
+              <li class="li"><span class="tick">✓</span><span><strong>Меню</strong> по дати и количества</span></li>
+              <li class="li"><span class="tick">✓</span><span><strong>Отказ</strong> на ястие и проследяване</span></li>
+              <li class="li"><span class="tick">✓</span><span><strong>Експорт</strong> за кетъринг и справки</span></li>
+            </ul>
 
-        <div class="card">
-          <h2>Paradise Food Order App</h2>
-          <p class="desc">
-            Вътрешна система за поръчки на храна с количества, лимити и админ справки.
-          </p>
-
-          <div class="tagRow">
-            <span class="tag tagBlue">Django</span>
-            <span class="tag tagBlue">PostgreSQL</span>
-            <span class="tag tagPurple">TailwindCSS</span>
-            <span class="tag tagGreen">Custom Admin</span>
-            <span class="tag tagGreen">Reporting</span>
-          </div>
-
-          <ul class="list">
-            <li class="li"><span class="tick">✓</span><span><strong>Меню</strong> по дати и количества</span></li>
-            <li class="li"><span class="tick">✓</span><span><strong>Отказ</strong> на ястие и проследяване</span></li>
-            <li class="li"><span class="tick">✓</span><span><strong>Експорт</strong> за кетъринг и справки</span></li>
-          </ul>
-
-          <div class="btns">
-            <!-- Ако имаш live линк, сложи го тук -->
-            <!-- <a class="btn btnPrimary" href="https://nekrato.com/menu/" target="_blank" rel="noopener">Live demo</a> -->
-
-            <!-- Смени линка с точния repo за Food App, ако искаш -->
-            <a class="btn btnSecondary" href="https://github.com/vegaFlex" target="_blank" rel="noopener">Source</a>
+            <div class="btns">
+              <a class="btn btnPrimary" href="https://nekrato.com/menu/" target="_blank" rel="noopener">Live demo</a>
+              <a class="btn btnSecondary" href="https://github.com/vegaFlex" target="_blank" rel="noopener">Source</a>
+            </div>
           </div>
         </div>
+
       </div>
     </div>
 
     <div class="section">
       <h2 class="sectionTitle">Какво правя</h2>
+      <div class="sectionBlock sectionWhatIDo">
+        <div class="accentBar" aria-hidden="true"></div>
 
-      <div class="grid2">
-        <div class="card">
-          <h2>Разработка</h2>
-          <p class="desc">Фокус върху крайни решения с ясни роли, правила и админ контрол.</p>
-          <ul class="list">
-            <li class="li"><span class="tick">✓</span><span><strong>Уеб системи</strong> с Django и PostgreSQL</span></li>
-            <li class="li"><span class="tick">✓</span><span><strong>Интеграции</strong> Stripe, Maps, външни услуги</span></li>
-            <li class="li"><span class="tick">✓</span><span><strong>Панели</strong> за управление и справки</span></li>
-          </ul>
+        <div class="grid2">
+          <div class="card">
+            <h2>Разработка</h2>
+            <p class="desc">Фокус върху крайни решения с ясни роли, правила и админ контрол.</p>
+            <ul class="list">
+              <li class="li"><span class="tick">✓</span><span><strong>Уеб системи</strong> с Django и PostgreSQL</span></li>
+              <li class="li"><span class="tick">✓</span><span><strong>Интеграции</strong> Stripe, Maps, външни услуги</span></li>
+              <li class="li"><span class="tick">✓</span><span><strong>Панели</strong> за управление и справки</span></li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h2>Анализ и отчети</h2>
+            <p class="desc">Данни, SQL и табла за управление за решения и контрол.</p>
+            <ul class="list">
+              <li class="li"><span class="tick">✓</span><span><strong>SQL</strong> заявки и оптимизация</span></li>
+              <li class="li"><span class="tick">✓</span><span><strong>Excel</strong> регулярни отчети и KPI</span></li>
+              <li class="li"><span class="tick">✓</span><span><strong>Автоматизация</strong> на процеси и проверки</span></li>
+            </ul>
+          </div>
         </div>
 
-        <div class="card">
-          <h2>Анализ и отчети</h2>
-          <p class="desc">Данни, SQL и табла за управление за решения и контрол.</p>
-          <ul class="list">
-            <li class="li"><span class="tick">✓</span><span><strong>SQL</strong> заявки и оптимизация</span></li>
-            <li class="li"><span class="tick">✓</span><span><strong>Excel</strong> регулярни отчети и KPI</span></li>
-            <li class="li"><span class="tick">✓</span><span><strong>Автоматизация</strong> на процеси и проверки</span></li>
-          </ul>
-        </div>
       </div>
     </div>
 
     <div class="section">
       <h2 class="sectionTitle">Технологии</h2>
-      <div class="panel" style="padding:18px">
+      <div class="sectionBlock sectionTech">
+        <div class="accentBar" aria-hidden="true"></div>
+
         <div class="split">
           <div class="skill">
             <p class="skillTitle">Back end</p>
@@ -399,10 +448,11 @@
             <p class="skillText">Stripe API, Google Maps API, QR логика</p>
           </div>
         </div>
+
       </div>
     </div>
 
-    <div class="footer panel">
+    <div class="footer">
       <div class="ctaRow" style="justify-content:center">
         <a class="btn btnPrimary" href="https://www.linkedin.com/in/veselin-lilov-0b7624344/" target="_blank" rel="noopener">Свържи се в LinkedIn</a>
         <a class="btn btnSecondary" href="https://github.com/vegaFlex" target="_blank" rel="noopener">Виж кода в GitHub</a>
@@ -413,7 +463,7 @@
   </div>
 
   <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
+    document.getElementById("y").textContent = new Date().getFullYear()
   </script>
 </body>
 </html>
