@@ -414,6 +414,49 @@
       box-shadow:var(--shadow2);
     }
 
+        /* DEMO PREVIEW СНИМКИ */
+    .demoShot{
+      display:block;
+      width:100%;
+      margin:12px 0 12px 0;
+      border-radius:14px;
+      border:1px solid rgba(15,23,42,0.10);
+      background:linear-gradient(180deg, #ffffff, #f8fafc);
+      box-shadow:0 10px 22px rgba(2,6,23,0.08);
+      overflow:hidden;
+      text-decoration:none;
+      transform:translateY(0);
+      transition:transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease;
+    }
+
+    .demoShot img{
+      width:100%;
+      height:auto;
+      display:block;
+    }
+
+    .demoShot:hover{
+      transform:translateY(-1px);
+      border-color:rgba(15,23,42,0.16);
+      box-shadow:0 14px 30px rgba(2,6,23,0.12);
+    }
+
+    .demoShot:focus-visible{
+      outline:none;
+      box-shadow: 0 0 0 4px rgba(37,99,235,0.16), 0 14px 30px rgba(2,6,23,0.12);
+      border-color:rgba(37,99,235,0.32);
+    }
+
+    .demoCap{
+      margin:0;
+      padding:10px 12px;
+      color:var(--muted);
+      font-size:12.5px;
+      line-height:1.45;
+      border-top:1px solid rgba(15,23,42,0.08);
+      background:rgba(255,255,255,0.86);
+    }
+
     @media (max-width:980px){
       .grid3{grid-template-columns:1fr}
       .grid2{grid-template-columns:1fr}
@@ -483,7 +526,13 @@
         <div class="grid3">
           <div class="card">
             <h2>BookZone</h2>
-            <p class="desc">Пример за онлайн магазин с каталог, търсене, количка и поръчки.</p>
+            <p class="desc">Онлайн книжарница с каталог, търсене, количка, поръчки и отстъпки.</p>
+
+            <a class="demoShot" href="https://vegata.pythonanywhere.com/" target="_blank" rel="noopener">
+              <img src="assets/bookzone.jpg" alt="BookZone демо preview">
+              <p class="demoCap">Преглед на началната страница на BookZone</p>
+            </a>
+
 
             <div class="tagRow">
               <span class="tag tagBlue">Каталог</span>
@@ -506,7 +555,13 @@
 
           <div class="card">
             <h2>EventHub</h2>
-            <p class="desc">Пример за сайт за събития с билети, места и QR проверка.</p>
+            <p class="desc">Платформа за събития с билети, онлайн плащане, карта и QR валидация.</p>
+
+            <a class="demoShot" href="https://eventhub-vegata.pythonanywhere.com/bg/" target="_blank" rel="noopener">
+              <img src="assets/eventhub.jpg" alt="EventHub демо preview">
+              <p class="demoCap">Преглед на началната страница на EventHub</p>
+            </a>
+
 
             <div class="tagRow">
               <span class="tag tagBlue">Резервации</span>
@@ -531,7 +586,13 @@
 
           <div class="card">
             <h2>Paradise Food Order App</h2>
-            <p class="desc">Пример за вътрешен сайт за поръчки с лимити, локации и справки.</p>
+            <p class="desc">Вътрешна система за поръчки на храна с количества, лимити и админ справки.</p>
+
+            <a class="demoShot" href="https://nekrato.com/menu/" target="_blank" rel="noopener">
+              <img src="assets/paradise.jpg" alt="Paradise Food Order App демо preview">
+              <p class="demoCap">Преглед на меню и поръчки в Paradise Food Order App</p>
+            </a>
+
 
             <div class="tagRow">
               <span class="tag tagBlue">Поръчки</span>
