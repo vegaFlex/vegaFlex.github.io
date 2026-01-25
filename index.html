@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="bg">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Veselin Lilov Portfolio</title>
+  <style>
+    body{font-family:Arial,Helvetica,sans-serif;margin:0;background:#f6f8ff;color:#0f172a}
+    .wrap{max-width:980px;margin:0 auto;padding:28px}
+    .top{background:#ffffff;border:1px solid #e6eaf3;border-radius:16px;padding:22px}
+    h1{margin:0 0 6px 0;font-size:28px}
+    .sub{margin:0;color:#475569}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+    .card{background:#ffffff;border:1px solid #e6eaf3;border-radius:16px;padding:18px}
+    .card h2{margin:0 0 10px 0;font-size:18px}
+    .desc{margin:0 0 14px 0;color:#475569;line-height:1.35}
+    .btns{display:flex;gap:10px;flex-wrap:wrap}
+    a.btn{display:inline-block;padding:10px 12px;border-radius:12px;text-decoration:none;border:1px solid #dbeafe}
+    a.primary{background:#2563eb;color:#fff;border-color:#2563eb}
+    a.secondary{background:#eef2ff;color:#0f172a}
+    .links{margin-top:14px;display:flex;gap:12px;flex-wrap:wrap}
+    .links a{text-decoration:none;color:#2563eb}
+    @media (max-width:860px){.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <h1>Veselin Lilov</h1>
+      <p class="sub">Python Django Developer, Business Analyst</p>
+
+      <div class="links">
+        <a href="https://github.com/vegaFlex" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/veselin-lilov-0b7624344/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h2>BookZone</h2>
+        <p class="desc">Онлайн книжарница с каталог, търсене, количка и поръчки.</p>
+        <div class="btns">
+          <a class="btn primary" href="https://vegata.pythonanywhere.com/" target="_blank" rel="noopener">Live demo</a>
+          <a class="btn secondary" href="https://github.com/vegaFlex" target="_blank" rel="noopener">Source</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>EventHub</h2>
+        <p class="desc">Платформа за събития с билети, QR валидация и админ панел.</p>
+        <div class="btns">
+          <a class="btn primary" href="https://eventhub-vegata.pythonanywhere.com/bg/" target="_blank" rel="noopener">Live demo</a>
+          <a class="btn secondary" href="https://github.com/vegaFlex" target="_blank" rel="noopener">Source</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Paradise Food Order App</h2>
+        <p class="desc">Вътрешна система за поръчки на храна и справки.</p>
+        <div class="btns">
+          <a class="btn secondary" href="https://github.com/vegaFlex" target="_blank" rel="noopener">Source</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
