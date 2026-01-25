@@ -79,8 +79,8 @@
       position:relative;
       overflow:hidden;
       background:
-        radial-gradient(900px 280px at 18% 0%, rgba(37,99,235,0.22), transparent 62%),
-        radial-gradient(900px 280px at 82% 0%, rgba(124,58,237,0.20), transparent 62%),
+        radial-gradient(900px 280px at 18% 0%, rgba(37,99,235,0.18), transparent 62%),
+        radial-gradient(900px 280px at 82% 0%, rgba(124,58,237,0.16), transparent 62%),
         linear-gradient(180deg, #ffffff, #fbfcff);
     }
 
@@ -100,9 +100,9 @@
       position:absolute;
       inset:-2px;
       background:
-        radial-gradient(520px 260px at 12% 30%, rgba(37,99,235,0.14), transparent 62%),
-        radial-gradient(520px 260px at 88% 22%, rgba(124,58,237,0.12), transparent 62%),
-        radial-gradient(720px 320px at 52% 120%, rgba(14,165,233,0.10), transparent 62%);
+        radial-gradient(520px 260px at 12% 30%, rgba(37,99,235,0.12), transparent 62%),
+        radial-gradient(520px 260px at 88% 22%, rgba(124,58,237,0.10), transparent 62%),
+        radial-gradient(720px 320px at 52% 120%, rgba(14,165,233,0.08), transparent 62%);
       pointer-events:none;
     }
 
@@ -127,9 +127,9 @@
     .sub{
       margin:0;
       color:var(--muted);
-      font-size:15px;
-      line-height:1.6;
-      max-width:680px;
+      font-size:14px;
+      line-height:1.65;
+      max-width:720px;
     }
 
     .ctaRow{
@@ -153,8 +153,8 @@
       font-weight:900;
       font-size:14px;
       background:linear-gradient(180deg, #ffffff, #f8fafc);
-      box-shadow:0 12px 26px rgba(2,6,23,0.10);
-      transition:transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease, background 0.12s ease;
+      box-shadow:0 10px 22px rgba(2,6,23,0.10);
+      transition:transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease, background 0.12s ease, color 0.12s ease;
       outline:none;
       cursor:pointer;
       user-select:none;
@@ -163,75 +163,73 @@
     .btn:hover{
       transform:translateY(-1px);
       border-color:rgba(15,23,42,0.22);
-      box-shadow:0 16px 34px rgba(2,6,23,0.14);
-      background:linear-gradient(180deg, #ffffff, #eef2ff);
+      box-shadow:0 14px 30px rgba(2,6,23,0.14);
+      background:linear-gradient(180deg, #ffffff, #f1f5ff);
     }
 
     .btn:active{
       transform:translateY(0px);
-      box-shadow:0 10px 22px rgba(2,6,23,0.12);
+      box-shadow:0 9px 18px rgba(2,6,23,0.12);
     }
 
     .btn:focus-visible{
-      box-shadow: 0 0 0 4px rgba(37,99,235,0.18), 0 16px 34px rgba(2,6,23,0.14);
-      border-color:#cbd5ff;
+      box-shadow: 0 0 0 4px rgba(37,99,235,0.16), 0 14px 30px rgba(2,6,23,0.14);
+      border-color:rgba(37,99,235,0.40);
     }
 
+    /* Визуално еднакви, без наситено синьо */
     .btnPrimary{
-      background:linear-gradient(90deg, var(--accent), #1d4ed8);
-      color:#fff;
-      border-color:transparent;
-      box-shadow:0 18px 42px rgba(37,99,235,0.26);
+      color:var(--text);
+      border-color:rgba(37,99,235,0.28);
+      background:linear-gradient(180deg, #ffffff, #eef2ff);
+      box-shadow:0 10px 22px rgba(37,99,235,0.10);
     }
 
     .btnPrimary:hover{
-      box-shadow:0 22px 52px rgba(37,99,235,0.32);
-      background:linear-gradient(90deg, #1d4ed8, var(--accent2));
+      border-color:rgba(37,99,235,0.36);
+      background:linear-gradient(180deg, #ffffff, #e0e7ff);
+      box-shadow:0 14px 30px rgba(37,99,235,0.14);
     }
 
     .btnSecondary{
       color:var(--text);
-      border-color:rgba(37,99,235,0.30);
-      background:linear-gradient(180deg, #ffffff, #eef2ff);
-      box-shadow:0 12px 26px rgba(37,99,235,0.12);
+      border-color:rgba(15,23,42,0.16);
+      background:linear-gradient(180deg, #ffffff, #f8fafc);
+      box-shadow:0 10px 22px rgba(2,6,23,0.10);
     }
 
     .btnSecondary:hover{
-      box-shadow:0 16px 34px rgba(37,99,235,0.18);
-      background:linear-gradient(180deg, #ffffff, #e0e7ff);
-      border-color:rgba(37,99,235,0.38);
+      border-color:rgba(15,23,42,0.22);
+      background:linear-gradient(180deg, #ffffff, #eef2ff);
+      box-shadow:0 14px 30px rgba(2,6,23,0.14);
     }
 
     .btnPurple{
       color:var(--text);
-      border-color:rgba(124,58,237,0.30);
+      border-color:rgba(124,58,237,0.22);
       background:linear-gradient(180deg, #ffffff, #f3e8ff);
-      box-shadow:0 12px 26px rgba(124,58,237,0.12);
+      box-shadow:0 10px 22px rgba(124,58,237,0.08);
     }
 
     .btnPurple:hover{
-      box-shadow:0 16px 34px rgba(124,58,237,0.18);
+      border-color:rgba(124,58,237,0.30);
       background:linear-gradient(180deg, #ffffff, #ede9fe);
-      border-color:rgba(124,58,237,0.38);
+      box-shadow:0 14px 30px rgba(124,58,237,0.12);
     }
 
-    /* Ясно да личи, че са кликаеми */
+    /* Кликаемост, без да доминира */
     .btn::after{
       content:"";
-      width:10px;
-      height:10px;
+      width:9px;
+      height:9px;
       border-right:2px solid currentColor;
       border-bottom:2px solid currentColor;
       transform:rotate(-45deg);
-      opacity:0.55;
+      opacity:0.45;
       margin-left:2px;
     }
 
-    .btnPrimary::after{opacity:0.85}
-    .btnSecondary::after{opacity:0.55}
-    .btnPurple::after{opacity:0.55}
-
-    /* ПИЛЧЕТА В BADGE */
+    /* BADGE */
     .badgeRow{
       display:flex;
       gap:8px;
@@ -441,7 +439,8 @@
           <h1>Veselin Lilov</h1>
           <p class="sub">
             Python Django Developer и Business Analyst.<br>
-            Изграждам уеб системи от база данни и бизнес логика до интерфейс и внедряване.
+            Python, Django, JavaScript, HTML, CSS, TailwindCSS, AJAX, PostgreSQL, SQL, Excel, KNIME.<br>
+            Git, GitHub, GitHub Actions, Docker, Azure, Stripe, PythonAnywhere, Passenger.
           </p>
 
           <div class="ctaRow">
@@ -610,7 +609,7 @@
           </div>
           <div class="skill">
             <p class="skillTitle">Deploy</p>
-            <p class="skillText">PythonAnywhere, Azure, CI CD</p>
+            <p class="skillText">PythonAnywhere, Azure, CI CD, Passenger</p>
           </div>
           <div class="skill">
             <p class="skillTitle">Интеграции</p>
