@@ -1,61 +1,58 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" fill="none">
   <defs>
-    <linearGradient id="bg" x1="88" y1="56" x2="1116" y2="710" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#0F172A"/>
-      <stop offset="0.55" stop-color="#111827"/>
-      <stop offset="1" stop-color="#0C4A6E"/>
+    <linearGradient id="bg" x1="74" y1="42" x2="1128" y2="718" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#140B12"/>
+      <stop offset="0.48" stop-color="#2A0F1C"/>
+      <stop offset="1" stop-color="#451A03"/>
     </linearGradient>
     <linearGradient id="stroke" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="#67E8F9"/>
-      <stop offset="1" stop-color="#A78BFA"/>
+      <stop stop-color="#FB7185"/>
+      <stop offset="1" stop-color="#F59E0B"/>
     </linearGradient>
-    <linearGradient id="barA" x1="0" y1="0" x2="1" y2="0">
-      <stop stop-color="#22D3EE"/>
-      <stop offset="1" stop-color="#34D399"/>
+    <linearGradient id="danger" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#FB7185"/>
+      <stop offset="1" stop-color="#EF4444"/>
     </linearGradient>
-    <linearGradient id="barB" x1="0" y1="0" x2="1" y2="0">
+    <linearGradient id="warn" x1="0" y1="0" x2="1" y2="0">
       <stop stop-color="#F59E0B"/>
-      <stop offset="1" stop-color="#FB7185"/>
+      <stop offset="1" stop-color="#F97316"/>
     </linearGradient>
   </defs>
-  <rect width="1200" height="760" rx="34" fill="#08111F"/>
-  <rect x="36" y="36" width="1128" height="688" rx="28" fill="url(#bg)" stroke="url(#stroke)" stroke-opacity="0.5"/>
-  <circle cx="1012" cy="126" r="150" fill="#A78BFA" fill-opacity="0.16"/>
-  <circle cx="196" cy="650" r="170" fill="#22D3EE" fill-opacity="0.14"/>
+  <rect width="1200" height="760" rx="34" fill="#120A10"/>
+  <rect x="36" y="36" width="1128" height="688" rx="28" fill="url(#bg)" stroke="url(#stroke)" stroke-opacity="0.55"/>
+  <circle cx="1018" cy="124" r="150" fill="#EF4444" fill-opacity="0.18"/>
+  <circle cx="194" cy="648" r="176" fill="#F59E0B" fill-opacity="0.14"/>
 
-  <text x="78" y="104" fill="#C7D2FE" font-family="Arial, sans-serif" font-size="22" font-weight="700">Fraud Monitoring Production System</text>
-  <text x="78" y="152" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="48" font-weight="700">Risk scoring, drift checks, and executive reporting</text>
-  <text x="78" y="190" fill="#94A3B8" font-family="Arial, sans-serif" font-size="22">Concept preview for a production-style ML fraud monitoring stack</text>
+  <text x="78" y="104" fill="#FBCFE8" font-family="Arial, sans-serif" font-size="22" font-weight="700">Fraud Monitoring Production System</text>
+  <text x="78" y="152" fill="#FFF7ED" font-family="Arial, sans-serif" font-size="48" font-weight="700">Live alerts, anomaly signals, and loss monitoring</text>
+  <text x="78" y="190" fill="#FDBA74" font-family="Arial, sans-serif" font-size="22">Risk-focused concept preview with alert-driven monitoring visuals</text>
 
-  <rect x="78" y="236" width="320" height="170" rx="22" fill="#0B1220" fill-opacity="0.48" stroke="#334155"/>
-  <text x="104" y="276" fill="#E2E8F0" font-family="Arial, sans-serif" font-size="22" font-weight="700">Live scoring API</text>
-  <text x="104" y="324" fill="#22D3EE" font-family="Arial, sans-serif" font-size="44" font-weight="700">0.87</text>
-  <text x="104" y="352" fill="#94A3B8" font-family="Arial, sans-serif" font-size="18">fraud probability</text>
-  <text x="104" y="388" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="28" font-weight="700">$4,250</text>
-  <text x="104" y="414" fill="#94A3B8" font-family="Arial, sans-serif" font-size="18">expected financial loss</text>
+  <rect x="78" y="236" width="332" height="176" rx="22" fill="#160C12" fill-opacity="0.56" stroke="#7F1D1D"/>
+  <text x="104" y="276" fill="#FFE4E6" font-family="Arial, sans-serif" font-size="22" font-weight="700">Fraud alert queue</text>
+  <rect x="104" y="306" width="280" height="26" rx="13" fill="#3F0D16"/>
+  <rect x="104" y="306" width="228" height="26" rx="13" fill="url(#danger)"/>
+  <rect x="104" y="346" width="280" height="26" rx="13" fill="#3F0D16"/>
+  <rect x="104" y="346" width="188" height="26" rx="13" fill="url(#warn)"/>
+  <text x="104" y="396" fill="#FFE4E6" font-family="Arial, sans-serif" font-size="38" font-weight="700">27 active</text>
+  <text x="104" y="424" fill="#FDBA74" font-family="Arial, sans-serif" font-size="18">high-risk cases in current monitoring window</text>
 
-  <rect x="426" y="236" width="320" height="170" rx="22" fill="#0B1220" fill-opacity="0.48" stroke="#334155"/>
-  <text x="452" y="276" fill="#E2E8F0" font-family="Arial, sans-serif" font-size="22" font-weight="700">Monitoring status</text>
-  <rect x="452" y="308" width="242" height="16" rx="8" fill="#1E293B"/>
-  <rect x="452" y="308" width="206" height="16" rx="8" fill="url(#barA)"/>
-  <rect x="452" y="342" width="242" height="16" rx="8" fill="#1E293B"/>
-  <rect x="452" y="342" width="182" height="16" rx="8" fill="url(#barB)"/>
-  <rect x="452" y="376" width="242" height="16" rx="8" fill="#1E293B"/>
-  <rect x="452" y="376" width="154" height="16" rx="8" fill="#60A5FA"/>
-  <text x="704" y="321" fill="#CBD5E1" font-family="Arial, sans-serif" font-size="16">API health</text>
-  <text x="704" y="355" fill="#CBD5E1" font-family="Arial, sans-serif" font-size="16">Drift watch</text>
-  <text x="704" y="389" fill="#CBD5E1" font-family="Arial, sans-serif" font-size="16">Alert coverage</text>
+  <rect x="438" y="236" width="314" height="176" rx="22" fill="#160C12" fill-opacity="0.56" stroke="#7C2D12"/>
+  <text x="464" y="276" fill="#FFF7ED" font-family="Arial, sans-serif" font-size="22" font-weight="700">Financial impact</text>
+  <text x="464" y="334" fill="#FB7185" font-family="Arial, sans-serif" font-size="50" font-weight="700">$84.2K</text>
+  <text x="464" y="364" fill="#FDBA74" font-family="Arial, sans-serif" font-size="18">expected loss exposure</text>
+  <text x="464" y="404" fill="#FFF7ED" font-family="Arial, sans-serif" font-size="28" font-weight="700">0.91 avg score</text>
+  <text x="464" y="432" fill="#FDBA74" font-family="Arial, sans-serif" font-size="18">for flagged transactions</text>
 
-  <rect x="774" y="236" width="316" height="170" rx="22" fill="#0B1220" fill-opacity="0.48" stroke="#334155"/>
-  <text x="800" y="276" fill="#E2E8F0" font-family="Arial, sans-serif" font-size="22" font-weight="700">System stack</text>
-  <text x="800" y="320" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="20">Python + Scikit-learn</text>
-  <text x="800" y="354" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="20">FastAPI scoring service</text>
-  <text x="800" y="388" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="20">PostgreSQL + Power BI</text>
+  <rect x="780" y="236" width="310" height="176" rx="22" fill="#160C12" fill-opacity="0.56" stroke="#9A3412"/>
+  <text x="806" y="276" fill="#FFF7ED" font-family="Arial, sans-serif" font-size="22" font-weight="700">Monitoring stack</text>
+  <text x="806" y="322" fill="#FFE4E6" font-family="Arial, sans-serif" font-size="20">FastAPI scoring service</text>
+  <text x="806" y="356" fill="#FFE4E6" font-family="Arial, sans-serif" font-size="20">Drift checks and alert logic</text>
+  <text x="806" y="390" fill="#FFE4E6" font-family="Arial, sans-serif" font-size="20">Executive dashboard reporting</text>
 
-  <rect x="78" y="446" width="1012" height="214" rx="24" fill="#0B1220" fill-opacity="0.42" stroke="#334155"/>
-  <text x="104" y="486" fill="#E2E8F0" font-family="Arial, sans-serif" font-size="22" font-weight="700">Risk trend view</text>
-  <polyline points="116,612 220,580 324,588 428,526 532,506 636,520 740,470 844,440 948,394 1034,370" stroke="#22D3EE" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-  <polyline points="116,628 220,620 324,604 428,592 532,564 636,556 740,530 844,516 948,492 1034,474" stroke="#FB7185" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-  <text x="108" y="640" fill="#94A3B8" font-family="Arial, sans-serif" font-size="18">Fraud probability trend</text>
-  <text x="372" y="640" fill="#94A3B8" font-family="Arial, sans-serif" font-size="18">Expected loss trend</text>
+  <rect x="78" y="446" width="1012" height="214" rx="24" fill="#160C12" fill-opacity="0.48" stroke="#7C2D12"/>
+  <text x="104" y="486" fill="#FFF7ED" font-family="Arial, sans-serif" font-size="22" font-weight="700">Alert intensity over time</text>
+  <polyline points="116,612 206,578 296,590 386,540 476,496 566,528 656,482 746,442 836,470 926,404 1018,358" stroke="#FB7185" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="116,628 206,620 296,604 386,596 476,560 566,552 656,528 746,520 836,488 926,474 1018,438" stroke="#F59E0B" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="108" y="640" fill="#FDBA74" font-family="Arial, sans-serif" font-size="18">Fraud alert score trend</text>
+  <text x="356" y="640" fill="#FDBA74" font-family="Arial, sans-serif" font-size="18">Expected loss trend</text>
 </svg>
