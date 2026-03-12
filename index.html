@@ -72,8 +72,8 @@
     .card:hover{transform:translateY(-2px);box-shadow:0 18px 44px rgba(2,6,23,0.12);border-color:rgba(15,23,42,0.14)}
     .card h2{margin:0 0 10px 0;font-size:18px;min-height:44px}
     .desc{margin:0 0 14px 0;color:var(--muted);line-height:1.6;min-height:78px}.projectSummary{margin:0 0 14px 0;color:var(--muted);line-height:1.65;min-height:88px}
-    .tagRow{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 14px 0}
-    .tag{display:inline-flex;padding:7px 10px;border-radius:999px;border:1px solid rgba(15,23,42,0.10);background:#ffffff;color:#1f2937;font-size:12px;font-weight:900}
+    .tagRow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:12px 0 14px 0}
+    .tag{display:inline-flex;align-items:center;justify-content:center;min-height:34px;padding:6px 8px;border-radius:999px;border:1px solid rgba(15,23,42,0.10);background:#ffffff;color:#1f2937;font-size:10px;line-height:1.15;font-weight:800;text-align:center}
     .tagBlue{background:#eff6ff;border-color:#dbeafe}.tagPurple{background:#f5f3ff;border-color:#e9d5ff}.tagGreen{background:#ecfdf5;border-color:#bbf7d0}.tagAmber{background:#fffbeb;border-color:#fde68a}
     .btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:auto}
     .list{margin:0;padding:0;list-style:none}
@@ -83,11 +83,11 @@
     .skillTitle{margin:0 0 6px 0;font-weight:900;font-size:13px}.skillText{margin:0;color:var(--muted);font-size:13px;line-height:1.45}
     .footer{margin-top:18px;padding:18px;text-align:center;color:var(--muted);font-size:13px;background:radial-gradient(700px 220px at 12% 0%, rgba(245,158,11,0.12), transparent 65%),linear-gradient(180deg, var(--sFooter1), var(--sFooter2));border:1px solid rgba(15,23,42,0.08);border-radius:var(--radius);box-shadow:var(--shadow2)}
     .demoShot{display:block;width:100%;margin:12px 0;border-radius:14px;border:1px solid rgba(15,23,42,0.10);background:linear-gradient(180deg, #ffffff, #f8fafc);box-shadow:0 10px 22px rgba(2,6,23,0.08);overflow:hidden;text-decoration:none;color:inherit;transform:translateY(0);transition:transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease}
-    .demoShot img{width:100%;height:190px;object-fit:cover;object-position:center top;display:block;transition:transform 0.25s ease}.demoShotTight img{transform:scale(1.08);transform-origin:center top}.demoShotTight:hover img{transform:scale(1.11)}
+    .demoShot img{width:100%;height:190px;object-fit:cover;object-position:center center;display:block;transition:transform 0.25s ease}.demoShotTight img{transform:scale(1.16);transform-origin:center center}.demoShotTight:hover img{transform:scale(1.19)}
     .demoShot:hover{transform:translateY(-1px);border-color:rgba(15,23,42,0.16);box-shadow:0 14px 30px rgba(2,6,23,0.12)}
     .demoShot:hover img{transform:scale(1.03)}
-    .demoCap{margin:0;padding:10px 12px;color:var(--muted);font-size:12.5px;line-height:1.45;border-top:1px solid rgba(15,23,42,0.08);background:rgba(255,255,255,0.86);min-height:56px;display:flex;align-items:center}.gridMl .tagRow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:12px 0 14px 0}.gridMl .tag{justify-content:center;white-space:nowrap;font-size:11px;padding:7px 8px}
-    @media (max-width:980px){.topRow,.gridMl,.gridWeb,.grid2,.split,.heroMeta{grid-template-columns:1fr}.wrap{padding:18px}h1{font-size:30px}.hero{padding:20px}.contactCard{max-width:none}.badgeRow{gap:6px}.btns{gap:8px}}
+    .demoCap{margin:0;padding:10px 12px;color:var(--muted);font-size:12.5px;line-height:1.45;border-top:1px solid rgba(15,23,42,0.08);background:rgba(255,255,255,0.86);min-height:56px;display:flex;align-items:center}.gridMl .tag,.gridWeb .tag{white-space:nowrap}
+    @media (max-width:980px){.topRow,.gridMl,.gridWeb,.grid2,.split,.heroMeta{grid-template-columns:1fr}.wrap{padding:18px}h1{font-size:30px}.hero{padding:20px}.contactCard{max-width:none}.badgeRow{gap:6px}.btns{gap:8px}.gridMl .tagRow,.gridWeb .tagRow{grid-template-columns:repeat(2,minmax(0,1fr))}.gridMl .tag,.gridWeb .tag{white-space:normal}}
   </style>
 </head>
 <body>
@@ -315,6 +315,7 @@
   </script>
 </body>
 </html>
+
 
 
 
