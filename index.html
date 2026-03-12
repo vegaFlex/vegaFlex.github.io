@@ -1,716 +1,299 @@
 <!doctype html>
-<html lang="bg">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Veselin Lilov Portfolio</title>
-  <meta name="description" content="Създавам уеб сайтове и уеб системи. Онлайн магазин, резервации, поръчки, админ панел и плащания.">
-
+  <title>Veselin Lilov | Data Analyst, ML Builder, Python Engineer</title>
+  <meta name="description" content="Portfolio of Veselin Lilov: data analytics, machine learning systems, Python engineering, dashboards, web applications, and end-to-end business platforms.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --page1:#f6f8ff;
-      --page2:#f2f6ff;
-
-      --text:#0f172a;
-      --muted:#475569;
-
-      --card:#ffffff;
-      --line:#e6eaf3;
-      --line2:#dde3f2;
-
-      --accent:#2563eb;
-      --accent2:#7c3aed;
-
-      --ok:#16a34a;
-      --warn:#f59e0b;
-      --info:#0ea5e9;
-
-      --shadow1: 0 22px 70px rgba(2,6,23,0.12);
-      --shadow2: 0 12px 32px rgba(2,6,23,0.10);
-
-      --radius:18px;
-
-      --sAbout1:#eef2ff;
-      --sAbout2:#ffffff;
-
-      --sProjects1:#f5f3ff;
-      --sProjects2:#ffffff;
-
-      --sWork1:#ecfdf5;
-      --sWork2:#ffffff;
-
-      --sTech1:#f1f5f9;
-      --sTech2:#ffffff;
-
-      --sFooter1:#fffbeb;
-      --sFooter2:#ffffff;
-    }
-
-    *{box-sizing:border-box}
-
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif;
-      color:var(--text);
-      background:
-        radial-gradient(900px 420px at 10% 0%, rgba(37,99,235,0.10), transparent 55%),
-        radial-gradient(900px 420px at 90% 0%, rgba(124,58,237,0.10), transparent 55%),
-        linear-gradient(180deg, var(--page1), var(--page2));
-    }
-
-    a{color:inherit}
-
-    .wrap{
-      max-width:1120px;
-      margin:0 auto;
-      padding:28px;
-    }
-
-    .panel{
-      background:var(--card);
-      border:1px solid rgba(15,23,42,0.10);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow1);
-    }
-
-    .hero{
-      padding:28px;
-      position:relative;
-      overflow:hidden;
-      background:
-        radial-gradient(900px 280px at 18% 0%, rgba(37,99,235,0.18), transparent 62%),
-        radial-gradient(900px 280px at 82% 0%, rgba(124,58,237,0.16), transparent 62%),
-        linear-gradient(180deg, #ffffff, #fbfcff);
-    }
-
-    .hero::after{
-      content:"";
-      position:absolute;
-      left:0;
-      top:0;
-      right:0;
-      height:6px;
-      background:linear-gradient(90deg, var(--accent), var(--accent2));
-      pointer-events:none;
-    }
-
-    .hero::before{
-      content:"";
-      position:absolute;
-      inset:-2px;
-      background:
-        radial-gradient(520px 260px at 12% 30%, rgba(37,99,235,0.12), transparent 62%),
-        radial-gradient(520px 260px at 88% 22%, rgba(124,58,237,0.10), transparent 62%),
-        radial-gradient(720px 320px at 52% 120%, rgba(14,165,233,0.08), transparent 62%);
-      pointer-events:none;
-    }
-
-    .hero > *{position:relative}
-
-    .topRow{
-      display:flex;
-      gap:18px;
-      flex-wrap:wrap;
-      align-items:flex-start;
-      justify-content:space-between;
-    }
-
-    .idBlock{min-width:280px}
-
-    h1{
-      margin:0 0 8px 0;
-      font-size:34px;
-      letter-spacing:0.2px;
-    }
-
-    .sub{
-      margin:0;
-      color:var(--muted);
-      font-size:14px;
-      line-height:1.65;
-      max-width:720px;
-    }
-
-    .ctaRow{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      align-items:center;
-      margin-top:14px;
-    }
-
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:8px;
-      padding:11px 14px;
-      border-radius:14px;
-      border:1px solid rgba(15,23,42,0.16);
-      text-decoration:none;
-      font-weight:900;
-      font-size:14px;
-      background:linear-gradient(180deg, #ffffff, #f8fafc);
-      box-shadow:0 10px 22px rgba(2,6,23,0.10);
-      transition:transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease, background 0.12s ease, color 0.12s ease;
-      outline:none;
-      cursor:pointer;
-      user-select:none;
-    }
-
-    .btn:hover{
-      transform:translateY(-1px);
-      border-color:rgba(15,23,42,0.22);
-      box-shadow:0 14px 30px rgba(2,6,23,0.14);
-      background:linear-gradient(180deg, #ffffff, #f1f5ff);
-    }
-
-    .btn:active{
-      transform:translateY(0px);
-      box-shadow:0 9px 18px rgba(2,6,23,0.12);
-    }
-
-    .btn:focus-visible{
-      box-shadow: 0 0 0 4px rgba(37,99,235,0.16), 0 14px 30px rgba(2,6,23,0.14);
-      border-color:rgba(37,99,235,0.40);
-    }
-
-    .btnPrimary{
-      color:var(--text);
-      border-color:rgba(37,99,235,0.28);
-      background:linear-gradient(180deg, #ffffff, #eef2ff);
-      box-shadow:0 10px 22px rgba(37,99,235,0.10);
-    }
-
-    .btnPrimary:hover{
-      border-color:rgba(37,99,235,0.36);
-      background:linear-gradient(180deg, #ffffff, #e0e7ff);
-      box-shadow:0 14px 30px rgba(37,99,235,0.14);
-    }
-
-    .btnSecondary{
-      color:var(--text);
-      border-color:rgba(15,23,42,0.16);
-      background:linear-gradient(180deg, #ffffff, #f8fafc);
-      box-shadow:0 10px 22px rgba(2,6,23,0.10);
-    }
-
-    .btnSecondary:hover{
-      border-color:rgba(15,23,42,0.22);
-      background:linear-gradient(180deg, #ffffff, #eef2ff);
-      box-shadow:0 14px 30px rgba(2,6,23,0.14);
-    }
-
-    .btnPurple{
-      color:var(--text);
-      border-color:rgba(124,58,237,0.22);
-      background:linear-gradient(180deg, #ffffff, #f3e8ff);
-      box-shadow:0 10px 22px rgba(124,58,237,0.08);
-    }
-
-    .btnPurple:hover{
-      border-color:rgba(124,58,237,0.30);
-      background:linear-gradient(180deg, #ffffff, #ede9fe);
-      box-shadow:0 14px 30px rgba(124,58,237,0.12);
-    }
-
-    .btn::after{
-      content:"";
-      width:9px;
-      height:9px;
-      border-right:2px solid currentColor;
-      border-bottom:2px solid currentColor;
-      transform:rotate(-45deg);
-      opacity:0.45;
-      margin-left:2px;
-    }
-
-    .badgeRow{
-      display:flex;
-      gap:8px;
-      flex-wrap:wrap;
-      margin-top:14px;
-    }
-
-    .badge{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding:8px 10px;
-      border-radius:999px;
-      border:1px solid rgba(15,23,42,0.10);
-      background:rgba(255,255,255,0.76);
-      color:var(--muted);
-      font-size:13px;
-      font-weight:900;
-      backdrop-filter: blur(10px);
-    }
-
-    .dot{width:10px;height:10px;border-radius:50%}
-    .dotOk{background:var(--ok)}
-    .dotInfo{background:var(--info)}
-    .dotWarn{background:var(--warn)}
-
-    .section{margin-top:18px}
-
-    .sectionTitle{
-      margin:0 0 10px 0;
-      font-size:16px;
-      letter-spacing:0.2px;
-    }
-
-    .sectionBox{
-      position:relative;
-      border-radius:var(--radius);
-      border:1px solid rgba(15,23,42,0.08);
-      box-shadow:var(--shadow2);
-      overflow:hidden;
-      padding:18px;
-    }
-
-    .sectionBox::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:
-        radial-gradient(900px 230px at 10% 0%, rgba(255,255,255,0.70), transparent 60%),
-        radial-gradient(900px 230px at 90% 0%, rgba(255,255,255,0.58), transparent 60%);
-      pointer-events:none;
-    }
-
-    .sectionBox > *{position:relative}
-
-    .sectionBox::after{
-      content:"";
-      position:absolute;
-      left:0;
-      top:0;
-      right:0;
-      height:4px;
-      background:linear-gradient(90deg, var(--accent), var(--accent2));
-      opacity:0.85;
-      pointer-events:none;
-    }
-
-    .aboutBg{
-      background:
-        radial-gradient(700px 220px at 12% 0%, rgba(37,99,235,0.10), transparent 65%),
-        linear-gradient(180deg, var(--sAbout1), var(--sAbout2));
-    }
-
-    .projectsBg{
-      background:
-        radial-gradient(700px 220px at 12% 0%, rgba(124,58,237,0.10), transparent 65%),
-        linear-gradient(180deg, var(--sProjects1), var(--sProjects2));
-    }
-
-    .workBg{
-      background:
-        radial-gradient(700px 220px at 12% 0%, rgba(22,163,74,0.10), transparent 65%),
-        linear-gradient(180deg, var(--sWork1), var(--sWork2));
-    }
-
-    .techBg{
-      background:
-        radial-gradient(700px 220px at 12% 0%, rgba(14,165,233,0.10), transparent 65%),
-        linear-gradient(180deg, var(--sTech1), var(--sTech2));
-    }
-
-    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-
-    .card{
-      background:rgba(255,255,255,0.92);
-      border:1px solid rgba(15,23,42,0.10);
-      border-radius:var(--radius);
-      padding:18px;
-      box-shadow:0 12px 30px rgba(2,6,23,0.09);
-      backdrop-filter: blur(10px);
-      transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease;
-    }
-
-    .card:hover{
-      transform:translateY(-2px);
-      box-shadow:0 18px 44px rgba(2,6,23,0.12);
-      border-color:rgba(15,23,42,0.14);
-    }
-
-    .card h2{margin:0 0 10px 0;font-size:18px}
-    .desc{margin:0 0 14px 0;color:var(--muted);line-height:1.6}
-
-    .tagRow{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 14px 0}
-
-    .tag{
-      display:inline-flex;
-      padding:7px 10px;
-      border-radius:999px;
-      border:1px solid rgba(15,23,42,0.10);
-      background:#ffffff;
-      color:#1f2937;
-      font-size:12px;
-      font-weight:900;
-    }
-
-    .tagBlue{background:#eff6ff;border-color:#dbeafe}
-    .tagPurple{background:#f5f3ff;border-color:#e9d5ff}
-    .tagGreen{background:#ecfdf5;border-color:#bbf7d0}
-    .tagAmber{background:#fffbeb;border-color:#fde68a}
-
-    .btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
-
-    .list{margin:0;padding:0;list-style:none}
-
-    .li{
-      display:flex;
-      gap:10px;
-      padding:10px 0;
-      border-top:1px solid rgba(15,23,42,0.08);
-      color:var(--muted);
-      line-height:1.55;
-    }
-
-    .li:first-child{border-top:none}
-    .li strong{color:var(--text)}
-
-    .tick{
-      width:20px;
-      height:20px;
-      border-radius:7px;
-      background:#eff6ff;
-      border:1px solid #dbeafe;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      color:var(--accent);
-      font-weight:900;
-      flex:0 0 auto;
-      margin-top:1px;
-    }
-
-    .split{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-
-    .skill{
-      border:1px solid rgba(15,23,42,0.10);
-      background:rgba(255,255,255,0.92);
-      border-radius:16px;
-      padding:12px;
-      box-shadow:0 10px 22px rgba(2,6,23,0.06);
-    }
-
-    .skillTitle{margin:0 0 6px 0;font-weight:900;font-size:13px}
-    .skillText{margin:0;color:var(--muted);font-size:13px;line-height:1.45}
-
-    .footer{
-      margin-top:18px;
-      padding:18px;
-      text-align:center;
-      color:var(--muted);
-      font-size:13px;
-      background:
-        radial-gradient(700px 220px at 12% 0%, rgba(245,158,11,0.12), transparent 65%),
-        linear-gradient(180deg, var(--sFooter1), var(--sFooter2));
-      border:1px solid rgba(15,23,42,0.08);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow2);
-    }
-
-    /* ------------------ */
-    /* DEMO PREVIEW СНИМКИ */
-.demoShot{
-  display:block;
-  width:100%;
-  margin:12px 0;
-  border-radius:14px;
-  border:1px solid rgba(15,23,42,0.10);
-  background:linear-gradient(180deg, #ffffff, #f8fafc);
-  box-shadow:0 10px 22px rgba(2,6,23,0.08);
-  overflow:hidden;
-  text-decoration:none;
-  color:inherit;
-  transform:translateY(0);
-  transition:transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease;
-}
-
-.demoShot img{
-  width:100%;
-  height:190px;
-  object-fit:cover;
-  display:block;
-  transition:transform 0.25s ease;
-}
-
-.demoShot:hover{
-  transform:translateY(-1px);
-  border-color:rgba(15,23,42,0.16);
-  box-shadow:0 14px 30px rgba(2,6,23,0.12);
-}
-
-.demoShot:hover img{
-  transform:scale(1.03);
-}
-
-.demoShot:focus-visible{
-  outline:none;
-  box-shadow: 0 0 0 4px rgba(37,99,235,0.16), 0 14px 30px rgba(2,6,23,0.12);
-  border-color:rgba(37,99,235,0.32);
-}
-
-.demoCap{
-  margin:0;
-  padding:10px 12px;
-  color:var(--muted);
-  font-size:12.5px;
-  line-height:1.45;
-  border-top:1px solid rgba(15,23,42,0.08);
-  background:rgba(255,255,255,0.86);
-}
-/* -- */
-.grid3 .card{
-  display:flex;
-  flex-direction:column;
-}
-
-.grid3 .btns{
-  margin-top:auto;
-}
-
-/* -- */
-    /* --------------- */
-
-    @media (max-width:980px){
-      .grid3{grid-template-columns:1fr}
-      .grid2{grid-template-columns:1fr}
-      .split{grid-template-columns:1fr}
-      .wrap{padding:18px}
-      h1{font-size:28px}
-      .hero{padding:20px}
-    }
+    :root{--bg:#08111f;--panel:rgba(11,21,40,.78);--text:#e8eefc;--muted:#9eb0d1;--line:rgba(173,190,255,.16);--cyan:#63e6ff;--blue:#78a6ff;--teal:#59f0c2;--shadow:0 30px 80px rgba(0,0,0,.35);--radius-xl:28px;--max:1180px}
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;font-family:"Manrope",sans-serif;color:var(--text);background:radial-gradient(circle at top left,rgba(99,230,255,.14),transparent 28%),radial-gradient(circle at 85% 8%,rgba(120,166,255,.14),transparent 24%),radial-gradient(circle at 50% 100%,rgba(89,240,194,.12),transparent 30%),linear-gradient(180deg,#07101d 0%,#08111f 35%,#0b1527 100%);min-height:100vh}
+    a{color:inherit;text-decoration:none} img{max-width:100%;display:block}
+    .shell{width:min(calc(100% - 32px),var(--max));margin:24px auto 48px}
+    .glass{background:var(--panel);border:1px solid var(--line);box-shadow:var(--shadow);backdrop-filter:blur(18px)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 20px;border-radius:999px;position:sticky;top:16px;z-index:10;margin-bottom:24px}
+    .brand{display:flex;align-items:center;gap:12px;font-family:"Space Grotesk",sans-serif;font-weight:700;letter-spacing:.04em;text-transform:uppercase;font-size:13px}
+    .brandMark{width:38px;height:38px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(99,230,255,.22),rgba(120,166,255,.22));border:1px solid rgba(255,255,255,.12);color:var(--cyan);box-shadow:inset 0 1px 0 rgba(255,255,255,.08)}
+    .navLinks{display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-end}
+    .navLinks a{padding:10px 14px;color:var(--muted);border-radius:999px;font-size:14px;transition:background .18s ease,color .18s ease,transform .18s ease}
+    .navLinks a:hover{background:rgba(255,255,255,.06);color:var(--text);transform:translateY(-1px)}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:22px;align-items:stretch;margin-bottom:24px}
+    .heroPanel,.statCard,.noteCard,.section,.projectCard,.stackCard,.footerCard{border-radius:var(--radius-xl);padding:24px}
+    .heroPanel{padding:34px;position:relative;overflow:hidden}
+    .heroPanel::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 18% 18%,rgba(99,230,255,.18),transparent 24%),radial-gradient(circle at 85% 25%,rgba(120,166,255,.18),transparent 26%),radial-gradient(circle at 50% 100%,rgba(89,240,194,.14),transparent 30%);pointer-events:none}
+    .heroPanel>*{position:relative}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);color:var(--cyan);font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+    h1,h2,h3{margin:0;font-family:"Space Grotesk",sans-serif}
+    h1{font-size:clamp(2.8rem,5vw,5.1rem);line-height:.95;margin-top:18px;max-width:9ch}
+    .heroLead{margin:22px 0 0;max-width:62ch;color:var(--muted);font-size:18px;line-height:1.75}
+    .accent{background:linear-gradient(90deg,var(--cyan),var(--teal));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .ctaRow{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 18px;border-radius:16px;border:1px solid transparent;font-weight:800;font-size:14px;transition:transform .16s ease,box-shadow .16s ease,border-color .16s ease,background .16s ease}
+    .btn:hover{transform:translateY(-2px)} .btnPrimary{background:linear-gradient(135deg,var(--cyan),var(--teal));color:#04131d;box-shadow:0 18px 38px rgba(89,240,194,.18)} .btnSecondary{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.10);color:var(--text)} .btnGhost{background:transparent;border-color:rgba(255,255,255,.14);color:var(--muted)}
+    .badgeGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:28px}
+    .badge{padding:14px;border-radius:18px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08)} .badge small{display:block;color:var(--muted);margin-bottom:6px;font-size:12px;text-transform:uppercase;letter-spacing:.08em} .badge strong{display:block;font-size:16px;line-height:1.4}
+    .statCard{min-height:100%;display:flex;flex-direction:column;justify-content:space-between;background:linear-gradient(180deg,rgba(17,30,54,.92),rgba(10,18,33,.92)),rgba(255,255,255,.03)}
+    .kicker{color:var(--muted);text-transform:uppercase;letter-spacing:.08em;font-size:12px;font-weight:800} .statValue{font-family:"Space Grotesk",sans-serif;font-size:52px;line-height:1;margin:12px 0}
+    .statList,.featureList,.contactList{display:grid;gap:10px} .statItem{display:flex;align-items:flex-start;gap:10px;color:var(--muted);font-size:14px;line-height:1.6}
+    .dot{width:10px;height:10px;border-radius:999px;background:linear-gradient(135deg,var(--cyan),var(--teal));margin-top:7px;flex:0 0 auto}
+    .miniGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-bottom:24px}
+    .section{margin-bottom:24px;background:linear-gradient(180deg,rgba(13,24,48,.9),rgba(9,16,30,.92))}
+    .sectionHead{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:22px} .sectionHead p{margin:8px 0 0;color:var(--muted);max-width:66ch;line-height:1.7}
+    .sectionLabel{display:block;color:var(--cyan);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
+    .projectGrid,.skillsGrid,.impactGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+    .impactGrid,.skillsGrid{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .projectCard,.stackCard{display:flex;flex-direction:column;gap:16px;background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.025));border:1px solid rgba(255,255,255,.08);min-height:100%}
+    .projectTop{display:flex;justify-content:space-between;gap:16px;align-items:flex-start}
+    .pill{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);color:var(--muted);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}
+    .projectCard p,.stackCard p{margin:0;color:var(--muted);line-height:1.7}
+    .metricStrip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+    .metric{padding:12px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06)} .metric strong{display:block;font-family:"Space Grotesk",sans-serif;font-size:20px;margin-bottom:4px} .metric span{color:var(--muted);font-size:12px;line-height:1.45} .analyticsViz{display:grid;grid-template-columns:1.05fr .95fr;gap:12px;margin-top:4px} .vizCard{padding:14px;border-radius:18px;background:linear-gradient(180deg,rgba(99,230,255,.08),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.08);min-height:148px} .vizTitle{display:block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--cyan);margin-bottom:12px;font-weight:800} .vizStack{display:grid;gap:10px} .vizNode{padding:10px 12px;border-radius:14px;background:rgba(8,17,31,.55);border:1px solid rgba(255,255,255,.08);font-size:13px;color:var(--text);font-weight:700} .vizNode small{display:block;margin-top:4px;color:var(--muted);font-weight:600;font-size:11px} .vizBars{display:grid;gap:10px;margin-top:6px} .vizBar{display:grid;gap:6px} .vizBar span{font-size:12px;color:var(--muted);font-weight:700} .vizBar i{display:block;height:10px;border-radius:999px;background:linear-gradient(90deg,rgba(255,255,255,.08),rgba(255,255,255,.03));overflow:hidden} .vizBar b{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,var(--cyan),var(--teal))} .vizStats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:12px} .vizStat{padding:12px;border-radius:14px;background:rgba(8,17,31,.55);border:1px solid rgba(255,255,255,.08)} .vizStat strong{display:block;font-family:"Space Grotesk",sans-serif;font-size:20px} .vizStat span{display:block;color:var(--muted);font-size:11px;line-height:1.5;margin-top:3px}
+    .featureList{margin:0;padding:0;list-style:none} .featureList li{display:flex;gap:10px;align-items:flex-start;color:var(--muted);line-height:1.6;padding-top:10px;border-top:1px solid rgba(255,255,255,.06)} .featureList li:first-child{padding-top:0;border-top:none} .featureList strong{color:var(--text)}
+    .plus{width:22px;height:22px;border-radius:8px;display:grid;place-items:center;background:rgba(99,230,255,.12);color:var(--cyan);font-weight:800;flex:0 0 auto;margin-top:1px}
+    .projectLinks{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto}
+    .linkBtn{display:inline-flex;align-items:center;gap:8px;padding:11px 14px;border-radius:14px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);color:var(--text);font-weight:700;font-size:14px}
+    .linkBtn.primary{background:rgba(99,230,255,.12);border-color:rgba(99,230,255,.20);color:var(--cyan)}
+    .previewCard{overflow:hidden;padding:0} .previewCard img{width:100%;height:230px;object-fit:cover;border-bottom:1px solid rgba(255,255,255,.08)} .previewBody{padding:20px 22px 22px;display:flex;flex-direction:column;gap:14px}
+    .stackCard h3{font-size:18px} .tagCloud{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px} .tag{padding:10px 12px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);color:var(--text);font-size:13px;font-weight:700}
+    .footerCard{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;background:radial-gradient(circle at 20% 0%,rgba(99,230,255,.14),transparent 28%),linear-gradient(180deg,rgba(13,24,48,.92),rgba(8,17,31,.95))}
+    .footerText{color:var(--muted);line-height:1.75;margin-top:12px;max-width:60ch}
+    .contactBox{border-radius:22px;padding:20px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08)}
+    .contactList a,.contactList span{display:block;padding:12px 14px;border-radius:14px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);color:var(--text)}
+    .fadeUp{opacity:0;transform:translateY(18px);animation:fadeUp .7s ease forwards} .delay1{animation-delay:.08s} .delay2{animation-delay:.16s} .delay3{animation-delay:.24s} .delay4{animation-delay:.32s}
+    @keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
+    @media (max-width:1080px){.hero,.footerCard,.projectGrid,.skillsGrid,.impactGrid,.miniGrid,.analyticsViz{grid-template-columns:1fr}.badgeGrid{grid-template-columns:1fr}.metricStrip{grid-template-columns:1fr 1fr}}
+    @media (max-width:760px){.shell{width:min(calc(100% - 20px),var(--max));margin:12px auto 28px}.nav{border-radius:26px;padding:14px}.navLinks{justify-content:flex-start}.heroPanel,.statCard,.noteCard,.section,.projectCard,.stackCard,.footerCard{padding:20px}h1{font-size:clamp(2.4rem,11vw,4rem)}.heroLead{font-size:16px}.metricStrip{grid-template-columns:1fr}.previewCard img{height:200px}}
   </style>
 </head>
-
 <body>
-  <div class="wrap">
+  <div class="shell">
+    <nav class="nav glass fadeUp">
+      <div class="brand"><div class="brandMark">VL</div><span>Veselin Lilov</span></div>
+      <div class="navLinks"><a href="#projects">Projects</a><a href="#web-apps">Web Apps</a><a href="#expertise">Expertise</a><a href="#contact">Contact</a></div>
+    </nav>
 
-    <div class="panel hero">
-      <div class="topRow">
-        <div class="idBlock">
-          <h1>Veselin Lilov</h1>
-          <p class="sub">
-            Изграждам уеб сайтове и уеб системи за всякакъв тип бизнес.<br>
-            От фирмен сайт и лендинг страница до онлайн магазин и вътрешни системи за работа.<br>
-            Каталози, поръчки, резервации, плащания, потребителски профили и админ панели.<br>
-            Получаваш напълно готово решение за реална работа с клиенти и продажби.
-           </p>
-
-          <div class="ctaRow">
-            <a class="btn btnPrimary" href="https://eventhub-vegata.pythonanywhere.com/bg/" target="_blank" rel="noopener">Виж демо EventHub</a>
-            <a class="btn btnSecondary" href="https://vegata.pythonanywhere.com/" target="_blank" rel="noopener">Виж демо BookZone</a>
-            <a class="btn btnPurple" href="mailto:veslin.lilov@gmail.com?subject=%D0%97%D0%B0%D0%BF%D0%B8%D1%82%D0%B2%D0%B0%D0%BD%D0%B5%20%D0%B7%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82&body=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D0%B5%D0%B9%2C%0D%0A%0D%0A%D0%98%D1%81%D0%BA%D0%B0%D0%BC%20%D1%81%D0%B0%D0%B9%D1%82%20%D0%B7%D0%B0%3A%20%0D%0A%D0%A1%D1%80%D0%BE%D0%BA%3A%20%0D%0A%D0%91%D1%8E%D0%B4%D0%B6%D0%B5%D1%82%3A%20%0D%0A%D0%A2%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%3A%20" rel="noopener">Пиши ми за сайт</a>
-          </div>
-
-          <div class="badgeRow" aria-label="Кратки акценти">
-            <span class="badge"><span class="dot dotOk"></span>Сайтове и системи</span>
-            <span class="badge"><span class="dot dotInfo"></span>Онлайн поръчки и плащания</span>
-            <span class="badge"><span class="dot dotWarn"></span>Админ панел и отчети</span>
-          </div>
+    <section class="hero">
+      <div class="heroPanel glass fadeUp delay1">
+        <span class="eyebrow">Data Analyst • ML Builder • Python Engineer</span>
+        <h1>Building <span class="accent">analytics</span>, machine learning, and web products that solve real business problems.</h1>
+        <p class="heroLead">I design end-to-end systems that connect data analysis, machine learning, backend APIs, dashboards, and production-ready web applications. My focus is not just shipping demos, but creating reliable products that help teams make decisions, automate workflows, and measure outcomes.</p>
+        <div class="ctaRow">
+          <a class="btn btnPrimary" href="#projects">Explore featured work</a>
+          <a class="btn btnSecondary" href="https://github.com/vegaFlex" target="_blank" rel="noopener">GitHub profile</a>
+          <a class="btn btnGhost" href="mailto:veslin.lilov@gmail.com?subject=Portfolio%20Inquiry">Email me</a>
         </div>
-
-        <div class="card" style="min-width:280px;max-width:360px">
-          <h2 style="margin-bottom:8px">Контакти</h2>
-          <p class="desc" style="margin-bottom:12px">
-            София, България<br>
-            Email: veslin.lilov@gmail.com
-          </p>
-          <div class="btns">
-            <a class="btn btnSecondary" href="mailto:veslin.lilov@gmail.com?subject=%D0%97%D0%B0%D0%BF%D0%B8%D1%82%D0%B2%D0%B0%D0%BD%D0%B5%20%D0%B7%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82" rel="noopener">Запитване</a>
-            <a class="btn btnSecondary" href="https://www.linkedin.com/in/veselin-lilov-0b7624344/" target="_blank" rel="noopener">LinkedIn</a>
-            <a class="btn btnSecondary" href="https://github.com/vegaFlex" target="_blank" rel="noopener">GitHub</a>
+        <div class="badgeGrid">
+          <div class="badge"><small>Core focus</small><strong>Analytics platforms, ML systems, dashboards, and Python products</strong></div>
+          <div class="badge"><small>Working style</small><strong>End-to-end ownership from data ingestion to deployment and monitoring</strong></div>
+          <div class="badge"><small>Positioning</small><strong>Strong fit for data, analytics engineering, ML, and product-minded Python roles</strong></div>
+        </div>
+      </div>
+      <div class="heroSide">
+        <div class="statCard glass fadeUp delay2">
+          <div>
+            <div class="kicker">Featured profile</div>
+            <div class="statValue">5+</div>
+            <div style="font-size:20px;font-weight:800;line-height:1.3">Portfolio projects across analytics, ML, and hosted web systems</div>
+          </div>
+          <div class="statList">
+            <div class="statItem"><span class="dot"></span><span>Debt & risk analytics platform with dashboards, valuation workspace, REST API, and reporting</span></div>
+            <div class="statItem"><span class="dot"></span><span>Fraud monitoring production system with scoring API, monitoring, and Power BI executive layer</span></div>
+            <div class="statItem"><span class="dot"></span><span>Hosted business web apps with orders, reservations, ticketing, payments, and admin workflows</span></div>
           </div>
         </div>
       </div>
+    </section>
+
+    <div class="miniGrid">
+      <section class="noteCard glass fadeUp delay2">
+        <span class="sectionLabel">About me</span>
+        <h2>Data-minded builder with strong product and engineering instincts.</h2>
+        <p class="footerText">I combine analytical thinking with practical engineering. That means clean SQL, structured data models, machine learning pipelines, backend services, and interfaces that people can actually use in real workflows.</p>
+      </section>
+      <section class="noteCard glass fadeUp delay3">
+        <span class="sectionLabel">What I care about</span>
+        <h2>Clarity, maintainability, measurable outcomes.</h2>
+        <p class="footerText">I build systems with business purpose: reliable ingestion, readable logic, useful dashboards, and workflows that stay stable under real usage instead of collapsing outside a demo scenario.</p>
+      </section>
     </div>
 
-    <div class="section">
-      <h2 class="sectionTitle">За твоя сайт</h2>
-      <div class="sectionBox aboutBg">
-        <p class="desc" style="margin:0">
-          Ако ти трябва сайт, който привлича клиенти и води до реални запитвания и поръчки, поемам всичко от началото до пускането онлайн.<br>
-          Първо уточняваме целта ти, после подреждам структурата и съдържанието, след това изграждам дизайна и нужните функции.<br>
-          Получаваш бърз сайт с мобилна версия, ясни бутони за действие и форма за контакт, готов за реална работа.<br>
-          Освен визия и мобилна версия, получаваш админ панел за управление и отчети според нуждите ти.<br>
-          Всичко е направено така, че да спестява време и да носи резултат.
-        </p>
-      </div>
-    </div>
-
-    <div class="section">
-      <h2 class="sectionTitle">Демота</h2>
-      <div class="sectionBox projectsBg">
-        <div class="grid3">
-          <div class="card">
-            <h2>BookZone</h2>
-            <p class="desc">Онлайн книжарница с каталог, търсене, количка, поръчки и отстъпки.</p>
-
-            <a class="demoShot" href="https://vegata.pythonanywhere.com/" target="_blank" rel="noopener">
-              <img src="assets/bookzone.jpg" alt="BookZone демо preview" loading="lazy" decoding="async">
-              <p class="demoCap">Преглед на началната страница на BookZone</p>
-            </a>
-
-
-            <div class="tagRow">
-              <span class="tag tagBlue">Каталог</span>
-              <span class="tag tagBlue">Търсене</span>
-              <span class="tag tagPurple">Количка</span>
-              <span class="tag tagAmber">Плащания</span>
-            </div>
-
-            <ul class="list">
-              <li class="li"><span class="tick">✓</span><span><strong>Продуктови страници</strong> с филтри и търсене</span></li>
-              <li class="li"><span class="tick">✓</span><span><strong>Количка</strong> и процес по поръчка</span></li>
-              <li class="li"><span class="tick">✓</span><span><strong>Админ панел</strong> за продукти и поръчки</span></li>
-            </ul>
-
-            <div class="btns">
-              <a class="btn btnPrimary" href="https://vegata.pythonanywhere.com/" target="_blank" rel="noopener">Виж демо</a>
-              <a class="btn btnSecondary" href="https://github.com/vegaFlex" target="_blank" rel="noopener">Код</a>
-            </div>
-          </div>
-
-          <div class="card">
-            <h2>EventHub</h2>
-            <p class="desc">Платформа за събития с билети, онлайн плащане, карта и QR валидация.</p>
-
-            <a class="demoShot" href="https://eventhub-vegata.pythonanywhere.com/bg/" target="_blank" rel="noopener">
-              <img src="assets/eventhub.jpg" alt="EventHub демо preview" loading="lazy" decoding="async">
-              <p class="demoCap">Преглед на началната страница на EventHub</p>
-            </a>
-
-
-            <div class="tagRow">
-              <span class="tag tagBlue">Резервации</span>
-              <span class="tag tagBlue">Билети</span>
-              <span class="tag tagPurple">Места</span>
-              <span class="tag tagAmber">Плащания</span>
-              <span class="tag tagGreen">QR</span>
-              <span class="tag tagGreen">Карта</span>
-            </div>
-
-            <ul class="list">
-              <li class="li"><span class="tick">✓</span><span><strong>Продажби</strong> на билети онлайн</span></li>
-              <li class="li"><span class="tick">✓</span><span><strong>Избор на места</strong> по сектор и ред</span></li>
-              <li class="li"><span class="tick">✓</span><span><strong>QR проверка</strong> на вход</span></li>
-            </ul>
-
-            <div class="btns">
-              <a class="btn btnPrimary" href="https://eventhub-vegata.pythonanywhere.com/bg/" target="_blank" rel="noopener">Виж демо</a>
-              <a class="btn btnSecondary" href="https://github.com/vegaFlex" target="_blank" rel="noopener">Код</a>
-            </div>
-          </div>
-
-          <div class="card">
-            <h2>Paradise Food Order App</h2>
-            <p class="desc">Вътрешна система за поръчки на храна с количества, лимити и админ справки.</p>
-
-            <a class="demoShot" href="https://nekrato.com/menu/" target="_blank" rel="noopener">
-              <img src="assets/paradise.jpg" alt="Paradise Food Order App демо preview" loading="lazy" decoding="async">
-              <p class="demoCap">Преглед на меню и поръчки в Paradise Food Order App</p>
-            </a>
-
-
-            <div class="tagRow">
-              <span class="tag tagBlue">Поръчки</span>
-              <span class="tag tagPurple">Лимити</span>
-              <span class="tag tagGreen">Админ</span>
-              <span class="tag tagGreen">Справки</span>
-            </div>
-
-            <ul class="list">
-              <li class="li"><span class="tick">✓</span><span><strong>Поръчки</strong> по дати и количества</span></li>
-              <li class="li"><span class="tick">✓</span><span><strong>Контрол</strong> с правила и права</span></li>
-              <li class="li"><span class="tick">✓</span><span><strong>Експорт</strong> и дневни справки</span></li>
-            </ul>
-
-            <div class="btns">
-              <a class="btn btnPrimary" href="https://nekrato.com/menu/" target="_blank" rel="noopener">Виж демо</a>
-              <a class="btn btnSecondary" href="https://github.com/vegaFlex" target="_blank" rel="noopener">Код</a>
-            </div>
-          </div>
+    <section class="section glass fadeUp delay3" id="projects">
+      <div class="sectionHead">
+        <div>
+          <span class="sectionLabel">Featured analytics and ML work</span>
+          <h2>Projects that position me as a serious analytics and product-minded engineer.</h2>
+          <p>These projects show how I approach analytics systems, machine learning workflows, risk logic, backend engineering, reporting, and business-facing tooling as one connected product.</p>
         </div>
       </div>
-    </div>
 
-    <div class="section">
-      <h2 class="sectionTitle">Услуги</h2>
-      <div class="sectionBox workBg">
-        <div class="grid2">
-          <div class="card">
-            <h2>Фирмен сайт</h2>
-            <p class="desc">Подходящ за услуги, представяне, контакти и запитвания.</p>
-            <ul class="list">
-              <li class="li"><span class="tick">✓</span><span><strong>Страници</strong> Начало, Услуги, За нас, Контакти</span></li>
-              <li class="li"><span class="tick">✓</span><span><strong>Форма</strong> за запитване и обаждане</span></li>
-              <li class="li"><span class="tick">✓</span><span><strong>Мобилна версия</strong> и бързо зареждане</span></li>
-            </ul>
+      <div class="projectGrid">
+        <article class="projectCard">
+          <div class="projectTop"><div><h3>Debt & Risk Intelligence Hub</h3><p>End-to-end debt analytics and acquisition review platform for portfolio import, risk scoring, collections monitoring, KPI reporting, and benchmark-aware valuation workflows.</p></div><span class="pill">Analytics Platform</span></div>
+          <div class="metricStrip">
+            <div class="metric"><strong>Import</strong><span>Validated portfolio ingestion and structured review flows</span></div>
+            <div class="metric"><strong>Scoring</strong><span>Risk segmentation, debtor prioritization, and package ranking</span></div>
+            <div class="metric"><strong>Reporting</strong><span>Dashboards, recommendations, PDF / Excel exports, and API access</span></div>
           </div>
+          <div class="analyticsViz"><div class="vizCard"><span class="vizTitle">System flow</span><div class="vizStack"><div class="vizNode">Portfolio import<small>validation, mapping, quality checks</small></div><div class="vizNode">Risk scoring<small>segmentation, prioritization, package ranking</small></div><div class="vizNode">Decision layer<small>dashboards, pricing, exports, API access</small></div></div></div><div class="vizCard"><span class="vizTitle">Business capability</span><div class="vizBars"><div class="vizBar"><span>Operational analytics</span><i><b style="width:92%"></b></i></div><div class="vizBar"><span>Valuation workflow</span><i><b style="width:88%"></b></i></div><div class="vizBar"><span>Reporting automation</span><i><b style="width:84%"></b></i></div></div><div class="vizStats"><div class="vizStat"><strong>API</strong><span>REST endpoints for debtors, portfolios, and KPIs</span></div><div class="vizStat"><strong>PDF/XLS</strong><span>Export-ready reporting for review and decision support</span></div></div></div></div><div class="analyticsViz"><div class="vizCard"><span class="vizTitle">ML pipeline</span><div class="vizStack"><div class="vizNode">Feature inputs<small>risk signals, behavioral indicators, transaction context</small></div><div class="vizNode">Scoring API<small>real-time fraud probability and expected loss</small></div><div class="vizNode">Monitoring loop<small>drift checks, reporting, risk mart updates</small></div></div></div><div class="vizCard"><span class="vizTitle">Production readiness</span><div class="vizBars"><div class="vizBar"><span>Prediction service</span><i><b style="width:90%"></b></i></div><div class="vizBar"><span>Monitoring coverage</span><i><b style="width:86%"></b></i></div><div class="vizBar"><span>Executive reporting</span><i><b style="width:82%"></b></i></div></div><div class="vizStats"><div class="vizStat"><strong>FastAPI</strong><span>Real-time scoring endpoint for downstream product use</span></div><div class="vizStat"><strong>Power BI</strong><span>Executive dashboard layer for business oversight</span></div></div></div></div><ul class="featureList">
+            <li><span class="plus">+</span><span><strong>Portfolio import with validation</strong> for operational data quality and repeatable analysis</span></li>
+            <li><span class="plus">+</span><span><strong>Valuation workspace</strong> with ranking, comparison desk, benchmark-aware pricing, and recommendation logic</span></li>
+            <li><span class="plus">+</span><span><strong>Role-based analytics product</strong> combining dashboards, REST API endpoints, reporting, and browser-ready documentation</span></li>
+          </ul>
+          <div class="projectLinks">
+            <a class="linkBtn primary" href="https://debt-risk-intelligence-hub.onrender.com" target="_blank" rel="noopener">Live demo</a>
+            <a class="linkBtn" href="https://github.com/vegaFlex/debt-risk-intelligence-hub" target="_blank" rel="noopener">Repository</a>
+          </div>
+        </article>
 
-          <div class="card">
-            <h2>Онлайн магазин и системи</h2>
-            <p class="desc">Подходящ за продажби, резервации, поръчки и управление.</p>
-            <ul class="list">
-              <li class="li"><span class="tick">✓</span><span><strong>Каталог</strong> с търсене и филтри</span></li>
-              <li class="li"><span class="tick">✓</span><span><strong>Количка</strong> и онлайн плащане</span></li>
-              <li class="li"><span class="tick">✓</span><span><strong>Админ панел</strong> за поръчки и справки</span></li>
-            </ul>
+        <article class="projectCard">
+          <div class="projectTop"><div><h3>Fraud Monitoring Production System</h3><p>Machine learning system designed to simulate a real fraud risk environment with scoring, expected loss estimation, model monitoring, and business-facing reporting.</p></div><span class="pill">ML / Monitoring</span></div>
+          <div class="metricStrip">
+            <div class="metric"><strong>Prediction</strong><span>Fraud probability scoring for operational use cases</span></div>
+            <div class="metric"><strong>Loss</strong><span>Expected financial loss estimation for prioritization</span></div>
+            <div class="metric"><strong>Monitoring</strong><span>Drift checks, API scoring, and risk mart reporting</span></div>
           </div>
+          <div class="analyticsViz"><div class="vizCard"><span class="vizTitle">System flow</span><div class="vizStack"><div class="vizNode">Portfolio import<small>validation, mapping, quality checks</small></div><div class="vizNode">Risk scoring<small>segmentation, prioritization, package ranking</small></div><div class="vizNode">Decision layer<small>dashboards, pricing, exports, API access</small></div></div></div><div class="vizCard"><span class="vizTitle">Business capability</span><div class="vizBars"><div class="vizBar"><span>Operational analytics</span><i><b style="width:92%"></b></i></div><div class="vizBar"><span>Valuation workflow</span><i><b style="width:88%"></b></i></div><div class="vizBar"><span>Reporting automation</span><i><b style="width:84%"></b></i></div></div><div class="vizStats"><div class="vizStat"><strong>API</strong><span>REST endpoints for debtors, portfolios, and KPIs</span></div><div class="vizStat"><strong>PDF/XLS</strong><span>Export-ready reporting for review and decision support</span></div></div></div></div><div class="analyticsViz"><div class="vizCard"><span class="vizTitle">ML pipeline</span><div class="vizStack"><div class="vizNode">Feature inputs<small>risk signals, behavioral indicators, transaction context</small></div><div class="vizNode">Scoring API<small>real-time fraud probability and expected loss</small></div><div class="vizNode">Monitoring loop<small>drift checks, reporting, risk mart updates</small></div></div></div><div class="vizCard"><span class="vizTitle">Production readiness</span><div class="vizBars"><div class="vizBar"><span>Prediction service</span><i><b style="width:90%"></b></i></div><div class="vizBar"><span>Monitoring coverage</span><i><b style="width:86%"></b></i></div><div class="vizBar"><span>Executive reporting</span><i><b style="width:82%"></b></i></div></div><div class="vizStats"><div class="vizStat"><strong>FastAPI</strong><span>Real-time scoring endpoint for downstream product use</span></div><div class="vizStat"><strong>Power BI</strong><span>Executive dashboard layer for business oversight</span></div></div></div></div><ul class="featureList">
+            <li><span class="plus">+</span><span><strong>FastAPI scoring API</strong> for real-time prediction workflows and downstream consumption</span></li>
+            <li><span class="plus">+</span><span><strong>PostgreSQL risk mart</strong> supporting analytics, model tracking, and business review</span></li>
+            <li><span class="plus">+</span><span><strong>Executive dashboard layer</strong> using Power BI plus monitoring and drift-detection logic</span></li>
+          </ul>
+          <div class="projectLinks">
+            <a class="linkBtn" href="https://github.com/vegaFlex/fraud-monitoring-prod" target="_blank" rel="noopener">Repository</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section glass fadeUp delay4" id="web-apps">
+      <div class="sectionHead">
+        <div>
+          <span class="sectionLabel">Hosted web applications</span>
+          <h2>Production-style apps with users, workflows, transactions, and admin control.</h2>
+          <p>These apps demonstrate that I can also build and ship customer-facing systems, not only analytics projects. Together, they show a strong mix of backend, UX, business logic, and deployment.</p>
         </div>
       </div>
-    </div>
 
-    <div class="section">
-      <h2 class="sectionTitle">С какво го правя</h2>
-      <div class="sectionBox techBg">
-        <div class="split">
-          <div class="skill">
-            <p class="skillTitle">Back end</p>
-            <p class="skillText">Python, Django, Django REST Framework</p>
+      <div class="projectGrid">
+        <article class="projectCard previewCard">
+          <img src="assets/eventhub.jpg" alt="EventHub preview">
+          <div class="previewBody">
+            <div class="projectTop"><div><h3>EventHub</h3><p>Event management platform with ticket sales, seat selection, payments, QR validation, and admin control.</p></div><span class="pill">Live App</span></div>
+            <div class="analyticsViz"><div class="vizCard"><span class="vizTitle">System flow</span><div class="vizStack"><div class="vizNode">Portfolio import<small>validation, mapping, quality checks</small></div><div class="vizNode">Risk scoring<small>segmentation, prioritization, package ranking</small></div><div class="vizNode">Decision layer<small>dashboards, pricing, exports, API access</small></div></div></div><div class="vizCard"><span class="vizTitle">Business capability</span><div class="vizBars"><div class="vizBar"><span>Operational analytics</span><i><b style="width:92%"></b></i></div><div class="vizBar"><span>Valuation workflow</span><i><b style="width:88%"></b></i></div><div class="vizBar"><span>Reporting automation</span><i><b style="width:84%"></b></i></div></div><div class="vizStats"><div class="vizStat"><strong>API</strong><span>REST endpoints for debtors, portfolios, and KPIs</span></div><div class="vizStat"><strong>PDF/XLS</strong><span>Export-ready reporting for review and decision support</span></div></div></div></div><div class="analyticsViz"><div class="vizCard"><span class="vizTitle">ML pipeline</span><div class="vizStack"><div class="vizNode">Feature inputs<small>risk signals, behavioral indicators, transaction context</small></div><div class="vizNode">Scoring API<small>real-time fraud probability and expected loss</small></div><div class="vizNode">Monitoring loop<small>drift checks, reporting, risk mart updates</small></div></div></div><div class="vizCard"><span class="vizTitle">Production readiness</span><div class="vizBars"><div class="vizBar"><span>Prediction service</span><i><b style="width:90%"></b></i></div><div class="vizBar"><span>Monitoring coverage</span><i><b style="width:86%"></b></i></div><div class="vizBar"><span>Executive reporting</span><i><b style="width:82%"></b></i></div></div><div class="vizStats"><div class="vizStat"><strong>FastAPI</strong><span>Real-time scoring endpoint for downstream product use</span></div><div class="vizStat"><strong>Power BI</strong><span>Executive dashboard layer for business oversight</span></div></div></div></div><ul class="featureList">
+              <li><span class="plus">+</span><span><strong>Ticket sales and reservations</strong> with user-facing booking flows</span></li>
+              <li><span class="plus">+</span><span><strong>Seat logic and QR validation</strong> for operational event usage</span></li>
+              <li><span class="plus">+</span><span><strong>Admin workflows</strong> for control, organization, and platform management</span></li>
+            </ul>
+            <div class="projectLinks">
+              <a class="linkBtn primary" href="https://eventhub-vegata.pythonanywhere.com/bg/" target="_blank" rel="noopener">Live demo</a>
+              <a class="linkBtn" href="https://github.com/vegaFlex/EventHub_README" target="_blank" rel="noopener">Source overview</a>
+            </div>
           </div>
-          <div class="skill">
-            <p class="skillTitle">Data</p>
-            <p class="skillText">PostgreSQL, SQL</p>
+        </article>
+
+        <article class="projectCard previewCard">
+          <img src="assets/bookzone.jpg" alt="BookZone preview">
+          <div class="previewBody">
+            <div class="projectTop"><div><h3>BookZone</h3><p>Online bookstore with catalog browsing, product filtering, cart flows, ordering, and management logic.</p></div><span class="pill">Live App</span></div>
+            <div class="analyticsViz"><div class="vizCard"><span class="vizTitle">System flow</span><div class="vizStack"><div class="vizNode">Portfolio import<small>validation, mapping, quality checks</small></div><div class="vizNode">Risk scoring<small>segmentation, prioritization, package ranking</small></div><div class="vizNode">Decision layer<small>dashboards, pricing, exports, API access</small></div></div></div><div class="vizCard"><span class="vizTitle">Business capability</span><div class="vizBars"><div class="vizBar"><span>Operational analytics</span><i><b style="width:92%"></b></i></div><div class="vizBar"><span>Valuation workflow</span><i><b style="width:88%"></b></i></div><div class="vizBar"><span>Reporting automation</span><i><b style="width:84%"></b></i></div></div><div class="vizStats"><div class="vizStat"><strong>API</strong><span>REST endpoints for debtors, portfolios, and KPIs</span></div><div class="vizStat"><strong>PDF/XLS</strong><span>Export-ready reporting for review and decision support</span></div></div></div></div><div class="analyticsViz"><div class="vizCard"><span class="vizTitle">ML pipeline</span><div class="vizStack"><div class="vizNode">Feature inputs<small>risk signals, behavioral indicators, transaction context</small></div><div class="vizNode">Scoring API<small>real-time fraud probability and expected loss</small></div><div class="vizNode">Monitoring loop<small>drift checks, reporting, risk mart updates</small></div></div></div><div class="vizCard"><span class="vizTitle">Production readiness</span><div class="vizBars"><div class="vizBar"><span>Prediction service</span><i><b style="width:90%"></b></i></div><div class="vizBar"><span>Monitoring coverage</span><i><b style="width:86%"></b></i></div><div class="vizBar"><span>Executive reporting</span><i><b style="width:82%"></b></i></div></div><div class="vizStats"><div class="vizStat"><strong>FastAPI</strong><span>Real-time scoring endpoint for downstream product use</span></div><div class="vizStat"><strong>Power BI</strong><span>Executive dashboard layer for business oversight</span></div></div></div></div><ul class="featureList">
+              <li><span class="plus">+</span><span><strong>Catalog, search, and product pages</strong> built for browsing and conversion</span></li>
+              <li><span class="plus">+</span><span><strong>Cart and checkout flow</strong> covering core e-commerce behavior</span></li>
+              <li><span class="plus">+</span><span><strong>Admin support</strong> for products, orders, and store operations</span></li>
+            </ul>
+            <div class="projectLinks">
+              <a class="linkBtn primary" href="https://vegata.pythonanywhere.com/" target="_blank" rel="noopener">Live demo</a>
+              <a class="linkBtn" href="https://github.com/vegaFlex/OnlineBookstore_README" target="_blank" rel="noopener">Source overview</a>
+            </div>
           </div>
-          <div class="skill">
-            <p class="skillTitle">Front end</p>
-            <p class="skillText">TailwindCSS, JavaScript, HTML, CSS, AJAX</p>
+        </article>
+        <article class="projectCard previewCard">
+          <img src="assets/paradise.jpg" alt="Paradise Food Order App preview">
+          <div class="previewBody">
+            <div class="projectTop"><div><h3>Paradise Food Order App</h3><p>Internal food ordering system built for an operational business workflow with menus, limits, locations, and admin summaries.</p></div><span class="pill">Business Workflow</span></div>
+            <div class="analyticsViz"><div class="vizCard"><span class="vizTitle">System flow</span><div class="vizStack"><div class="vizNode">Portfolio import<small>validation, mapping, quality checks</small></div><div class="vizNode">Risk scoring<small>segmentation, prioritization, package ranking</small></div><div class="vizNode">Decision layer<small>dashboards, pricing, exports, API access</small></div></div></div><div class="vizCard"><span class="vizTitle">Business capability</span><div class="vizBars"><div class="vizBar"><span>Operational analytics</span><i><b style="width:92%"></b></i></div><div class="vizBar"><span>Valuation workflow</span><i><b style="width:88%"></b></i></div><div class="vizBar"><span>Reporting automation</span><i><b style="width:84%"></b></i></div></div><div class="vizStats"><div class="vizStat"><strong>API</strong><span>REST endpoints for debtors, portfolios, and KPIs</span></div><div class="vizStat"><strong>PDF/XLS</strong><span>Export-ready reporting for review and decision support</span></div></div></div></div><div class="analyticsViz"><div class="vizCard"><span class="vizTitle">ML pipeline</span><div class="vizStack"><div class="vizNode">Feature inputs<small>risk signals, behavioral indicators, transaction context</small></div><div class="vizNode">Scoring API<small>real-time fraud probability and expected loss</small></div><div class="vizNode">Monitoring loop<small>drift checks, reporting, risk mart updates</small></div></div></div><div class="vizCard"><span class="vizTitle">Production readiness</span><div class="vizBars"><div class="vizBar"><span>Prediction service</span><i><b style="width:90%"></b></i></div><div class="vizBar"><span>Monitoring coverage</span><i><b style="width:86%"></b></i></div><div class="vizBar"><span>Executive reporting</span><i><b style="width:82%"></b></i></div></div><div class="vizStats"><div class="vizStat"><strong>FastAPI</strong><span>Real-time scoring endpoint for downstream product use</span></div><div class="vizStat"><strong>Power BI</strong><span>Executive dashboard layer for business oversight</span></div></div></div></div><ul class="featureList">
+              <li><span class="plus">+</span><span><strong>Operational ordering process</strong> with dates, quantities, and practical constraints</span></li>
+              <li><span class="plus">+</span><span><strong>Rules, permissions, and internal control</strong> for non-public workflow management</span></li>
+              <li><span class="plus">+</span><span><strong>Admin summaries and exports</strong> to support daily business reporting</span></li>
+            </ul>
+            <div class="projectLinks">
+              <a class="linkBtn primary" href="https://nekrato.com/menu/" target="_blank" rel="noopener">Live demo</a>
+              <a class="linkBtn" href="https://github.com/vegaFlex/ParadiseFoodOrderApp_README" target="_blank" rel="noopener">Source overview</a>
+            </div>
           </div>
-          <div class="skill">
-            <p class="skillTitle">Tools</p>
-            <p class="skillText">Git, GitHub, GitHub Actions, Docker</p>
-          </div>
-          <div class="skill">
-            <p class="skillTitle">Deploy</p>
-            <p class="skillText">PythonAnywhere, Azure, Passenger</p>
-          </div>
-          <div class="skill">
-            <p class="skillTitle">Интеграции</p>
-            <p class="skillText">Stripe API, Google Maps API, QR логика</p>
-          </div>
+        </article>
+
+        <article class="projectCard">
+          <div class="projectTop"><div><h3>Why this mix matters</h3><p>This portfolio is intentionally hybrid. It shows that I can move between analytics, machine learning, backend engineering, dashboards, and customer-facing web products without losing quality or business focus.</p></div><span class="pill">Positioning</span></div>
+          <div class="analyticsViz"><div class="vizCard"><span class="vizTitle">System flow</span><div class="vizStack"><div class="vizNode">Portfolio import<small>validation, mapping, quality checks</small></div><div class="vizNode">Risk scoring<small>segmentation, prioritization, package ranking</small></div><div class="vizNode">Decision layer<small>dashboards, pricing, exports, API access</small></div></div></div><div class="vizCard"><span class="vizTitle">Business capability</span><div class="vizBars"><div class="vizBar"><span>Operational analytics</span><i><b style="width:92%"></b></i></div><div class="vizBar"><span>Valuation workflow</span><i><b style="width:88%"></b></i></div><div class="vizBar"><span>Reporting automation</span><i><b style="width:84%"></b></i></div></div><div class="vizStats"><div class="vizStat"><strong>API</strong><span>REST endpoints for debtors, portfolios, and KPIs</span></div><div class="vizStat"><strong>PDF/XLS</strong><span>Export-ready reporting for review and decision support</span></div></div></div></div><div class="analyticsViz"><div class="vizCard"><span class="vizTitle">ML pipeline</span><div class="vizStack"><div class="vizNode">Feature inputs<small>risk signals, behavioral indicators, transaction context</small></div><div class="vizNode">Scoring API<small>real-time fraud probability and expected loss</small></div><div class="vizNode">Monitoring loop<small>drift checks, reporting, risk mart updates</small></div></div></div><div class="vizCard"><span class="vizTitle">Production readiness</span><div class="vizBars"><div class="vizBar"><span>Prediction service</span><i><b style="width:90%"></b></i></div><div class="vizBar"><span>Monitoring coverage</span><i><b style="width:86%"></b></i></div><div class="vizBar"><span>Executive reporting</span><i><b style="width:82%"></b></i></div></div><div class="vizStats"><div class="vizStat"><strong>FastAPI</strong><span>Real-time scoring endpoint for downstream product use</span></div><div class="vizStat"><strong>Power BI</strong><span>Executive dashboard layer for business oversight</span></div></div></div></div><ul class="featureList">
+            <li><span class="plus">+</span><span><strong>For data roles:</strong> I can own analysis, metrics, modeling, API exposure, dashboards, and reporting</span></li>
+            <li><span class="plus">+</span><span><strong>For ML roles:</strong> I think in terms of deployment, monitoring, and product integration, not isolated notebooks</span></li>
+            <li><span class="plus">+</span><span><strong>For Python or product roles:</strong> I can deliver systems that support real users, workflows, and business operations</span></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section glass" id="expertise">
+      <div class="sectionHead">
+        <div>
+          <span class="sectionLabel">Expertise</span>
+          <h2>Built around analytics, engineering, and business usability.</h2>
+          <p>I work best in environments where data, product thinking, and engineering quality need to come together. My strongest value is turning messy business processes into structured systems.</p>
         </div>
       </div>
-    </div>
 
-    <div class="footer">
-      <div class="ctaRow" style="justify-content:center">
-        <a class="btn btnPrimary" href="mailto:veslin.lilov@gmail.com?subject=%D0%97%D0%B0%D0%BF%D0%B8%D1%82%D0%B2%D0%B0%D0%BD%D0%B5%20%D0%B7%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82&body=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D0%B5%D0%B9%2C%0D%0A%0D%0A%D0%98%D1%81%D0%BA%D0%B0%D0%BC%20%D1%81%D0%B0%D0%B9%D1%82%20%D0%B7%D0%B0%3A%20%0D%0A%D0%A1%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B8%3A%20%0D%0A%D0%A4%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%B8%3A%20%0D%0A%D0%A1%D1%80%D0%BE%D0%BA%3A%20%0D%0A%D0%91%D1%8E%D0%B4%D0%B6%D0%B5%D1%82%3A%20%0D%0A%D0%A2%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%3A%20" rel="noopener">Запитване за сайт</a>
-        <a class="btn btnSecondary" href="https://www.linkedin.com/in/veselin-lilov-0b7624344/" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="btn btnSecondary" href="https://github.com/vegaFlex" target="_blank" rel="noopener">GitHub</a>
+      <div class="skillsGrid">
+        <article class="stackCard"><h3>Data Analytics</h3><p>Python, Pandas, SQL, Excel, KPI modeling, portfolio analysis, business reporting, benchmark comparison, and dashboard thinking.</p></article>
+        <article class="stackCard"><h3>Machine Learning</h3><p>Scikit-learn, classification workflows, risk scoring, fraud modeling, loss estimation, monitoring, and drift detection.</p></article>
+        <article class="stackCard"><h3>Engineering & Delivery</h3><p>Django, FastAPI, PostgreSQL, REST APIs, role-based systems, deployment, documentation, and business-facing interfaces.</p></article>
       </div>
-      <div style="margin-top:10px">© <span id="y"></span> Veselin Lilov</div>
-    </div>
 
+      <div class="tagCloud">
+        <span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Scikit-learn</span><span class="tag">FastAPI</span><span class="tag">Django</span><span class="tag">PostgreSQL</span><span class="tag">SQL</span><span class="tag">Power BI</span><span class="tag">Excel</span><span class="tag">JavaScript</span><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">TailwindCSS</span><span class="tag">Docker</span><span class="tag">GitHub Actions</span><span class="tag">Azure</span><span class="tag">KNIME</span>
+      </div>
+    </section>
+
+    <section class="section glass">
+      <div class="sectionHead">
+        <div>
+          <span class="sectionLabel">How I work</span>
+          <h2>I build systems with structure, ownership, and business purpose.</h2>
+        </div>
+      </div>
+      <div class="impactGrid">
+        <article class="stackCard"><h3>Clear structure</h3><p>I favor explicit models, readable logic, and analytics flows that remain understandable as complexity grows.</p></article>
+        <article class="stackCard"><h3>End-to-end ownership</h3><p>I enjoy owning the path from raw data and business requirements to deployed features, dashboards, and operational tooling.</p></article>
+        <article class="stackCard"><h3>Real-world usability</h3><p>I care about whether people can actually use the product to decide, monitor, act, and improve workflows.</p></article>
+      </div>
+    </section>
+
+    <section class="footerCard glass" id="contact">
+      <div>
+        <span class="sectionLabel">Contact</span>
+        <h2>Open to roles where I can build analytics products, ML systems, and useful business software.</h2>
+        <p class="footerText">If you are hiring for Data Analyst, Analytics Engineer, Python, ML, or product-focused technical roles, I would be glad to connect. I am especially interested in roles where I can combine analysis, systems thinking, ML or backend execution, and hands-on product delivery.</p>
+        <div class="ctaRow">
+          <a class="btn btnPrimary" href="mailto:veslin.lilov@gmail.com?subject=Let%27s%20talk%20about%20a%20role">Get in touch</a>
+          <a class="btn btnSecondary" href="https://github.com/vegaFlex" target="_blank" rel="noopener">View GitHub</a>
+          <a class="btn btnGhost" href="https://www.linkedin.com/in/veselin-lilov-0b7624344/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+      <aside class="contactBox">
+        <div class="kicker">Quick details</div>
+        <div class="contactList">
+          <a href="mailto:veslin.lilov@gmail.com">veslin.lilov@gmail.com</a>
+          <a href="https://github.com/vegaFlex" target="_blank" rel="noopener">github.com/vegaFlex</a>
+          <a href="https://www.linkedin.com/in/veselin-lilov-0b7624344/" target="_blank" rel="noopener">LinkedIn profile</a>
+          <span>Based in Sofia, Bulgaria</span>
+        </div>
+        <p class="footerText" style="margin-bottom:0">Portfolio focused on analytics systems, machine learning, and production-style web applications.</p>
+      </aside>
+    </section>
   </div>
-
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
+
+
