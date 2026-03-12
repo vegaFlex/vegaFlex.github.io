@@ -40,11 +40,11 @@
     .hero::after{content:"";position:absolute;left:0;top:0;right:0;height:6px;background:linear-gradient(90deg, var(--accent), var(--accent2));pointer-events:none}
     .hero::before{content:"";position:absolute;inset:-2px;background:radial-gradient(520px 260px at 12% 30%, rgba(37,99,235,0.12), transparent 62%),radial-gradient(520px 260px at 88% 22%, rgba(124,58,237,0.10), transparent 62%),radial-gradient(720px 320px at 52% 120%, rgba(14,165,233,0.08), transparent 62%);pointer-events:none}
     .hero > *{position:relative}
-    .topRow{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(280px,.7fr);gap:18px;align-items:stretch}.idBlock{display:flex;flex-direction:column;justify-content:center}
+    .topRow{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(260px,.55fr);gap:18px;align-items:start}.idBlock{display:flex;flex-direction:column;justify-content:center}
     .idBlock{min-width:0}
     h1{margin:0 0 8px 0;font-size:38px;letter-spacing:0.2px}
     .sub{margin:0;color:var(--muted);font-size:15px;line-height:1.7;max-width:760px}
-    .ctaRow{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:14px}.heroMeta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:18px}.heroMetaCard{padding:12px 14px;border-radius:14px;background:rgba(255,255,255,0.72);border:1px solid rgba(15,23,42,0.08);box-shadow:0 8px 18px rgba(2,6,23,0.05)}.heroMetaCard strong{display:block;font-size:13px;margin-bottom:4px}.heroMetaCard span{display:block;color:var(--muted);font-size:12px;line-height:1.45}.contactCard{min-width:280px;max-width:360px;height:100%;display:flex;flex-direction:column;justify-content:space-between;background:linear-gradient(180deg, rgba(255,255,255,0.98), rgba(244,247,255,0.96));box-shadow:0 18px 40px rgba(2,6,23,0.08)}.contactCard .desc{min-height:auto}.contactList{display:grid;gap:10px;margin-top:6px}.contactLink{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 14px;border-radius:14px;border:1px solid rgba(15,23,42,0.10);background:rgba(255,255,255,0.9);text-decoration:none;font-weight:800;color:var(--text);box-shadow:0 8px 18px rgba(2,6,23,0.06)}.contactLink span{color:var(--muted);font-size:13px;font-weight:600}.contactLink strong{font-size:14px}.contactLink::after{content:"";width:8px;height:8px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(-45deg);opacity:.38}.contactTop{display:flex;flex-direction:column;gap:10px}.contactMini{display:inline-flex;align-items:center;gap:8px;padding:8px 10px;border-radius:999px;background:#eef2ff;border:1px solid #dbeafe;color:#334155;font-size:12px;font-weight:800;width:max-content}
+    .ctaRow{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:14px}.heroMeta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:18px}.heroMetaCard{padding:12px 14px;border-radius:14px;background:rgba(255,255,255,0.72);border:1px solid rgba(15,23,42,0.08);box-shadow:0 8px 18px rgba(2,6,23,0.05)}.heroMetaCard strong{display:block;font-size:13px;margin-bottom:4px}.heroMetaCard span{display:block;color:var(--muted);font-size:12px;line-height:1.45}.contactCard{min-width:260px;max-width:320px;padding:20px 20px 18px 20px;display:flex;flex-direction:column;gap:14px;background:linear-gradient(180deg, rgba(255,255,255,0.98), rgba(246,248,255,0.96));box-shadow:0 14px 30px rgba(2,6,23,0.07)}.contactCard .desc{min-height:auto;margin:0;color:var(--muted);line-height:1.6}.contactList{display:grid;gap:8px}.contactLink{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 12px;border-radius:12px;border:1px solid rgba(15,23,42,0.08);background:rgba(255,255,255,0.92);text-decoration:none;font-weight:800;color:var(--text);box-shadow:0 6px 14px rgba(2,6,23,0.05)}.contactLink span{color:var(--muted);font-size:12px;font-weight:600}.contactLink strong{font-size:13px}.contactLink::after{content:"";width:8px;height:8px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(-45deg);opacity:.38}.contactTop{display:flex;flex-direction:column;gap:8px}.contactMini{display:none}
     .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 14px;border-radius:14px;border:1px solid rgba(15,23,42,0.16);text-decoration:none;font-weight:900;font-size:14px;background:linear-gradient(180deg, #ffffff, #f8fafc);box-shadow:0 10px 22px rgba(2,6,23,0.10);transition:transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease, background 0.12s ease, color 0.12s ease;outline:none;cursor:pointer;user-select:none}
     .btn:hover{transform:translateY(-1px);border-color:rgba(15,23,42,0.22);box-shadow:0 14px 30px rgba(2,6,23,0.14);background:linear-gradient(180deg, #ffffff, #f1f5ff)}
     .btnPrimary{color:var(--text);border-color:rgba(37,99,235,0.28);background:linear-gradient(180deg, #ffffff, #eef2ff);box-shadow:0 10px 22px rgba(37,99,235,0.10)}
@@ -83,7 +83,7 @@
     .skillTitle{margin:0 0 6px 0;font-weight:900;font-size:13px}.skillText{margin:0;color:var(--muted);font-size:13px;line-height:1.45}
     .footer{margin-top:18px;padding:18px;text-align:center;color:var(--muted);font-size:13px;background:radial-gradient(700px 220px at 12% 0%, rgba(245,158,11,0.12), transparent 65%),linear-gradient(180deg, var(--sFooter1), var(--sFooter2));border:1px solid rgba(15,23,42,0.08);border-radius:var(--radius);box-shadow:var(--shadow2)}
     .demoShot{display:block;width:100%;margin:12px 0;border-radius:14px;border:1px solid rgba(15,23,42,0.10);background:linear-gradient(180deg, #ffffff, #f8fafc);box-shadow:0 10px 22px rgba(2,6,23,0.08);overflow:hidden;text-decoration:none;color:inherit;transform:translateY(0);transition:transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease}
-    .demoShot img{width:100%;height:190px;object-fit:cover;object-position:center center;display:block;transition:transform 0.25s ease}.demoShotContained img{object-fit:contain;padding:10px;background:#ffffff}.demoShotTight img{transform:scale(1.02);transform-origin:center center}.demoShotTight:hover img{transform:scale(1.04)}
+    .demoShot img{width:100%;height:190px;object-fit:cover;object-position:center center;display:block;transition:transform 0.25s ease}.demoShotDebt img{object-fit:cover;object-position:center top;transform:scale(1.08);transform-origin:center top}.demoShotDebt:hover img{transform:scale(1.11)}.demoShotTight img{transform:scale(1.02);transform-origin:center center}.demoShotTight:hover img{transform:scale(1.04)}
     .demoShot:hover{transform:translateY(-1px);border-color:rgba(15,23,42,0.16);box-shadow:0 14px 30px rgba(2,6,23,0.12)}
     .demoShot:hover img{transform:scale(1.03)}
     .demoCap{margin:0;padding:10px 12px;color:var(--muted);font-size:12.5px;line-height:1.45;border-top:1px solid rgba(15,23,42,0.08);background:rgba(255,255,255,0.86);min-height:56px;display:flex;align-items:center}.gridMl .tag,.gridWeb .tag{white-space:nowrap}
@@ -111,16 +111,12 @@
         <div class="card contactCard">
           <div class="contactTop">
             <h2 style="margin-bottom:0">Contact</h2>
-            <span class="contactMini">Open to analytics, ML, and Python roles</span>
-            <p class="desc" style="margin-bottom:0">
-              Sofia, Bulgaria<br>
-              Available for portfolio reviews, role conversations, and freelance product work.
-            </p>
+            <p class="desc" style="margin-bottom:0">Sofia, Bulgaria<br>Email and profile links below.</p>
           </div>
           <div class="contactList">
             <a class="contactLink" href="mailto:veslin.lilov@gmail.com?subject=Portfolio%20Inquiry" rel="noopener"><strong>Email</strong><span>veslin.lilov@gmail.com</span></a>
-            <a class="contactLink" href="https://www.linkedin.com/in/veselin-lilov-0b7624344/" target="_blank" rel="noopener"><strong>LinkedIn</strong><span>Professional profile</span></a>
-            <a class="contactLink" href="https://github.com/vegaFlex" target="_blank" rel="noopener"><strong>GitHub</strong><span>Projects and code</span></a>
+            <a class="contactLink" href="https://www.linkedin.com/in/veselin-lilov-0b7624344/" target="_blank" rel="noopener"><strong>LinkedIn</strong><span>/in/veselin-lilov</span></a>
+            <a class="contactLink" href="https://github.com/vegaFlex" target="_blank" rel="noopener"><strong>GitHub</strong><span>github.com/vegaFlex</span></a>
           </div>
         </div>
       </div>
@@ -144,7 +140,7 @@
           <div class="card">
             <h2>Debt & Risk Intelligence Hub</h2>
             <p class="desc">Debt analytics and acquisition review platform with import validation, risk scoring, valuation logic, dashboards, and exports.</p>
-            <a class="demoShot demoShotContained demoShotTight" href="https://debt-risk-intelligence-hub.onrender.com" target="_blank" rel="noopener">
+            <a class="demoShot demoShotDebt" href="https://debt-risk-intelligence-hub.onrender.com" target="_blank" rel="noopener">
               <img src="assets/debt-risk-hub.jpg" alt="Debt & Risk Intelligence Hub preview" loading="lazy" decoding="async">
               <p class="demoCap">Dashboard and valuation workspace preview</p>
             </a>
@@ -314,6 +310,9 @@
   </script>
 </body>
 </html>
+
+
+
 
 
 
