@@ -3,297 +3,209 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Veselin Lilov | Data Analyst, ML Builder, Python Engineer</title>
-  <meta name="description" content="Portfolio of Veselin Lilov: data analytics, machine learning systems, Python engineering, dashboards, web applications, and end-to-end business platforms.">
+  <title>Veselin Lilov | Data Analyst & Python Engineer</title>
+  <meta name="description" content="Veselin Lilov portfolio: data analytics, machine learning, Python engineering, dashboards, and web applications.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
   <style>
-    :root{--bg:#08111f;--panel:rgba(11,21,40,.78);--text:#e8eefc;--muted:#9eb0d1;--line:rgba(173,190,255,.16);--cyan:#63e6ff;--blue:#78a6ff;--teal:#59f0c2;--shadow:0 30px 80px rgba(0,0,0,.35);--radius-xl:28px;--max:1180px}
+    :root{--bg:#f5f7fb;--surface:#ffffff;--surface2:#f8fafc;--text:#0f172a;--muted:#475569;--line:#dbe3f0;--accent:#0f766e;--accent-soft:#ccfbf1;--shadow:0 18px 40px rgba(15,23,42,.08);--radius:20px;--max:1080px}
     *{box-sizing:border-box} html{scroll-behavior:smooth}
-    body{margin:0;font-family:"Manrope",sans-serif;color:var(--text);background:radial-gradient(circle at top left,rgba(99,230,255,.14),transparent 28%),radial-gradient(circle at 85% 8%,rgba(120,166,255,.14),transparent 24%),radial-gradient(circle at 50% 100%,rgba(89,240,194,.12),transparent 30%),linear-gradient(180deg,#07101d 0%,#08111f 35%,#0b1527 100%);min-height:100vh}
-    a{color:inherit;text-decoration:none} img{max-width:100%;display:block}
-    .shell{width:min(calc(100% - 32px),var(--max));margin:24px auto 48px}
-    .glass{background:var(--panel);border:1px solid var(--line);box-shadow:var(--shadow);backdrop-filter:blur(18px)}
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 20px;border-radius:999px;position:sticky;top:16px;z-index:10;margin-bottom:24px}
-    .brand{display:flex;align-items:center;gap:12px;font-family:"Space Grotesk",sans-serif;font-weight:700;letter-spacing:.04em;text-transform:uppercase;font-size:13px}
-    .brandMark{width:38px;height:38px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(99,230,255,.22),rgba(120,166,255,.22));border:1px solid rgba(255,255,255,.12);color:var(--cyan);box-shadow:inset 0 1px 0 rgba(255,255,255,.08)}
-    .navLinks{display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-end}
-    .navLinks a{padding:10px 14px;color:var(--muted);border-radius:999px;font-size:14px;transition:background .18s ease,color .18s ease,transform .18s ease}
-    .navLinks a:hover{background:rgba(255,255,255,.06);color:var(--text);transform:translateY(-1px)}
-    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:22px;align-items:stretch;margin-bottom:24px}
-    .heroPanel,.statCard,.noteCard,.section,.projectCard,.stackCard,.footerCard{border-radius:var(--radius-xl);padding:24px}
-    .heroPanel{padding:34px;position:relative;overflow:hidden}
-    .heroPanel::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 18% 18%,rgba(99,230,255,.18),transparent 24%),radial-gradient(circle at 85% 25%,rgba(120,166,255,.18),transparent 26%),radial-gradient(circle at 50% 100%,rgba(89,240,194,.14),transparent 30%);pointer-events:none}
-    .heroPanel>*{position:relative}
-    .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);color:var(--cyan);font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
-    h1,h2,h3{margin:0;font-family:"Space Grotesk",sans-serif}
-    h1{font-size:clamp(2.8rem,5vw,5.1rem);line-height:.95;margin-top:18px;max-width:9ch}
-    .heroLead{margin:22px 0 0;max-width:62ch;color:var(--muted);font-size:18px;line-height:1.75}
-    .accent{background:linear-gradient(90deg,var(--cyan),var(--teal));-webkit-background-clip:text;background-clip:text;color:transparent}
-    .ctaRow{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 18px;border-radius:16px;border:1px solid transparent;font-weight:800;font-size:14px;transition:transform .16s ease,box-shadow .16s ease,border-color .16s ease,background .16s ease}
-    .btn:hover{transform:translateY(-2px)} .btnPrimary{background:linear-gradient(135deg,var(--cyan),var(--teal));color:#04131d;box-shadow:0 18px 38px rgba(89,240,194,.18)} .btnSecondary{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.10);color:var(--text)} .btnGhost{background:transparent;border-color:rgba(255,255,255,.14);color:var(--muted)}
-    .badgeGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:28px}
-    .badge{padding:14px;border-radius:18px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08)} .badge small{display:block;color:var(--muted);margin-bottom:6px;font-size:12px;text-transform:uppercase;letter-spacing:.08em} .badge strong{display:block;font-size:16px;line-height:1.4}
-    .statCard{min-height:100%;display:flex;flex-direction:column;justify-content:space-between;background:linear-gradient(180deg,rgba(17,30,54,.92),rgba(10,18,33,.92)),rgba(255,255,255,.03)}
-    .kicker{color:var(--muted);text-transform:uppercase;letter-spacing:.08em;font-size:12px;font-weight:800} .statValue{font-family:"Space Grotesk",sans-serif;font-size:52px;line-height:1;margin:12px 0}
-    .statList,.featureList,.contactList{display:grid;gap:10px} .statItem{display:flex;align-items:flex-start;gap:10px;color:var(--muted);font-size:14px;line-height:1.6}
-    .dot{width:10px;height:10px;border-radius:999px;background:linear-gradient(135deg,var(--cyan),var(--teal));margin-top:7px;flex:0 0 auto}
-    .miniGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-bottom:24px}
-    .section{margin-bottom:24px;background:linear-gradient(180deg,rgba(13,24,48,.9),rgba(9,16,30,.92))}
-    .sectionHead{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:22px} .sectionHead p{margin:8px 0 0;color:var(--muted);max-width:66ch;line-height:1.7}
-    .sectionLabel{display:block;color:var(--cyan);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
-    .projectGrid,.skillsGrid,.impactGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
-    .impactGrid,.skillsGrid{grid-template-columns:repeat(3,minmax(0,1fr))}
-    .projectCard,.stackCard{display:flex;flex-direction:column;gap:16px;background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.025));border:1px solid rgba(255,255,255,.08);min-height:100%}
-    .projectTop{display:flex;justify-content:space-between;gap:16px;align-items:flex-start}
-    .pill{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);color:var(--muted);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}
-    .projectCard p,.stackCard p{margin:0;color:var(--muted);line-height:1.7}
-    .metricStrip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
-    .metric{padding:12px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06)} .metric strong{display:block;font-family:"Space Grotesk",sans-serif;font-size:20px;margin-bottom:4px} .metric span{color:var(--muted);font-size:12px;line-height:1.45} .analyticsViz{display:grid;grid-template-columns:1.05fr .95fr;gap:12px;margin-top:4px} .vizCard{padding:14px;border-radius:18px;background:linear-gradient(180deg,rgba(99,230,255,.08),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.08);min-height:148px} .vizTitle{display:block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--cyan);margin-bottom:12px;font-weight:800} .vizStack{display:grid;gap:10px} .vizNode{padding:10px 12px;border-radius:14px;background:rgba(8,17,31,.55);border:1px solid rgba(255,255,255,.08);font-size:13px;color:var(--text);font-weight:700} .vizNode small{display:block;margin-top:4px;color:var(--muted);font-weight:600;font-size:11px} .vizBars{display:grid;gap:10px;margin-top:6px} .vizBar{display:grid;gap:6px} .vizBar span{font-size:12px;color:var(--muted);font-weight:700} .vizBar i{display:block;height:10px;border-radius:999px;background:linear-gradient(90deg,rgba(255,255,255,.08),rgba(255,255,255,.03));overflow:hidden} .vizBar b{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,var(--cyan),var(--teal))} .vizStats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:12px} .vizStat{padding:12px;border-radius:14px;background:rgba(8,17,31,.55);border:1px solid rgba(255,255,255,.08)} .vizStat strong{display:block;font-family:"Space Grotesk",sans-serif;font-size:20px} .vizStat span{display:block;color:var(--muted);font-size:11px;line-height:1.5;margin-top:3px}
-    .featureList{margin:0;padding:0;list-style:none} .featureList li{display:flex;gap:10px;align-items:flex-start;color:var(--muted);line-height:1.6;padding-top:10px;border-top:1px solid rgba(255,255,255,.06)} .featureList li:first-child{padding-top:0;border-top:none} .featureList strong{color:var(--text)}
-    .plus{width:22px;height:22px;border-radius:8px;display:grid;place-items:center;background:rgba(99,230,255,.12);color:var(--cyan);font-weight:800;flex:0 0 auto;margin-top:1px}
-    .projectLinks{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto}
-    .linkBtn{display:inline-flex;align-items:center;gap:8px;padding:11px 14px;border-radius:14px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);color:var(--text);font-weight:700;font-size:14px}
-    .linkBtn.primary{background:rgba(99,230,255,.12);border-color:rgba(99,230,255,.20);color:var(--cyan)}
-    .previewCard{overflow:hidden;padding:0} .previewCard img{width:100%;height:230px;object-fit:cover;border-bottom:1px solid rgba(255,255,255,.08)} .previewBody{padding:20px 22px 22px;display:flex;flex-direction:column;gap:14px}
-    .stackCard h3{font-size:18px} .tagCloud{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px} .tag{padding:10px 12px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);color:var(--text);font-size:13px;font-weight:700}
-    .footerCard{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;background:radial-gradient(circle at 20% 0%,rgba(99,230,255,.14),transparent 28%),linear-gradient(180deg,rgba(13,24,48,.92),rgba(8,17,31,.95))}
-    .footerText{color:var(--muted);line-height:1.75;margin-top:12px;max-width:60ch}
-    .contactBox{border-radius:22px;padding:20px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08)}
-    .contactList a,.contactList span{display:block;padding:12px 14px;border-radius:14px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);color:var(--text)}
-    .fadeUp{opacity:0;transform:translateY(18px);animation:fadeUp .7s ease forwards} .delay1{animation-delay:.08s} .delay2{animation-delay:.16s} .delay3{animation-delay:.24s} .delay4{animation-delay:.32s}
-    @keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
-    @media (max-width:1080px){.hero,.footerCard,.projectGrid,.skillsGrid,.impactGrid,.miniGrid,.analyticsViz{grid-template-columns:1fr}.badgeGrid{grid-template-columns:1fr}.metricStrip{grid-template-columns:1fr 1fr}}
-    @media (max-width:760px){.shell{width:min(calc(100% - 20px),var(--max));margin:12px auto 28px}.nav{border-radius:26px;padding:14px}.navLinks{justify-content:flex-start}.heroPanel,.statCard,.noteCard,.section,.projectCard,.stackCard,.footerCard{padding:20px}h1{font-size:clamp(2.4rem,11vw,4rem)}.heroLead{font-size:16px}.metricStrip{grid-template-columns:1fr}.previewCard img{height:200px}}
+    body{margin:0;font-family:"Manrope",sans-serif;color:var(--text);background:linear-gradient(180deg,#f8fbff 0%,#f3f6fb 100%)}
+    a{color:inherit;text-decoration:none}
+    .page{width:min(calc(100% - 32px),var(--max));margin:24px auto 56px}
+    .nav,.panel,.card,.footer{background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:var(--radius)}
+    .nav{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:14px 18px;position:sticky;top:12px;z-index:20}
+    .brand{font-size:14px;font-weight:800;letter-spacing:.04em;text-transform:uppercase}
+    .links{display:flex;gap:10px;flex-wrap:wrap}.links a{padding:10px 12px;border-radius:999px;color:var(--muted);font-size:14px}.links a:hover{background:var(--surface2);color:var(--text)}
+    .hero{display:grid;grid-template-columns:1.15fr .85fr;gap:20px;margin-top:22px}
+    .panel{padding:34px}
+    .eyebrow{display:inline-block;padding:8px 12px;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+    h1,h2,h3{margin:0} h1{font-size:clamp(2.4rem,5vw,4.5rem);line-height:1.02;margin-top:16px;max-width:10ch}
+    .lead{margin:18px 0 0;color:var(--muted);font-size:18px;line-height:1.75;max-width:60ch}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.quickLinks{display:grid;gap:8px;margin-top:18px}.quickLinks a{color:var(--accent);font-weight:700}.quickLinks span{color:var(--muted);font-size:14px;line-height:1.6}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 16px;border-radius:14px;font-weight:800;font-size:14px;border:1px solid var(--line)}
+    .btnPrimary{background:var(--text);border-color:var(--text);color:#fff}.btnSecondary{background:#fff;color:var(--text)}
+    .stats{display:grid;gap:14px}.stat{padding:18px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)} .stat strong{display:block;font-size:28px;margin-bottom:6px}.stat p{margin:0;color:var(--muted);line-height:1.6}
+    .section{margin-top:22px}.sectionHead{margin-bottom:14px}.sectionHead h2{font-size:30px}.sectionHead p{margin:10px 0 0;color:var(--muted);line-height:1.75;max-width:70ch}
+    .grid2,.grid3{display:grid;gap:18px}.grid2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .card{padding:24px}.label{display:inline-block;padding:7px 10px;border-radius:999px;background:var(--surface2);border:1px solid var(--line);color:var(--muted);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;margin-bottom:14px}
+    .card p{margin:12px 0 0;color:var(--muted);line-height:1.7}.meta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:16px}.meta div{padding:12px;border-radius:14px;background:var(--surface2);border:1px solid var(--line)} .meta strong{display:block;font-size:15px}.meta span{display:block;margin-top:4px;color:var(--muted);font-size:12px;line-height:1.5}
+    .bullets{margin:16px 0 0;padding-left:18px;color:var(--muted)} .bullets li{margin:8px 0;line-height:1.65}.bullets strong{color:var(--text)}
+    .cardActions{display:grid;gap:6px;margin-top:18px}.cardActions a{color:var(--accent);font-weight:700}.cardActions span{color:var(--muted);font-size:14px}
+    .thumb{width:100%;height:180px;object-fit:cover;border-radius:14px;border:1px solid var(--line);margin-bottom:16px;background:#e5e7eb}
+    .tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.tag{padding:9px 11px;border-radius:999px;background:var(--surface2);border:1px solid var(--line);font-size:13px;font-weight:700;color:var(--text)}
+    .footer{padding:28px;margin-top:22px;display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center}.footer p{margin:10px 0 0;color:var(--muted);line-height:1.75;max-width:62ch}
+    @media (max-width:920px){.hero,.grid2,.grid3,.footer,.meta{grid-template-columns:1fr}.page{width:min(calc(100% - 20px),var(--max))}.panel,.card,.footer{padding:20px}.lead{font-size:16px}}
   </style>
 </head>
 <body>
-  <div class="shell">
-    <nav class="nav glass fadeUp">
-      <div class="brand"><div class="brandMark">VL</div><span>Veselin Lilov</span></div>
-      <div class="navLinks"><a href="#projects">Projects</a><a href="#web-apps">Web Apps</a><a href="#expertise">Expertise</a><a href="#contact">Contact</a></div>
+  <div class="page">
+    <nav class="nav">
+      <div class="brand">Veselin Lilov</div>
+      <div class="links">
+        <a href="#projects">Projects</a>
+        <a href="#web-apps">Web Apps</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
     </nav>
 
     <section class="hero">
-      <div class="heroPanel glass fadeUp delay1">
-        <span class="eyebrow">Data Analyst • ML Builder • Python Engineer</span>
-        <h1>Building <span class="accent">analytics</span>, machine learning, and web products that solve real business problems.</h1>
-        <p class="heroLead">I design end-to-end systems that connect data analysis, machine learning, backend APIs, dashboards, and production-ready web applications. My focus is not just shipping demos, but creating reliable products that help teams make decisions, automate workflows, and measure outcomes.</p>
-        <div class="ctaRow">
-          <a class="btn btnPrimary" href="#projects">Explore featured work</a>
-          <a class="btn btnSecondary" href="https://github.com/vegaFlex" target="_blank" rel="noopener">GitHub profile</a>
-          <a class="btn btnGhost" href="mailto:veslin.lilov@gmail.com?subject=Portfolio%20Inquiry">Email me</a>
-        </div>
-        <div class="badgeGrid">
-          <div class="badge"><small>Core focus</small><strong>Analytics platforms, ML systems, dashboards, and Python products</strong></div>
-          <div class="badge"><small>Working style</small><strong>End-to-end ownership from data ingestion to deployment and monitoring</strong></div>
-          <div class="badge"><small>Positioning</small><strong>Strong fit for data, analytics engineering, ML, and product-minded Python roles</strong></div>
+      <div class="panel">
+        <span class="eyebrow">Data Analyst • ML • Python</span>
+        <h1>I build analytics and software that solve business problems.</h1>
+        <p class="lead">I work across data analysis, machine learning, backend development, dashboards, and web applications. My portfolio is built to show practical systems, not only demos: products with structure, business logic, reporting, and real user flows.</p>
+        <div class="actions">
+          <a class="btn btnPrimary" href="#projects">View Projects</a>
+          <a class="btn btnSecondary" href="https://github.com/vegaFlex" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn btnSecondary" href="https://www.linkedin.com/in/veselin-lilov-0b7624344/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </div>
-      <div class="heroSide">
-        <div class="statCard glass fadeUp delay2">
-          <div>
-            <div class="kicker">Featured profile</div>
-            <div class="statValue">5+</div>
-            <div style="font-size:20px;font-weight:800;line-height:1.3">Portfolio projects across analytics, ML, and hosted web systems</div>
-          </div>
-          <div class="statList">
-            <div class="statItem"><span class="dot"></span><span>Debt & risk analytics platform with dashboards, valuation workspace, REST API, and reporting</span></div>
-            <div class="statItem"><span class="dot"></span><span>Fraud monitoring production system with scoring API, monitoring, and Power BI executive layer</span></div>
-            <div class="statItem"><span class="dot"></span><span>Hosted business web apps with orders, reservations, ticketing, payments, and admin workflows</span></div>
-          </div>
-        </div>
+      <div class="stats">
+        <div class="stat"><strong>2</strong><p>featured analytics and machine learning projects with product and business focus</p></div>
+        <div class="stat"><strong>3</strong><p>hosted web applications covering e-commerce, ticketing, and internal workflow management</p></div>
+        <div class="stat"><strong>1 profile</strong><p>positioned for data analyst, analytics engineering, ML, and product-minded Python roles</p></div>
       </div>
     </section>
 
-    <div class="miniGrid">
-      <section class="noteCard glass fadeUp delay2">
-        <span class="sectionLabel">About me</span>
-        <h2>Data-minded builder with strong product and engineering instincts.</h2>
-        <p class="footerText">I combine analytical thinking with practical engineering. That means clean SQL, structured data models, machine learning pipelines, backend services, and interfaces that people can actually use in real workflows.</p>
-      </section>
-      <section class="noteCard glass fadeUp delay3">
-        <span class="sectionLabel">What I care about</span>
-        <h2>Clarity, maintainability, measurable outcomes.</h2>
-        <p class="footerText">I build systems with business purpose: reliable ingestion, readable logic, useful dashboards, and workflows that stay stable under real usage instead of collapsing outside a demo scenario.</p>
-      </section>
-    </div>
-
-    <section class="section glass fadeUp delay3" id="projects">
+    <section class="section" id="projects">
       <div class="sectionHead">
-        <div>
-          <span class="sectionLabel">Featured analytics and ML work</span>
-          <h2>Projects that position me as a serious analytics and product-minded engineer.</h2>
-          <p>These projects show how I approach analytics systems, machine learning workflows, risk logic, backend engineering, reporting, and business-facing tooling as one connected product.</p>
-        </div>
+        <h2>Featured Analytics & ML Projects</h2>
+        <p>The strongest examples of how I combine analytics, machine learning, backend engineering, and business usability in one system.</p>
       </div>
-
-      <div class="projectGrid">
-        <article class="projectCard">
-          <div class="projectTop"><div><h3>Debt & Risk Intelligence Hub</h3><p>End-to-end debt analytics and acquisition review platform for portfolio import, risk scoring, collections monitoring, KPI reporting, and benchmark-aware valuation workflows.</p></div><span class="pill">Analytics Platform</span></div>
-          <div class="metricStrip">
-            <div class="metric"><strong>Import</strong><span>Validated portfolio ingestion and structured review flows</span></div>
-            <div class="metric"><strong>Scoring</strong><span>Risk segmentation, debtor prioritization, and package ranking</span></div>
-            <div class="metric"><strong>Reporting</strong><span>Dashboards, recommendations, PDF / Excel exports, and API access</span></div>
+      <div class="grid2">
+        <article class="card">
+          <span class="label">Analytics Platform</span>
+          <h3>Debt & Risk Intelligence Hub</h3>
+          <p>End-to-end debt analytics and acquisition review platform for portfolio import, debtor risk scoring, collections monitoring, KPI reporting, and benchmark-aware valuation.</p>
+          <div class="meta">
+            <div><strong>Import</strong><span>validated portfolio ingestion and review</span></div>
+            <div><strong>Scoring</strong><span>segmentation, prioritization, ranking</span></div>
+            <div><strong>Reporting</strong><span>dashboards, exports, API access</span></div>
           </div>
-          <div class="analyticsViz"><div class="vizCard"><span class="vizTitle">System flow</span><div class="vizStack"><div class="vizNode">Portfolio import<small>validation, mapping, quality checks</small></div><div class="vizNode">Risk scoring<small>segmentation, prioritization, package ranking</small></div><div class="vizNode">Decision layer<small>dashboards, pricing, exports, API access</small></div></div></div><div class="vizCard"><span class="vizTitle">Business capability</span><div class="vizBars"><div class="vizBar"><span>Operational analytics</span><i><b style="width:92%"></b></i></div><div class="vizBar"><span>Valuation workflow</span><i><b style="width:88%"></b></i></div><div class="vizBar"><span>Reporting automation</span><i><b style="width:84%"></b></i></div></div><div class="vizStats"><div class="vizStat"><strong>API</strong><span>REST endpoints for debtors, portfolios, and KPIs</span></div><div class="vizStat"><strong>PDF/XLS</strong><span>Export-ready reporting for review and decision support</span></div></div></div></div><div class="analyticsViz"><div class="vizCard"><span class="vizTitle">ML pipeline</span><div class="vizStack"><div class="vizNode">Feature inputs<small>risk signals, behavioral indicators, transaction context</small></div><div class="vizNode">Scoring API<small>real-time fraud probability and expected loss</small></div><div class="vizNode">Monitoring loop<small>drift checks, reporting, risk mart updates</small></div></div></div><div class="vizCard"><span class="vizTitle">Production readiness</span><div class="vizBars"><div class="vizBar"><span>Prediction service</span><i><b style="width:90%"></b></i></div><div class="vizBar"><span>Monitoring coverage</span><i><b style="width:86%"></b></i></div><div class="vizBar"><span>Executive reporting</span><i><b style="width:82%"></b></i></div></div><div class="vizStats"><div class="vizStat"><strong>FastAPI</strong><span>Real-time scoring endpoint for downstream product use</span></div><div class="vizStat"><strong>Power BI</strong><span>Executive dashboard layer for business oversight</span></div></div></div></div><ul class="featureList">
-            <li><span class="plus">+</span><span><strong>Portfolio import with validation</strong> for operational data quality and repeatable analysis</span></li>
-            <li><span class="plus">+</span><span><strong>Valuation workspace</strong> with ranking, comparison desk, benchmark-aware pricing, and recommendation logic</span></li>
-            <li><span class="plus">+</span><span><strong>Role-based analytics product</strong> combining dashboards, REST API endpoints, reporting, and browser-ready documentation</span></li>
+          <ul class="bullets">
+            <li><strong>Portfolio import with validation</strong> for operational data quality and structured analysis</li>
+            <li><strong>Valuation workspace</strong> with comparison, pricing logic, and recommendation support</li>
+            <li><strong>Role-based product design</strong> combining dashboards, reporting, and API endpoints</li>
           </ul>
-          <div class="projectLinks">
-            <a class="linkBtn primary" href="https://debt-risk-intelligence-hub.onrender.com" target="_blank" rel="noopener">Live demo</a>
-            <a class="linkBtn" href="https://github.com/vegaFlex/debt-risk-intelligence-hub" target="_blank" rel="noopener">Repository</a>
+          <div class="cardActions">
+            <a class="btn btnPrimary" href="https://debt-risk-intelligence-hub.onrender.com" target="_blank" rel="noopener">Live Demo</a>
+            <a class="btn btnSecondary" href="https://github.com/vegaFlex/debt-risk-intelligence-hub" target="_blank" rel="noopener">Repository</a>
           </div>
         </article>
 
-        <article class="projectCard">
-          <div class="projectTop"><div><h3>Fraud Monitoring Production System</h3><p>Machine learning system designed to simulate a real fraud risk environment with scoring, expected loss estimation, model monitoring, and business-facing reporting.</p></div><span class="pill">ML / Monitoring</span></div>
-          <div class="metricStrip">
-            <div class="metric"><strong>Prediction</strong><span>Fraud probability scoring for operational use cases</span></div>
-            <div class="metric"><strong>Loss</strong><span>Expected financial loss estimation for prioritization</span></div>
-            <div class="metric"><strong>Monitoring</strong><span>Drift checks, API scoring, and risk mart reporting</span></div>
+        <article class="card">
+          <span class="label">ML Production System</span>
+          <h3>Fraud Monitoring Production System</h3>
+          <p>Machine learning system simulating a production fraud risk workflow with prediction, expected loss estimation, API scoring, model monitoring, and business-facing reporting.</p>
+          <div class="meta">
+            <div><strong>Prediction</strong><span>fraud probability scoring</span></div>
+            <div><strong>Loss</strong><span>expected financial impact estimation</span></div>
+            <div><strong>Monitoring</strong><span>drift checks and reporting layer</span></div>
           </div>
-          <div class="analyticsViz"><div class="vizCard"><span class="vizTitle">System flow</span><div class="vizStack"><div class="vizNode">Portfolio import<small>validation, mapping, quality checks</small></div><div class="vizNode">Risk scoring<small>segmentation, prioritization, package ranking</small></div><div class="vizNode">Decision layer<small>dashboards, pricing, exports, API access</small></div></div></div><div class="vizCard"><span class="vizTitle">Business capability</span><div class="vizBars"><div class="vizBar"><span>Operational analytics</span><i><b style="width:92%"></b></i></div><div class="vizBar"><span>Valuation workflow</span><i><b style="width:88%"></b></i></div><div class="vizBar"><span>Reporting automation</span><i><b style="width:84%"></b></i></div></div><div class="vizStats"><div class="vizStat"><strong>API</strong><span>REST endpoints for debtors, portfolios, and KPIs</span></div><div class="vizStat"><strong>PDF/XLS</strong><span>Export-ready reporting for review and decision support</span></div></div></div></div><div class="analyticsViz"><div class="vizCard"><span class="vizTitle">ML pipeline</span><div class="vizStack"><div class="vizNode">Feature inputs<small>risk signals, behavioral indicators, transaction context</small></div><div class="vizNode">Scoring API<small>real-time fraud probability and expected loss</small></div><div class="vizNode">Monitoring loop<small>drift checks, reporting, risk mart updates</small></div></div></div><div class="vizCard"><span class="vizTitle">Production readiness</span><div class="vizBars"><div class="vizBar"><span>Prediction service</span><i><b style="width:90%"></b></i></div><div class="vizBar"><span>Monitoring coverage</span><i><b style="width:86%"></b></i></div><div class="vizBar"><span>Executive reporting</span><i><b style="width:82%"></b></i></div></div><div class="vizStats"><div class="vizStat"><strong>FastAPI</strong><span>Real-time scoring endpoint for downstream product use</span></div><div class="vizStat"><strong>Power BI</strong><span>Executive dashboard layer for business oversight</span></div></div></div></div><ul class="featureList">
-            <li><span class="plus">+</span><span><strong>FastAPI scoring API</strong> for real-time prediction workflows and downstream consumption</span></li>
-            <li><span class="plus">+</span><span><strong>PostgreSQL risk mart</strong> supporting analytics, model tracking, and business review</span></li>
-            <li><span class="plus">+</span><span><strong>Executive dashboard layer</strong> using Power BI plus monitoring and drift-detection logic</span></li>
+          <ul class="bullets">
+            <li><strong>FastAPI scoring service</strong> for real-time prediction workflows</li>
+            <li><strong>PostgreSQL risk mart</strong> for analytics, tracking, and downstream review</li>
+            <li><strong>Power BI executive dashboard</strong> for monitoring and business visibility</li>
           </ul>
-          <div class="projectLinks">
-            <a class="linkBtn" href="https://github.com/vegaFlex/fraud-monitoring-prod" target="_blank" rel="noopener">Repository</a>
+          <div class="cardActions">
+            <a class="btn btnSecondary" href="https://github.com/vegaFlex/fraud-monitoring-prod" target="_blank" rel="noopener">Repository</a>
           </div>
         </article>
       </div>
     </section>
-
-    <section class="section glass fadeUp delay4" id="web-apps">
+    <section class="section" id="web-apps">
       <div class="sectionHead">
-        <div>
-          <span class="sectionLabel">Hosted web applications</span>
-          <h2>Production-style apps with users, workflows, transactions, and admin control.</h2>
-          <p>These apps demonstrate that I can also build and ship customer-facing systems, not only analytics projects. Together, they show a strong mix of backend, UX, business logic, and deployment.</p>
-        </div>
+        <h2>Hosted Web Applications</h2>
+        <p>These projects show the engineering side of my work: customer-facing apps, internal workflows, transactions, admin logic, and real product structure.</p>
       </div>
-
-      <div class="projectGrid">
-        <article class="projectCard previewCard">
-          <img src="assets/eventhub.jpg" alt="EventHub preview">
-          <div class="previewBody">
-            <div class="projectTop"><div><h3>EventHub</h3><p>Event management platform with ticket sales, seat selection, payments, QR validation, and admin control.</p></div><span class="pill">Live App</span></div>
-            <div class="analyticsViz"><div class="vizCard"><span class="vizTitle">System flow</span><div class="vizStack"><div class="vizNode">Portfolio import<small>validation, mapping, quality checks</small></div><div class="vizNode">Risk scoring<small>segmentation, prioritization, package ranking</small></div><div class="vizNode">Decision layer<small>dashboards, pricing, exports, API access</small></div></div></div><div class="vizCard"><span class="vizTitle">Business capability</span><div class="vizBars"><div class="vizBar"><span>Operational analytics</span><i><b style="width:92%"></b></i></div><div class="vizBar"><span>Valuation workflow</span><i><b style="width:88%"></b></i></div><div class="vizBar"><span>Reporting automation</span><i><b style="width:84%"></b></i></div></div><div class="vizStats"><div class="vizStat"><strong>API</strong><span>REST endpoints for debtors, portfolios, and KPIs</span></div><div class="vizStat"><strong>PDF/XLS</strong><span>Export-ready reporting for review and decision support</span></div></div></div></div><div class="analyticsViz"><div class="vizCard"><span class="vizTitle">ML pipeline</span><div class="vizStack"><div class="vizNode">Feature inputs<small>risk signals, behavioral indicators, transaction context</small></div><div class="vizNode">Scoring API<small>real-time fraud probability and expected loss</small></div><div class="vizNode">Monitoring loop<small>drift checks, reporting, risk mart updates</small></div></div></div><div class="vizCard"><span class="vizTitle">Production readiness</span><div class="vizBars"><div class="vizBar"><span>Prediction service</span><i><b style="width:90%"></b></i></div><div class="vizBar"><span>Monitoring coverage</span><i><b style="width:86%"></b></i></div><div class="vizBar"><span>Executive reporting</span><i><b style="width:82%"></b></i></div></div><div class="vizStats"><div class="vizStat"><strong>FastAPI</strong><span>Real-time scoring endpoint for downstream product use</span></div><div class="vizStat"><strong>Power BI</strong><span>Executive dashboard layer for business oversight</span></div></div></div></div><ul class="featureList">
-              <li><span class="plus">+</span><span><strong>Ticket sales and reservations</strong> with user-facing booking flows</span></li>
-              <li><span class="plus">+</span><span><strong>Seat logic and QR validation</strong> for operational event usage</span></li>
-              <li><span class="plus">+</span><span><strong>Admin workflows</strong> for control, organization, and platform management</span></li>
-            </ul>
-            <div class="projectLinks">
-              <a class="linkBtn primary" href="https://eventhub-vegata.pythonanywhere.com/bg/" target="_blank" rel="noopener">Live demo</a>
-              <a class="linkBtn" href="https://github.com/vegaFlex/EventHub_README" target="_blank" rel="noopener">Source overview</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="projectCard previewCard">
-          <img src="assets/bookzone.jpg" alt="BookZone preview">
-          <div class="previewBody">
-            <div class="projectTop"><div><h3>BookZone</h3><p>Online bookstore with catalog browsing, product filtering, cart flows, ordering, and management logic.</p></div><span class="pill">Live App</span></div>
-            <div class="analyticsViz"><div class="vizCard"><span class="vizTitle">System flow</span><div class="vizStack"><div class="vizNode">Portfolio import<small>validation, mapping, quality checks</small></div><div class="vizNode">Risk scoring<small>segmentation, prioritization, package ranking</small></div><div class="vizNode">Decision layer<small>dashboards, pricing, exports, API access</small></div></div></div><div class="vizCard"><span class="vizTitle">Business capability</span><div class="vizBars"><div class="vizBar"><span>Operational analytics</span><i><b style="width:92%"></b></i></div><div class="vizBar"><span>Valuation workflow</span><i><b style="width:88%"></b></i></div><div class="vizBar"><span>Reporting automation</span><i><b style="width:84%"></b></i></div></div><div class="vizStats"><div class="vizStat"><strong>API</strong><span>REST endpoints for debtors, portfolios, and KPIs</span></div><div class="vizStat"><strong>PDF/XLS</strong><span>Export-ready reporting for review and decision support</span></div></div></div></div><div class="analyticsViz"><div class="vizCard"><span class="vizTitle">ML pipeline</span><div class="vizStack"><div class="vizNode">Feature inputs<small>risk signals, behavioral indicators, transaction context</small></div><div class="vizNode">Scoring API<small>real-time fraud probability and expected loss</small></div><div class="vizNode">Monitoring loop<small>drift checks, reporting, risk mart updates</small></div></div></div><div class="vizCard"><span class="vizTitle">Production readiness</span><div class="vizBars"><div class="vizBar"><span>Prediction service</span><i><b style="width:90%"></b></i></div><div class="vizBar"><span>Monitoring coverage</span><i><b style="width:86%"></b></i></div><div class="vizBar"><span>Executive reporting</span><i><b style="width:82%"></b></i></div></div><div class="vizStats"><div class="vizStat"><strong>FastAPI</strong><span>Real-time scoring endpoint for downstream product use</span></div><div class="vizStat"><strong>Power BI</strong><span>Executive dashboard layer for business oversight</span></div></div></div></div><ul class="featureList">
-              <li><span class="plus">+</span><span><strong>Catalog, search, and product pages</strong> built for browsing and conversion</span></li>
-              <li><span class="plus">+</span><span><strong>Cart and checkout flow</strong> covering core e-commerce behavior</span></li>
-              <li><span class="plus">+</span><span><strong>Admin support</strong> for products, orders, and store operations</span></li>
-            </ul>
-            <div class="projectLinks">
-              <a class="linkBtn primary" href="https://vegata.pythonanywhere.com/" target="_blank" rel="noopener">Live demo</a>
-              <a class="linkBtn" href="https://github.com/vegaFlex/OnlineBookstore_README" target="_blank" rel="noopener">Source overview</a>
-            </div>
-          </div>
-        </article>
-        <article class="projectCard previewCard">
-          <img src="assets/paradise.jpg" alt="Paradise Food Order App preview">
-          <div class="previewBody">
-            <div class="projectTop"><div><h3>Paradise Food Order App</h3><p>Internal food ordering system built for an operational business workflow with menus, limits, locations, and admin summaries.</p></div><span class="pill">Business Workflow</span></div>
-            <div class="analyticsViz"><div class="vizCard"><span class="vizTitle">System flow</span><div class="vizStack"><div class="vizNode">Portfolio import<small>validation, mapping, quality checks</small></div><div class="vizNode">Risk scoring<small>segmentation, prioritization, package ranking</small></div><div class="vizNode">Decision layer<small>dashboards, pricing, exports, API access</small></div></div></div><div class="vizCard"><span class="vizTitle">Business capability</span><div class="vizBars"><div class="vizBar"><span>Operational analytics</span><i><b style="width:92%"></b></i></div><div class="vizBar"><span>Valuation workflow</span><i><b style="width:88%"></b></i></div><div class="vizBar"><span>Reporting automation</span><i><b style="width:84%"></b></i></div></div><div class="vizStats"><div class="vizStat"><strong>API</strong><span>REST endpoints for debtors, portfolios, and KPIs</span></div><div class="vizStat"><strong>PDF/XLS</strong><span>Export-ready reporting for review and decision support</span></div></div></div></div><div class="analyticsViz"><div class="vizCard"><span class="vizTitle">ML pipeline</span><div class="vizStack"><div class="vizNode">Feature inputs<small>risk signals, behavioral indicators, transaction context</small></div><div class="vizNode">Scoring API<small>real-time fraud probability and expected loss</small></div><div class="vizNode">Monitoring loop<small>drift checks, reporting, risk mart updates</small></div></div></div><div class="vizCard"><span class="vizTitle">Production readiness</span><div class="vizBars"><div class="vizBar"><span>Prediction service</span><i><b style="width:90%"></b></i></div><div class="vizBar"><span>Monitoring coverage</span><i><b style="width:86%"></b></i></div><div class="vizBar"><span>Executive reporting</span><i><b style="width:82%"></b></i></div></div><div class="vizStats"><div class="vizStat"><strong>FastAPI</strong><span>Real-time scoring endpoint for downstream product use</span></div><div class="vizStat"><strong>Power BI</strong><span>Executive dashboard layer for business oversight</span></div></div></div></div><ul class="featureList">
-              <li><span class="plus">+</span><span><strong>Operational ordering process</strong> with dates, quantities, and practical constraints</span></li>
-              <li><span class="plus">+</span><span><strong>Rules, permissions, and internal control</strong> for non-public workflow management</span></li>
-              <li><span class="plus">+</span><span><strong>Admin summaries and exports</strong> to support daily business reporting</span></li>
-            </ul>
-            <div class="projectLinks">
-              <a class="linkBtn primary" href="https://nekrato.com/menu/" target="_blank" rel="noopener">Live demo</a>
-              <a class="linkBtn" href="https://github.com/vegaFlex/ParadiseFoodOrderApp_README" target="_blank" rel="noopener">Source overview</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="projectCard">
-          <div class="projectTop"><div><h3>Why this mix matters</h3><p>This portfolio is intentionally hybrid. It shows that I can move between analytics, machine learning, backend engineering, dashboards, and customer-facing web products without losing quality or business focus.</p></div><span class="pill">Positioning</span></div>
-          <div class="analyticsViz"><div class="vizCard"><span class="vizTitle">System flow</span><div class="vizStack"><div class="vizNode">Portfolio import<small>validation, mapping, quality checks</small></div><div class="vizNode">Risk scoring<small>segmentation, prioritization, package ranking</small></div><div class="vizNode">Decision layer<small>dashboards, pricing, exports, API access</small></div></div></div><div class="vizCard"><span class="vizTitle">Business capability</span><div class="vizBars"><div class="vizBar"><span>Operational analytics</span><i><b style="width:92%"></b></i></div><div class="vizBar"><span>Valuation workflow</span><i><b style="width:88%"></b></i></div><div class="vizBar"><span>Reporting automation</span><i><b style="width:84%"></b></i></div></div><div class="vizStats"><div class="vizStat"><strong>API</strong><span>REST endpoints for debtors, portfolios, and KPIs</span></div><div class="vizStat"><strong>PDF/XLS</strong><span>Export-ready reporting for review and decision support</span></div></div></div></div><div class="analyticsViz"><div class="vizCard"><span class="vizTitle">ML pipeline</span><div class="vizStack"><div class="vizNode">Feature inputs<small>risk signals, behavioral indicators, transaction context</small></div><div class="vizNode">Scoring API<small>real-time fraud probability and expected loss</small></div><div class="vizNode">Monitoring loop<small>drift checks, reporting, risk mart updates</small></div></div></div><div class="vizCard"><span class="vizTitle">Production readiness</span><div class="vizBars"><div class="vizBar"><span>Prediction service</span><i><b style="width:90%"></b></i></div><div class="vizBar"><span>Monitoring coverage</span><i><b style="width:86%"></b></i></div><div class="vizBar"><span>Executive reporting</span><i><b style="width:82%"></b></i></div></div><div class="vizStats"><div class="vizStat"><strong>FastAPI</strong><span>Real-time scoring endpoint for downstream product use</span></div><div class="vizStat"><strong>Power BI</strong><span>Executive dashboard layer for business oversight</span></div></div></div></div><ul class="featureList">
-            <li><span class="plus">+</span><span><strong>For data roles:</strong> I can own analysis, metrics, modeling, API exposure, dashboards, and reporting</span></li>
-            <li><span class="plus">+</span><span><strong>For ML roles:</strong> I think in terms of deployment, monitoring, and product integration, not isolated notebooks</span></li>
-            <li><span class="plus">+</span><span><strong>For Python or product roles:</strong> I can deliver systems that support real users, workflows, and business operations</span></li>
+      <div class="grid3">
+        <article class="card">
+          <img class="thumb" src="assets/eventhub.jpg" alt="EventHub preview">
+          <span class="label">Live App</span>
+          <h3>EventHub</h3>
+          <p>Event management platform with ticket sales, seat selection, payments, QR validation, and admin control.</p>
+          <ul class="bullets">
+            <li><strong>Ticketing workflow</strong> with booking and purchase logic</li>
+            <li><strong>Seat and QR validation</strong> for practical event operations</li>
+            <li><strong>Admin tooling</strong> for platform management</li>
           </ul>
+          <div class="cardActions">
+            <a class="btn btnPrimary" href="https://eventhub-vegata.pythonanywhere.com/bg/" target="_blank" rel="noopener">Live Demo</a>
+            <a class="btn btnSecondary" href="https://github.com/vegaFlex/EventHub_README" target="_blank" rel="noopener">Source Overview</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img class="thumb" src="assets/bookzone.jpg" alt="BookZone preview">
+          <span class="label">Live App</span>
+          <h3>BookZone</h3>
+          <p>Online bookstore with catalog browsing, product filtering, cart flows, ordering, and admin support.</p>
+          <ul class="bullets">
+            <li><strong>Catalog and product discovery</strong> with search and navigation</li>
+            <li><strong>Cart and checkout logic</strong> for e-commerce workflows</li>
+            <li><strong>Store management support</strong> for products and orders</li>
+          </ul>
+          <div class="cardActions">
+            <a class="btn btnPrimary" href="https://vegata.pythonanywhere.com/" target="_blank" rel="noopener">Live Demo</a>
+            <a class="btn btnSecondary" href="https://github.com/vegaFlex/OnlineBookstore_README" target="_blank" rel="noopener">Source Overview</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img class="thumb" src="assets/paradise.jpg" alt="Paradise Food Order App preview">
+          <span class="label">Business Workflow</span>
+          <h3>Paradise Food Order App</h3>
+          <p>Internal food ordering system built around menus, limits, quantities, locations, and admin summaries.</p>
+          <ul class="bullets">
+            <li><strong>Operational ordering flow</strong> for daily internal use</li>
+            <li><strong>Rules and permissions</strong> for process control</li>
+            <li><strong>Summary and export logic</strong> for reporting</li>
+          </ul>
+          <div class="cardActions">
+            <a class="btn btnPrimary" href="https://nekrato.com/menu/" target="_blank" rel="noopener">Live Demo</a>
+            <a class="btn btnSecondary" href="https://github.com/vegaFlex/ParadiseFoodOrderApp_README" target="_blank" rel="noopener">Source Overview</a>
+          </div>
         </article>
       </div>
     </section>
 
-    <section class="section glass" id="expertise">
+    <section class="section" id="skills">
       <div class="sectionHead">
-        <div>
-          <span class="sectionLabel">Expertise</span>
-          <h2>Built around analytics, engineering, and business usability.</h2>
-          <p>I work best in environments where data, product thinking, and engineering quality need to come together. My strongest value is turning messy business processes into structured systems.</p>
-        </div>
+        <h2>Skills & Focus</h2>
+        <p>I am most valuable in roles where analysis, technical execution, and product thinking need to work together.</p>
       </div>
-
-      <div class="skillsGrid">
-        <article class="stackCard"><h3>Data Analytics</h3><p>Python, Pandas, SQL, Excel, KPI modeling, portfolio analysis, business reporting, benchmark comparison, and dashboard thinking.</p></article>
-        <article class="stackCard"><h3>Machine Learning</h3><p>Scikit-learn, classification workflows, risk scoring, fraud modeling, loss estimation, monitoring, and drift detection.</p></article>
-        <article class="stackCard"><h3>Engineering & Delivery</h3><p>Django, FastAPI, PostgreSQL, REST APIs, role-based systems, deployment, documentation, and business-facing interfaces.</p></article>
+      <div class="grid3">
+        <article class="card">
+          <h3>Data Analytics</h3>
+          <p>Python, Pandas, SQL, Excel, KPI analysis, reporting, data modeling, dashboards, and business review workflows.</p>
+        </article>
+        <article class="card">
+          <h3>Machine Learning</h3>
+          <p>Scikit-learn, fraud and risk scoring, classification pipelines, expected loss logic, monitoring, and drift detection.</p>
+        </article>
+        <article class="card">
+          <h3>Engineering</h3>
+          <p>Django, FastAPI, PostgreSQL, REST APIs, admin workflows, deployment, and production-style application structure.</p>
+        </article>
       </div>
-
-      <div class="tagCloud">
-        <span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Scikit-learn</span><span class="tag">FastAPI</span><span class="tag">Django</span><span class="tag">PostgreSQL</span><span class="tag">SQL</span><span class="tag">Power BI</span><span class="tag">Excel</span><span class="tag">JavaScript</span><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">TailwindCSS</span><span class="tag">Docker</span><span class="tag">GitHub Actions</span><span class="tag">Azure</span><span class="tag">KNIME</span>
+      <div class="tags">
+        <span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">SQL</span><span class="tag">Scikit-learn</span><span class="tag">FastAPI</span><span class="tag">Django</span><span class="tag">PostgreSQL</span><span class="tag">Power BI</span><span class="tag">Excel</span><span class="tag">JavaScript</span><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Docker</span><span class="tag">GitHub</span><span class="tag">Azure</span>
       </div>
     </section>
 
-    <section class="section glass">
-      <div class="sectionHead">
-        <div>
-          <span class="sectionLabel">How I work</span>
-          <h2>I build systems with structure, ownership, and business purpose.</h2>
-        </div>
-      </div>
-      <div class="impactGrid">
-        <article class="stackCard"><h3>Clear structure</h3><p>I favor explicit models, readable logic, and analytics flows that remain understandable as complexity grows.</p></article>
-        <article class="stackCard"><h3>End-to-end ownership</h3><p>I enjoy owning the path from raw data and business requirements to deployed features, dashboards, and operational tooling.</p></article>
-        <article class="stackCard"><h3>Real-world usability</h3><p>I care about whether people can actually use the product to decide, monitor, act, and improve workflows.</p></article>
-      </div>
-    </section>
-
-    <section class="footerCard glass" id="contact">
+    <section class="footer" id="contact">
       <div>
-        <span class="sectionLabel">Contact</span>
-        <h2>Open to roles where I can build analytics products, ML systems, and useful business software.</h2>
-        <p class="footerText">If you are hiring for Data Analyst, Analytics Engineer, Python, ML, or product-focused technical roles, I would be glad to connect. I am especially interested in roles where I can combine analysis, systems thinking, ML or backend execution, and hands-on product delivery.</p>
-        <div class="ctaRow">
-          <a class="btn btnPrimary" href="mailto:veslin.lilov@gmail.com?subject=Let%27s%20talk%20about%20a%20role">Get in touch</a>
-          <a class="btn btnSecondary" href="https://github.com/vegaFlex" target="_blank" rel="noopener">View GitHub</a>
-          <a class="btn btnGhost" href="https://www.linkedin.com/in/veselin-lilov-0b7624344/" target="_blank" rel="noopener">LinkedIn</a>
-        </div>
+        <h2>Open to data, analytics, ML, and Python roles.</h2>
+        <p>I am especially interested in work where I can analyze business problems, build useful systems, and own features from idea to working product.</p>
       </div>
-      <aside class="contactBox">
-        <div class="kicker">Quick details</div>
-        <div class="contactList">
-          <a href="mailto:veslin.lilov@gmail.com">veslin.lilov@gmail.com</a>
-          <a href="https://github.com/vegaFlex" target="_blank" rel="noopener">github.com/vegaFlex</a>
-          <a href="https://www.linkedin.com/in/veselin-lilov-0b7624344/" target="_blank" rel="noopener">LinkedIn profile</a>
-          <span>Based in Sofia, Bulgaria</span>
-        </div>
-        <p class="footerText" style="margin-bottom:0">Portfolio focused on analytics systems, machine learning, and production-style web applications.</p>
-      </aside>
+      <div class="actions" style="margin-top:0;justify-content:flex-end">
+        <a class="btn btnPrimary" href="mailto:veslin.lilov@gmail.com?subject=Portfolio%20Inquiry">Email Me</a>
+        <a class="btn btnSecondary" href="https://github.com/vegaFlex" target="_blank" rel="noopener">GitHub</a>
+      </div>
     </section>
   </div>
 </body>
 </html>
-
 
