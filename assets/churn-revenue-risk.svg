@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="760" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F172A"/>
+      <stop offset="1" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#FFFFFF" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.04"/>
+    </linearGradient>
+    <linearGradient id="bar1" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#34D399"/>
+    </linearGradient>
+    <linearGradient id="bar2" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#F59E0B"/>
+      <stop offset="1" stop-color="#FB7185"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="760" rx="32" fill="url(#bg)"/>
+  <circle cx="1050" cy="110" r="160" fill="#7C3AED" fill-opacity="0.22"/>
+  <circle cx="180" cy="620" r="180" fill="#22D3EE" fill-opacity="0.18"/>
+  <rect x="52" y="52" width="1096" height="656" rx="28" fill="url(#panel)" stroke="rgba(255,255,255,0.15)"/>
+  <text x="86" y="118" fill="#C7D2FE" font-family="Arial, sans-serif" font-size="24" font-weight="700">Churn &amp; Revenue Risk</text>
+  <text x="86" y="158" fill="#E2E8F0" font-family="Arial, sans-serif" font-size="52" font-weight="700">Customer risk scoring dashboard</text>
+  <text x="86" y="198" fill="#94A3B8" font-family="Arial, sans-serif" font-size="24">Prediction, segmentation, revenue impact, retention priorities</text>
+
+  <rect x="86" y="246" width="338" height="178" rx="22" fill="#0B1220" fill-opacity="0.54" stroke="#334155"/>
+  <text x="112" y="286" fill="#E2E8F0" font-family="Arial, sans-serif" font-size="22" font-weight="700">Risk Segments</text>
+  <rect x="112" y="318" width="286" height="18" rx="9" fill="#1E293B"/>
+  <rect x="112" y="318" width="214" height="18" rx="9" fill="url(#bar1)"/>
+  <rect x="112" y="352" width="286" height="18" rx="9" fill="#1E293B"/>
+  <rect x="112" y="352" width="166" height="18" rx="9" fill="url(#bar2)"/>
+  <rect x="112" y="386" width="286" height="18" rx="9" fill="#1E293B"/>
+  <rect x="112" y="386" width="124" height="18" rx="9" fill="#60A5FA"/>
+
+  <rect x="448" y="246" width="302" height="178" rx="22" fill="#0B1220" fill-opacity="0.54" stroke="#334155"/>
+  <text x="474" y="286" fill="#E2E8F0" font-family="Arial, sans-serif" font-size="22" font-weight="700">Key Metrics</text>
+  <text x="474" y="338" fill="#22D3EE" font-family="Arial, sans-serif" font-size="46" font-weight="700">18.4%</text>
+  <text x="474" y="366" fill="#94A3B8" font-family="Arial, sans-serif" font-size="20">High-risk customer share</text>
+  <text x="474" y="408" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="30" font-weight="700">$1.2M</text>
+  <text x="474" y="434" fill="#94A3B8" font-family="Arial, sans-serif" font-size="20">Revenue exposure</text>
+
+  <rect x="774" y="246" width="288" height="178" rx="22" fill="#0B1220" fill-opacity="0.54" stroke="#334155"/>
+  <text x="800" y="286" fill="#E2E8F0" font-family="Arial, sans-serif" font-size="22" font-weight="700">Model Stack</text>
+  <text x="800" y="332" fill="#E2E8F0" font-family="Arial, sans-serif" font-size="20">Python</text>
+  <text x="800" y="366" fill="#E2E8F0" font-family="Arial, sans-serif" font-size="20">Scikit-learn</text>
+  <text x="800" y="400" fill="#E2E8F0" font-family="Arial, sans-serif" font-size="20">Pandas / SQL</text>
+
+  <rect x="86" y="462" width="976" height="188" rx="22" fill="#0B1220" fill-opacity="0.48" stroke="#334155"/>
+  <text x="112" y="502" fill="#E2E8F0" font-family="Arial, sans-serif" font-size="22" font-weight="700">Retention Priorities</text>
+  <polyline points="128,602 244,560 360,574 476,500 592,470 708,492 824,428 940,394" stroke="#22D3EE" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="128,620 244,610 360,592 476,566 592,548 708,528 824,500 940,474" stroke="#F59E0B" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="112" y="632" fill="#94A3B8" font-family="Arial, sans-serif" font-size="18">Churn probability trend</text>
+  <text x="366" y="632" fill="#94A3B8" font-family="Arial, sans-serif" font-size="18">Revenue-at-risk trend</text>
+</svg>
