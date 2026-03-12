@@ -70,8 +70,8 @@
     .split{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
     .card{background:rgba(255,255,255,0.92);border:1px solid rgba(15,23,42,0.10);border-radius:var(--radius);padding:18px;box-shadow:0 12px 30px rgba(2,6,23,0.09);backdrop-filter: blur(10px);transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease;display:flex;flex-direction:column}
     .card:hover{transform:translateY(-2px);box-shadow:0 18px 44px rgba(2,6,23,0.12);border-color:rgba(15,23,42,0.14)}
-    .card h2{margin:0 0 10px 0;font-size:18px}
-    .desc{margin:0 0 14px 0;color:var(--muted);line-height:1.6}
+    .card h2{margin:0 0 10px 0;font-size:18px;min-height:44px}
+    .desc{margin:0 0 14px 0;color:var(--muted);line-height:1.6;min-height:78px}.projectSummary{margin:0 0 14px 0;color:var(--muted);line-height:1.65;min-height:88px}
     .tagRow{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 14px 0}
     .tag{display:inline-flex;padding:7px 10px;border-radius:999px;border:1px solid rgba(15,23,42,0.10);background:#ffffff;color:#1f2937;font-size:12px;font-weight:900}
     .tagBlue{background:#eff6ff;border-color:#dbeafe}.tagPurple{background:#f5f3ff;border-color:#e9d5ff}.tagGreen{background:#ecfdf5;border-color:#bbf7d0}.tagAmber{background:#fffbeb;border-color:#fde68a}
@@ -155,12 +155,7 @@
               <span class="tag tagPurple">Valuation</span>
               <span class="tag tagAmber">Reporting</span>
             </div>
-            <ul class="list">
-              <li class="li"><span class="tick">✓</span><span><strong>Portfolio import</strong> with validation and review workflow</span></li>
-              <li class="li"><span class="tick">✓</span><span><strong>Risk scoring</strong> and package ranking for decision support</span></li>
-              <li class="li"><span class="tick">✓</span><span><strong>Dashboards and exports</strong> with API and reporting layer</span></li>
-            </ul>
-            <div class="btns">
+            <p class="projectSummary">Portfolio import, debtor scoring, valuation logic, dashboards, exports, and API-driven reporting built as one decision-support product.</p><div class="btns">
               <a class="btn btnPrimary" href="https://debt-risk-intelligence-hub.onrender.com" target="_blank" rel="noopener">Live demo</a>
               <a class="btn btnSecondary" href="https://github.com/vegaFlex/debt-risk-intelligence-hub" target="_blank" rel="noopener">Code</a>
             </div>
@@ -179,12 +174,7 @@
               <span class="tag tagAmber">Monitoring</span>
               <span class="tag tagGreen">Power BI</span>
             </div>
-            <ul class="list">
-              <li class="li"><span class="tick">✓</span><span><strong>Fraud scoring API</strong> for real-time model predictions</span></li>
-              <li class="li"><span class="tick">✓</span><span><strong>Expected loss logic</strong> for business prioritization</span></li>
-              <li class="li"><span class="tick">✓</span><span><strong>Monitoring and reporting</strong> with dashboard visibility</span></li>
-            </ul>
-            <div class="btns">
+            <p class="projectSummary">Real-time fraud scoring, expected loss estimation, monitoring workflows, and reporting designed for a production-style ML risk environment.</p><div class="btns">
               <a class="btn btnSecondary" href="https://github.com/vegaFlex/fraud-monitoring-prod" target="_blank" rel="noopener">Code</a>
             </div>
           </div>
@@ -201,12 +191,7 @@
               <span class="tag tagPurple">Segmentation</span>
               <span class="tag tagAmber">Retention</span>
             </div>
-            <ul class="list">
-              <li class="li"><span class="tick">✓</span><span><strong>Customer risk scoring</strong> for churn probability analysis</span></li>
-              <li class="li"><span class="tick">✓</span><span><strong>Revenue exposure logic</strong> to highlight business impact</span></li>
-              <li class="li"><span class="tick">✓</span><span><strong>Retention prioritization</strong> for actionable account focus</span></li>
-            </ul>
-            <div class="btns">
+            <p class="projectSummary">Customer churn scoring, revenue-risk visibility, segmentation logic, and retention prioritization focused on business impact and account actionability.</p><div class="btns">
               <a class="btn btnSecondary" href="https://github.com/vegaFlex/churn-revenue-risk" target="_blank" rel="noopener">Code</a>
             </div>
           </div>
@@ -231,12 +216,7 @@
               <span class="tag tagPurple">Cart</span>
               <span class="tag tagAmber">Payments</span>
             </div>
-            <ul class="list">
-              <li class="li"><span class="tick">✓</span><span><strong>Product pages</strong> with filters and search</span></li>
-              <li class="li"><span class="tick">✓</span><span><strong>Cart flow</strong> and ordering process</span></li>
-              <li class="li"><span class="tick">✓</span><span><strong>Admin panel</strong> for products and orders</span></li>
-            </ul>
-            <div class="btns">
+            <p class="projectSummary">Catalog browsing, search, cart behavior, checkout flow, and store administration combined into a complete e-commerce experience.</p><div class="btns">
               <a class="btn btnPrimary" href="https://vegata.pythonanywhere.com/" target="_blank" rel="noopener">Live demo</a>
               <a class="btn btnSecondary" href="https://github.com/vegaFlex/OnlineBookstore_README" target="_blank" rel="noopener">Code</a>
             </div>
@@ -256,12 +236,7 @@
               <span class="tag tagAmber">Payments</span>
               <span class="tag tagGreen">QR</span>
             </div>
-            <ul class="list">
-              <li class="li"><span class="tick">✓</span><span><strong>Ticket sales</strong> with online booking workflow</span></li>
-              <li class="li"><span class="tick">✓</span><span><strong>Seat selection</strong> by sector and row</span></li>
-              <li class="li"><span class="tick">✓</span><span><strong>QR validation</strong> for event entry flow</span></li>
-            </ul>
-            <div class="btns">
+            <p class="projectSummary">Ticket sales, seat selection, payment flow, and QR-based event entry brought together in one structured event platform.</p><div class="btns">
               <a class="btn btnPrimary" href="https://eventhub-vegata.pythonanywhere.com/bg/" target="_blank" rel="noopener">Live demo</a>
               <a class="btn btnSecondary" href="https://github.com/vegaFlex/EventHub_README" target="_blank" rel="noopener">Code</a>
             </div>
@@ -280,12 +255,7 @@
               <span class="tag tagGreen">Admin</span>
               <span class="tag tagGreen">Reports</span>
             </div>
-            <ul class="list">
-              <li class="li"><span class="tick">✓</span><span><strong>Ordering flow</strong> by date and quantity</span></li>
-              <li class="li"><span class="tick">✓</span><span><strong>Rules and permissions</strong> for internal control</span></li>
-              <li class="li"><span class="tick">✓</span><span><strong>Exports and summaries</strong> for daily reporting</span></li>
-            </ul>
-            <div class="btns">
+            <p class="projectSummary">Internal ordering workflow with quantity limits, permission rules, and admin reporting built for practical day-to-day operations.</p><div class="btns">
               <a class="btn btnPrimary" href="https://nekrato.com/menu/" target="_blank" rel="noopener">Live demo</a>
               <a class="btn btnSecondary" href="https://github.com/vegaFlex/ParadiseFoodOrderApp_README" target="_blank" rel="noopener">Code</a>
             </div>
@@ -345,5 +315,8 @@
   </script>
 </body>
 </html>
+
+
+
 
 
