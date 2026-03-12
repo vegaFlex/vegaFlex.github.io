@@ -3,227 +3,320 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Veselin Lilov | Data Analyst, ML, Python</title>
-  <meta name="description" content="Portfolio of Veselin Lilov: analytics, machine learning, Python engineering, dashboards, and web applications.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <title>Veselin Lilov | Data Analyst, ML Engineer, Python Developer</title>
+  <meta name="description" content="Portfolio of Veselin Lilov featuring analytics platforms, machine learning systems, and production-style web applications.">
   <style>
-    :root{--bg:#f4f7fb;--surface:#ffffff;--surface-soft:#f8fbff;--text:#0f172a;--muted:#526075;--line:#d9e2ee;--accent:#0f766e;--accent-2:#0ea5a4;--shadow:0 16px 36px rgba(15,23,42,.08);--radius:22px;--max:1120px}
-    *{box-sizing:border-box} html{scroll-behavior:smooth}
-    body{margin:0;font-family:"Manrope",sans-serif;color:var(--text);background:linear-gradient(180deg,#f8fbff 0%,#f3f6fb 100%)}
-    a{color:inherit;text-decoration:none} img{display:block;max-width:100%}
-    .page{width:min(calc(100% - 24px),var(--max));margin:16px auto 32px}
-    .nav,.hero,.sectionBox,.projectCard,.skillCard,.footer{background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:var(--radius)}
-    .nav{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:14px 18px;position:sticky;top:10px;z-index:10}
-    .brand{font-size:14px;font-weight:800;letter-spacing:.04em;text-transform:uppercase}
-    .navLinks{display:flex;gap:8px;flex-wrap:wrap}.navLinks a{padding:9px 12px;border-radius:999px;color:var(--muted);font-size:14px}.navLinks a:hover{background:var(--surface-soft);color:var(--text)}
-    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:18px;padding:22px;margin-top:16px;background:linear-gradient(180deg,#ffffff 0%,#fbfdff 100%)}
-    .eyebrow{display:inline-block;padding:7px 11px;border-radius:999px;background:#dff7f3;color:var(--accent);font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
-    h1,h2,h3{margin:0} h1{font-size:clamp(2rem,4.4vw,3.5rem);line-height:1.02;margin-top:12px;max-width:12ch}
-    .lead{margin:14px 0 0;color:var(--muted);font-size:16px;line-height:1.7;max-width:62ch}
-    .heroLinks{display:flex;flex-wrap:wrap;gap:16px;margin-top:16px;color:var(--muted);font-size:14px}
-    .heroLinks a{color:var(--accent);font-weight:700}
-    .summaryGrid{display:grid;gap:12px}
-    .summaryCard{padding:16px;border-radius:18px;background:var(--surface-soft);border:1px solid var(--line)}
-    .summaryCard strong{display:block;font-size:28px;line-height:1;margin-bottom:6px}
-    .summaryCard span{display:block;color:var(--muted);font-size:14px;line-height:1.55}
-    .section{margin-top:18px}.sectionHead{display:flex;justify-content:space-between;align-items:end;gap:18px;margin-bottom:10px}.sectionHead p{margin:6px 0 0;color:var(--muted);font-size:15px;line-height:1.65;max-width:64ch}
-    .sectionBox{padding:18px}
-    .grid2,.grid3{display:grid;gap:16px}.grid2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid3{grid-template-columns:repeat(3,minmax(0,1fr))}
-    .projectCard,.skillCard{padding:18px;background:linear-gradient(180deg,#fff 0%,#fbfdff 100%)}
-    .label{display:inline-block;padding:6px 10px;border-radius:999px;background:var(--surface-soft);border:1px solid var(--line);color:var(--muted);font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;margin-bottom:12px}
-    .projectCard p,.skillCard p{margin:10px 0 0;color:var(--muted);line-height:1.65;font-size:14px}
-    .miniMeta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:14px}.miniMeta div{padding:10px;border-radius:14px;background:var(--surface-soft);border:1px solid var(--line)} .miniMeta strong{display:block;font-size:13px}.miniMeta span{display:block;margin-top:4px;color:var(--muted);font-size:11px;line-height:1.4}
-    .bullets{margin:14px 0 0;padding-left:18px;color:var(--muted)} .bullets li{margin:7px 0;line-height:1.6;font-size:14px}.bullets strong{color:var(--text)}
-    .linksList{display:grid;gap:6px;margin-top:14px}.linksList span{font-size:13px;color:var(--muted);line-height:1.55}.linksList a{color:var(--accent);font-weight:700}
-    .thumb{width:100%;height:160px;object-fit:cover;border-radius:14px;border:1px solid var(--line);margin-bottom:14px;background:#e8eef5}
-    .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}.tag{padding:8px 10px;border-radius:999px;background:var(--surface-soft);border:1px solid var(--line);font-size:12px;font-weight:700;color:var(--text)}
-    .footer{padding:20px;margin-top:18px;display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center}
-    .footer p{margin:8px 0 0;color:var(--muted);line-height:1.65;font-size:14px;max-width:58ch}
-    .contactLinks{display:grid;gap:6px;text-align:right}.contactLinks a{color:var(--accent);font-weight:700}.contactLinks span{color:var(--muted);font-size:14px}
-    @media (max-width:920px){.hero,.grid2,.grid3,.footer,.miniMeta{grid-template-columns:1fr}.sectionHead{align-items:start}.contactLinks{text-align:left}.page{width:min(calc(100% - 16px),var(--max))}.hero,.sectionBox,.projectCard,.skillCard,.footer{padding:16px}.heroLinks{display:grid;gap:6px}}
+    :root{
+      --page1:#f6f8ff;
+      --page2:#f2f6ff;
+      --text:#0f172a;
+      --muted:#475569;
+      --card:#ffffff;
+      --accent:#2563eb;
+      --accent2:#7c3aed;
+      --ok:#16a34a;
+      --warn:#f59e0b;
+      --info:#0ea5e9;
+      --shadow1:0 22px 70px rgba(2,6,23,0.12);
+      --shadow2:0 12px 32px rgba(2,6,23,0.10);
+      --radius:18px;
+      --sAbout1:#eef2ff;
+      --sAbout2:#ffffff;
+      --sProjects1:#f5f3ff;
+      --sProjects2:#ffffff;
+      --sWork1:#ecfdf5;
+      --sWork2:#ffffff;
+      --sTech1:#f1f5f9;
+      --sTech2:#ffffff;
+      --sFooter1:#fffbeb;
+      --sFooter2:#ffffff;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:radial-gradient(900px 420px at 10% 0%, rgba(37,99,235,0.10), transparent 55%),radial-gradient(900px 420px at 90% 0%, rgba(124,58,237,0.10), transparent 55%),linear-gradient(180deg, var(--page1), var(--page2));}
+    a{color:inherit}
+    .wrap{max-width:1240px;margin:0 auto;padding:28px}
+    .panel{background:var(--card);border:1px solid rgba(15,23,42,0.10);border-radius:var(--radius);box-shadow:var(--shadow1)}
+    .hero{padding:28px;position:relative;overflow:hidden;background:radial-gradient(900px 280px at 18% 0%, rgba(37,99,235,0.18), transparent 62%),radial-gradient(900px 280px at 82% 0%, rgba(124,58,237,0.16), transparent 62%),linear-gradient(180deg, #ffffff, #fbfcff)}
+    .hero::after{content:"";position:absolute;left:0;top:0;right:0;height:6px;background:linear-gradient(90deg, var(--accent), var(--accent2));pointer-events:none}
+    .hero::before{content:"";position:absolute;inset:-2px;background:radial-gradient(520px 260px at 12% 30%, rgba(37,99,235,0.12), transparent 62%),radial-gradient(520px 260px at 88% 22%, rgba(124,58,237,0.10), transparent 62%),radial-gradient(720px 320px at 52% 120%, rgba(14,165,233,0.08), transparent 62%);pointer-events:none}
+    .hero>*{position:relative}
+    .topRow{display:flex;gap:18px;flex-wrap:wrap;align-items:flex-start;justify-content:space-between}
+    .idBlock{min-width:320px;flex:1 1 620px}
+    h1{margin:0 0 8px 0;font-size:38px;letter-spacing:0.2px}
+    .sub{margin:0;color:var(--muted);font-size:15px;line-height:1.7;max-width:760px}
+    .ctaRow{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:14px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 14px;border-radius:14px;border:1px solid rgba(15,23,42,0.16);text-decoration:none;font-weight:900;font-size:14px;background:linear-gradient(180deg,#ffffff,#f8fafc);box-shadow:0 10px 22px rgba(2,6,23,0.10);transition:transform .12s ease,box-shadow .12s ease,border-color .12s ease,background .12s ease;outline:none;cursor:pointer;user-select:none}
+    .btn:hover{transform:translateY(-1px);border-color:rgba(15,23,42,0.22);box-shadow:0 14px 30px rgba(2,6,23,0.14);background:linear-gradient(180deg,#ffffff,#f1f5ff)}
+    .btnPrimary{border-color:rgba(37,99,235,0.28);background:linear-gradient(180deg,#ffffff,#eef2ff);box-shadow:0 10px 22px rgba(37,99,235,0.10)}
+    .btnSecondary{border-color:rgba(15,23,42,0.16)}
+    .btnPurple{border-color:rgba(124,58,237,0.22);background:linear-gradient(180deg,#ffffff,#f3e8ff);box-shadow:0 10px 22px rgba(124,58,237,0.08)}
+    .btn::after{content:"";width:9px;height:9px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(-45deg);opacity:.45;margin-left:2px}
+    .badgeRow{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+    .badge{display:inline-flex;align-items:center;gap:8px;padding:8px 10px;border-radius:999px;border:1px solid rgba(15,23,42,0.10);background:rgba(255,255,255,0.76);color:var(--muted);font-size:13px;font-weight:900;backdrop-filter:blur(10px)}
+    .dot{width:10px;height:10px;border-radius:50%}.dotOk{background:var(--ok)}.dotInfo{background:var(--info)}.dotWarn{background:var(--warn)}
+    .section{margin-top:18px}
+    .sectionTitle{margin:0 0 10px 0;font-size:16px;letter-spacing:.2px}
+    .sectionBox{position:relative;border-radius:var(--radius);border:1px solid rgba(15,23,42,0.08);box-shadow:var(--shadow2);overflow:hidden;padding:18px}
+    .sectionBox::before{content:"";position:absolute;inset:0;background:radial-gradient(900px 230px at 10% 0%, rgba(255,255,255,0.70), transparent 60%),radial-gradient(900px 230px at 90% 0%, rgba(255,255,255,0.58), transparent 60%);pointer-events:none}
+    .sectionBox>*{position:relative}
+    .sectionBox::after{content:"";position:absolute;left:0;top:0;right:0;height:4px;background:linear-gradient(90deg, var(--accent), var(--accent2));opacity:.85;pointer-events:none}
+    .aboutBg{background:radial-gradient(700px 220px at 12% 0%, rgba(37,99,235,0.10), transparent 65%),linear-gradient(180deg, var(--sAbout1), var(--sAbout2))}
+    .projectsBg{background:radial-gradient(700px 220px at 12% 0%, rgba(124,58,237,0.10), transparent 65%),linear-gradient(180deg, var(--sProjects1), var(--sProjects2))}
+    .techBg{background:radial-gradient(700px 220px at 12% 0%, rgba(14,165,233,0.10), transparent 65%),linear-gradient(180deg, var(--sTech1), var(--sTech2))}
+    .workBg{background:radial-gradient(700px 220px at 12% 0%, rgba(22,163,74,0.10), transparent 65%),linear-gradient(180deg, var(--sWork1), var(--sWork2))}
+    .grid5{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .card{background:rgba(255,255,255,0.92);border:1px solid rgba(15,23,42,0.10);border-radius:var(--radius);padding:18px;box-shadow:0 12px 30px rgba(2,6,23,0.09);backdrop-filter:blur(10px);transition:transform .12s ease,box-shadow .12s ease,border-color .12s ease;height:100%}
+    .card:hover{transform:translateY(-2px);box-shadow:0 18px 44px rgba(2,6,23,0.12);border-color:rgba(15,23,42,0.14)}
+    .card h2{margin:0 0 10px 0;font-size:18px}
+    .desc{margin:0 0 14px 0;color:var(--muted);line-height:1.6}
+    .tagRow{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 14px 0}
+    .tag{display:inline-flex;padding:7px 10px;border-radius:999px;border:1px solid rgba(15,23,42,0.10);background:#ffffff;color:#1f2937;font-size:12px;font-weight:900}
+    .tagBlue{background:#eff6ff;border-color:#dbeafe}.tagPurple{background:#f5f3ff;border-color:#e9d5ff}.tagGreen{background:#ecfdf5;border-color:#bbf7d0}.tagAmber{background:#fffbeb;border-color:#fde68a}
+    .btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+    .list{margin:0;padding:0;list-style:none}
+    .li{display:flex;gap:10px;padding:10px 0;border-top:1px solid rgba(15,23,42,0.08);color:var(--muted);line-height:1.55}
+    .li:first-child{border-top:none}.li strong{color:var(--text)}
+    .tick{width:20px;height:20px;border-radius:7px;background:#eff6ff;border:1px solid #dbeafe;display:inline-flex;align-items:center;justify-content:center;color:var(--accent);font-weight:900;flex:0 0 auto;margin-top:1px}
+    .split{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .skill{border:1px solid rgba(15,23,42,0.10);background:rgba(255,255,255,0.92);border-radius:16px;padding:12px;box-shadow:0 10px 22px rgba(2,6,23,0.06)}
+    .skillTitle{margin:0 0 6px 0;font-weight:900;font-size:13px}.skillText{margin:0;color:var(--muted);font-size:13px;line-height:1.45}
+    .footer{margin-top:18px;padding:18px;text-align:center;color:var(--muted);font-size:13px;background:radial-gradient(700px 220px at 12% 0%, rgba(245,158,11,0.12), transparent 65%),linear-gradient(180deg, var(--sFooter1), var(--sFooter2));border:1px solid rgba(15,23,42,0.08);border-radius:var(--radius);box-shadow:var(--shadow2)}
+    .demoShot{display:block;width:100%;margin:12px 0;border-radius:14px;border:1px solid rgba(15,23,42,0.10);background:linear-gradient(180deg,#ffffff,#f8fafc);box-shadow:0 10px 22px rgba(2,6,23,0.08);overflow:hidden;text-decoration:none;color:inherit;transform:translateY(0);transition:transform .12s ease,box-shadow .12s ease,border-color .12s ease}
+    .demoShot img{width:100%;height:190px;object-fit:cover;display:block;transition:transform .25s ease}
+    .demoShot:hover{transform:translateY(-1px);border-color:rgba(15,23,42,0.16);box-shadow:0 14px 30px rgba(2,6,23,0.12)}
+    .demoShot:hover img{transform:scale(1.03)}
+    .demoCap{margin:0;padding:10px 12px;color:var(--muted);font-size:12.5px;line-height:1.45;border-top:1px solid rgba(15,23,42,0.08);background:rgba(255,255,255,0.86)}
+    .grid5 .card{display:flex;flex-direction:column}.grid5 .btns{margin-top:auto}
+    @media (max-width:1280px){.grid5{grid-template-columns:repeat(3,1fr)}}
+    @media (max-width:980px){.grid5,.grid3,.grid2,.split{grid-template-columns:1fr}.wrap{padding:18px}h1{font-size:30px}.hero{padding:20px}}
   </style>
 </head>
 <body>
-  <div class="page">
-    <nav class="nav">
-      <div class="brand">Veselin Lilov</div>
-      <div class="navLinks">
-        <a href="#analytics">Analytics</a>
-        <a href="#web-apps">Web Apps</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
-
-    <section class="hero">
-      <div>
-        <span class="eyebrow">Data Analyst • ML • Python</span>
-        <h1>Analytics, machine learning, and web products for real business use.</h1>
-        <p class="lead">I build portfolio projects that combine data analysis, backend logic, dashboards, machine learning, and user-facing applications. The goal is simple: make it immediately clear what I build and where my strengths are.</p>
-        <div class="heroLinks">
-          <span>GitHub: <a href="https://github.com/vegaFlex" target="_blank" rel="noopener">github.com/vegaFlex</a></span>
-          <span>LinkedIn: <a href="https://www.linkedin.com/in/veselin-lilov-0b7624344/" target="_blank" rel="noopener">veselin-lilov</a></span>
-          <span>Email: <a href="mailto:veslin.lilov@gmail.com">veslin.lilov@gmail.com</a></span>
+  <div class="wrap">
+    <div class="panel hero">
+      <div class="topRow">
+        <div class="idBlock">
+          <h1>Veselin Lilov</h1>
+          <p class="sub">
+            I build end-to-end analytics platforms, machine learning systems, and web applications for real business use.<br>
+            My work combines data analysis, backend engineering, dashboards, APIs, and production-style product logic.<br>
+            This portfolio is designed to show both sides of my profile: analytics and ML work, plus real web systems with users, payments, orders, and admin flows.
+          </p>
+          <div class="ctaRow">
+            <a class="btn btnPrimary" href="https://github.com/vegaFlex/debt-risk-intelligence-hub" target="_blank" rel="noopener">Debt & Risk Hub</a>
+            <a class="btn btnSecondary" href="https://github.com/vegaFlex/fraud-monitoring-prod" target="_blank" rel="noopener">Fraud Monitoring</a>
+            <a class="btn btnPurple" href="mailto:veslin.lilov@gmail.com?subject=Portfolio%20Inquiry" rel="noopener">Contact Me</a>
+          </div>
+          <div class="badgeRow" aria-label="Highlights">
+            <span class="badge"><span class="dot dotOk"></span>Analytics and ML systems</span>
+            <span class="badge"><span class="dot dotInfo"></span>Dashboards, APIs, reporting</span>
+            <span class="badge"><span class="dot dotWarn"></span>Web apps and admin workflows</span>
+          </div>
+        </div>
+        <div class="card" style="min-width:280px;max-width:360px">
+          <h2 style="margin-bottom:8px">Contact</h2>
+          <p class="desc" style="margin-bottom:12px">
+            Sofia, Bulgaria<br>
+            Email: veslin.lilov@gmail.com
+          </p>
+          <div class="btns">
+            <a class="btn btnSecondary" href="mailto:veslin.lilov@gmail.com?subject=Portfolio%20Inquiry" rel="noopener">Email</a>
+            <a class="btn btnSecondary" href="https://www.linkedin.com/in/veselin-lilov-0b7624344/" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn btnSecondary" href="https://github.com/vegaFlex" target="_blank" rel="noopener">GitHub</a>
+          </div>
         </div>
       </div>
-      <div class="summaryGrid">
-        <div class="summaryCard"><strong>2</strong><span>featured analytics and machine learning projects</span></div>
-        <div class="summaryCard"><strong>3</strong><span>hosted web applications with real workflows</span></div>
-        <div class="summaryCard"><strong>Focus</strong><span>data, ML, backend, dashboards, business applications</span></div>
-      </div>
-    </section>
+    </div>
 
-    <section class="section" id="analytics">
-      <div class="sectionHead">
-        <div>
-          <h2>Featured Analytics & ML Projects</h2>
-          <p>The strongest examples of analytics, machine learning, backend engineering, reporting, and decision-support systems.</p>
+    <div class="section">
+      <h2 class="sectionTitle">About Me</h2>
+      <div class="sectionBox aboutBg">
+        <p class="desc" style="margin:0">
+          I build systems with clear business purpose: analytics products, machine learning workflows, dashboards, APIs, and customer-facing applications.<br>
+          I enjoy work where I can move from data and business logic to product structure, reporting, and implementation.<br>
+          My strongest fit is in roles that need analytical thinking, technical execution, and ownership across the full workflow.
+        </p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="sectionTitle">Featured Projects</h2>
+      <div class="sectionBox projectsBg">
+        <div class="grid5">
+          <div class="card">
+            <h2>Debt & Risk Intelligence Hub</h2>
+            <p class="desc">Debt analytics and acquisition review platform with import validation, risk scoring, valuation logic, dashboards, and exports.</p>
+            <a class="demoShot" href="https://debt-risk-intelligence-hub.onrender.com" target="_blank" rel="noopener">
+              <img src="assets/debt-risk-hub.jpg" alt="Debt & Risk Intelligence Hub preview" loading="lazy" decoding="async">
+              <p class="demoCap">Dashboard and valuation workspace preview</p>
+            </a>
+            <div class="tagRow">
+              <span class="tag tagBlue">Analytics</span>
+              <span class="tag tagBlue">Scoring</span>
+              <span class="tag tagPurple">Valuation</span>
+              <span class="tag tagAmber">Reporting</span>
+            </div>
+            <ul class="list">
+              <li class="li"><span class="tick">✓</span><span><strong>Portfolio import</strong> with validation and review workflow</span></li>
+              <li class="li"><span class="tick">✓</span><span><strong>Risk scoring</strong> and package ranking for decision support</span></li>
+              <li class="li"><span class="tick">✓</span><span><strong>Dashboards and exports</strong> with API and reporting layer</span></li>
+            </ul>
+            <div class="btns">
+              <a class="btn btnPrimary" href="https://debt-risk-intelligence-hub.onrender.com" target="_blank" rel="noopener">Live demo</a>
+              <a class="btn btnSecondary" href="https://github.com/vegaFlex/debt-risk-intelligence-hub" target="_blank" rel="noopener">Code</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <h2>Fraud Monitoring Production System</h2>
+            <p class="desc">Machine learning system for fraud prediction, expected loss estimation, monitoring, API scoring, and business-facing reporting.</p>
+            <a class="demoShot" href="https://github.com/vegaFlex/fraud-monitoring-prod" target="_blank" rel="noopener">
+              <img src="assets/fraud-monitoring.jpg" alt="Fraud Monitoring Production System preview" loading="lazy" decoding="async">
+              <p class="demoCap">Power BI dashboard preview for fraud monitoring</p>
+            </a>
+            <div class="tagRow">
+              <span class="tag tagBlue">Machine Learning</span>
+              <span class="tag tagPurple">FastAPI</span>
+              <span class="tag tagAmber">Monitoring</span>
+              <span class="tag tagGreen">Power BI</span>
+            </div>
+            <ul class="list">
+              <li class="li"><span class="tick">✓</span><span><strong>Fraud scoring API</strong> for real-time model predictions</span></li>
+              <li class="li"><span class="tick">✓</span><span><strong>Expected loss logic</strong> for business prioritization</span></li>
+              <li class="li"><span class="tick">✓</span><span><strong>Monitoring and reporting</strong> with dashboard visibility</span></li>
+            </ul>
+            <div class="btns">
+              <a class="btn btnSecondary" href="https://github.com/vegaFlex/fraud-monitoring-prod" target="_blank" rel="noopener">Code</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <h2>BookZone</h2>
+            <p class="desc">Online bookstore with catalog, search, cart, orders, and discount logic.</p>
+            <a class="demoShot" href="https://vegata.pythonanywhere.com/" target="_blank" rel="noopener">
+              <img src="assets/bookzone.jpg" alt="BookZone preview" loading="lazy" decoding="async">
+              <p class="demoCap">Homepage preview of BookZone</p>
+            </a>
+            <div class="tagRow">
+              <span class="tag tagBlue">Catalog</span>
+              <span class="tag tagBlue">Search</span>
+              <span class="tag tagPurple">Cart</span>
+              <span class="tag tagAmber">Payments</span>
+            </div>
+            <ul class="list">
+              <li class="li"><span class="tick">✓</span><span><strong>Product pages</strong> with filters and search</span></li>
+              <li class="li"><span class="tick">✓</span><span><strong>Cart flow</strong> and ordering process</span></li>
+              <li class="li"><span class="tick">✓</span><span><strong>Admin panel</strong> for products and orders</span></li>
+            </ul>
+            <div class="btns">
+              <a class="btn btnPrimary" href="https://vegata.pythonanywhere.com/" target="_blank" rel="noopener">Live demo</a>
+              <a class="btn btnSecondary" href="https://github.com/vegaFlex/OnlineBookstore_README" target="_blank" rel="noopener">Code</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <h2>EventHub</h2>
+            <p class="desc">Event platform with ticket sales, online payments, seat selection, map logic, and QR validation.</p>
+            <a class="demoShot" href="https://eventhub-vegata.pythonanywhere.com/bg/" target="_blank" rel="noopener">
+              <img src="assets/eventhub.jpg" alt="EventHub preview" loading="lazy" decoding="async">
+              <p class="demoCap">Homepage preview of EventHub</p>
+            </a>
+            <div class="tagRow">
+              <span class="tag tagBlue">Reservations</span>
+              <span class="tag tagBlue">Tickets</span>
+              <span class="tag tagPurple">Seats</span>
+              <span class="tag tagAmber">Payments</span>
+              <span class="tag tagGreen">QR</span>
+            </div>
+            <ul class="list">
+              <li class="li"><span class="tick">✓</span><span><strong>Ticket sales</strong> with online booking workflow</span></li>
+              <li class="li"><span class="tick">✓</span><span><strong>Seat selection</strong> by sector and row</span></li>
+              <li class="li"><span class="tick">✓</span><span><strong>QR validation</strong> for event entry flow</span></li>
+            </ul>
+            <div class="btns">
+              <a class="btn btnPrimary" href="https://eventhub-vegata.pythonanywhere.com/bg/" target="_blank" rel="noopener">Live demo</a>
+              <a class="btn btnSecondary" href="https://github.com/vegaFlex/EventHub_README" target="_blank" rel="noopener">Code</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <h2>Paradise Food Order App</h2>
+            <p class="desc">Internal food ordering system with quantities, limits, permissions, and admin summaries.</p>
+            <a class="demoShot" href="https://nekrato.com/menu/" target="_blank" rel="noopener">
+              <img src="assets/paradise.jpg" alt="Paradise Food Order App preview" loading="lazy" decoding="async">
+              <p class="demoCap">Menu and ordering preview</p>
+            </a>
+            <div class="tagRow">
+              <span class="tag tagBlue">Orders</span>
+              <span class="tag tagPurple">Limits</span>
+              <span class="tag tagGreen">Admin</span>
+              <span class="tag tagGreen">Reports</span>
+            </div>
+            <ul class="list">
+              <li class="li"><span class="tick">✓</span><span><strong>Ordering flow</strong> by date and quantity</span></li>
+              <li class="li"><span class="tick">✓</span><span><strong>Rules and permissions</strong> for internal control</span></li>
+              <li class="li"><span class="tick">✓</span><span><strong>Exports and summaries</strong> for daily reporting</span></li>
+            </ul>
+            <div class="btns">
+              <a class="btn btnPrimary" href="https://nekrato.com/menu/" target="_blank" rel="noopener">Live demo</a>
+              <a class="btn btnSecondary" href="https://github.com/vegaFlex/ParadiseFoodOrderApp_README" target="_blank" rel="noopener">Code</a>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="sectionBox">
+    </div>
+
+    <div class="section">
+      <h2 class="sectionTitle">What I Work With</h2>
+      <div class="sectionBox techBg">
+        <div class="split">
+          <div class="skill"><p class="skillTitle">Data Analytics</p><p class="skillText">Python, Pandas, SQL, Excel, KPI logic, reporting, dashboards</p></div>
+          <div class="skill"><p class="skillTitle">Machine Learning</p><p class="skillText">Scikit-learn, risk scoring, fraud modeling, monitoring, drift checks</p></div>
+          <div class="skill"><p class="skillTitle">Back end</p><p class="skillText">Python, Django, FastAPI, Django REST Framework</p></div>
+          <div class="skill"><p class="skillTitle">Data Layer</p><p class="skillText">PostgreSQL, SQL, structured models, analytics marts</p></div>
+          <div class="skill"><p class="skillTitle">Front end</p><p class="skillText">JavaScript, HTML, CSS, TailwindCSS, AJAX</p></div>
+          <div class="skill"><p class="skillTitle">Tools</p><p class="skillText">Git, GitHub, GitHub Actions, Docker, Azure, Power BI</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="sectionTitle">How I Position My Work</h2>
+      <div class="sectionBox workBg">
         <div class="grid2">
-          <article class="projectCard">
-            <span class="label">Analytics Platform</span>
-            <h3>Debt & Risk Intelligence Hub</h3>
-            <p>End-to-end debt analytics and acquisition review platform for portfolio import, risk scoring, collections monitoring, KPI reporting, and valuation workflows.</p>
-            <div class="miniMeta">
-              <div><strong>Import</strong><span>validated portfolio ingestion</span></div>
-              <div><strong>Scoring</strong><span>segmentation and ranking</span></div>
-              <div><strong>Reporting</strong><span>dashboards, exports, API</span></div>
-            </div>
-            <ul class="bullets">
-              <li><strong>Portfolio import with validation</strong> for structured analysis and quality control</li>
-              <li><strong>Valuation workspace</strong> with comparison, pricing logic, and recommendation support</li>
-              <li><strong>Role-based analytics product</strong> combining dashboards, exports, and REST endpoints</li>
+          <div class="card">
+            <h2>For Data and Analytics Roles</h2>
+            <ul class="list">
+              <li class="li"><span class="tick">✓</span><span><strong>Business-oriented analysis</strong> with dashboards, exports, and decision support</span></li>
+              <li class="li"><span class="tick">✓</span><span><strong>Structured data thinking</strong> with validation, scoring, and reporting workflows</span></li>
+              <li class="li"><span class="tick">✓</span><span><strong>End-to-end execution</strong> from raw input to useful product output</span></li>
             </ul>
-            <div class="linksList">
-              <span>Live demo: <a href="https://debt-risk-intelligence-hub.onrender.com" target="_blank" rel="noopener">debt-risk-intelligence-hub.onrender.com</a></span>
-              <span>Repository: <a href="https://github.com/vegaFlex/debt-risk-intelligence-hub" target="_blank" rel="noopener">github.com/vegaFlex/debt-risk-intelligence-hub</a></span>
-            </div>
-          </article>
-
-          <article class="projectCard">
-            <span class="label">ML Production System</span>
-            <h3>Fraud Monitoring Production System</h3>
-            <p>Machine learning system for fraud prediction, expected loss estimation, API scoring, monitoring, and business-facing reporting.</p>
-            <div class="miniMeta">
-              <div><strong>Prediction</strong><span>fraud probability scoring</span></div>
-              <div><strong>Loss</strong><span>expected financial impact</span></div>
-              <div><strong>Monitoring</strong><span>drift and reporting layer</span></div>
-            </div>
-            <ul class="bullets">
-              <li><strong>FastAPI scoring service</strong> for real-time prediction workflows</li>
-              <li><strong>PostgreSQL risk mart</strong> for analytics, tracking, and downstream review</li>
-              <li><strong>Power BI executive dashboard</strong> for monitoring and business visibility</li>
+          </div>
+          <div class="card">
+            <h2>For ML and Python Roles</h2>
+            <ul class="list">
+              <li class="li"><span class="tick">✓</span><span><strong>ML systems</strong> with APIs, monitoring, and business-facing reporting</span></li>
+              <li class="li"><span class="tick">✓</span><span><strong>Production-style backend work</strong> with users, admin flows, and operational logic</span></li>
+              <li class="li"><span class="tick">✓</span><span><strong>Product mindset</strong> focused on maintainability and real usage</span></li>
             </ul>
-            <div class="linksList">
-              <span>Repository: <a href="https://github.com/vegaFlex/fraud-monitoring-prod" target="_blank" rel="noopener">github.com/vegaFlex/fraud-monitoring-prod</a></span>
-            </div>
-          </article>
+          </div>
         </div>
       </div>
-    </section>
-    <section class="section" id="web-apps">
-      <div class="sectionHead">
-        <div>
-          <h2>Hosted Web Applications</h2>
-          <p>Customer-facing and internal applications showing backend structure, business workflows, transactions, and admin logic.</p>
-        </div>
-      </div>
-      <div class="sectionBox">
-        <div class="grid3">
-          <article class="projectCard">
-            <img class="thumb" src="assets/eventhub.jpg" alt="EventHub preview">
-            <span class="label">Live App</span>
-            <h3>EventHub</h3>
-            <p>Event management platform with ticket sales, seat selection, payments, QR validation, and admin control.</p>
-            <ul class="bullets">
-              <li><strong>Ticketing workflow</strong> with booking and purchase logic</li>
-              <li><strong>Seat selection and QR validation</strong> for operational event usage</li>
-              <li><strong>Admin workflows</strong> for management and organization</li>
-            </ul>
-            <div class="linksList">
-              <span>Live demo: <a href="https://eventhub-vegata.pythonanywhere.com/bg/" target="_blank" rel="noopener">eventhub-vegata.pythonanywhere.com</a></span>
-              <span>Repository: <a href="https://github.com/vegaFlex/EventHub_README" target="_blank" rel="noopener">github.com/vegaFlex/EventHub_README</a></span>
-            </div>
-          </article>
+    </div>
 
-          <article class="projectCard">
-            <img class="thumb" src="assets/bookzone.jpg" alt="BookZone preview">
-            <span class="label">Live App</span>
-            <h3>BookZone</h3>
-            <p>Online bookstore with catalog browsing, product filtering, cart flows, ordering, and admin support.</p>
-            <ul class="bullets">
-              <li><strong>Catalog and search</strong> for product discovery</li>
-              <li><strong>Cart and checkout logic</strong> for e-commerce flow</li>
-              <li><strong>Store administration</strong> for products and orders</li>
-            </ul>
-            <div class="linksList">
-              <span>Live demo: <a href="https://vegata.pythonanywhere.com/" target="_blank" rel="noopener">vegata.pythonanywhere.com</a></span>
-              <span>Repository: <a href="https://github.com/vegaFlex/OnlineBookstore_README" target="_blank" rel="noopener">github.com/vegaFlex/OnlineBookstore_README</a></span>
-            </div>
-          </article>
-
-          <article class="projectCard">
-            <img class="thumb" src="assets/paradise.jpg" alt="Paradise Food Order App preview">
-            <span class="label">Business Workflow</span>
-            <h3>Paradise Food Order App</h3>
-            <p>Internal food ordering system built around menus, quantities, limits, locations, and admin summaries.</p>
-            <ul class="bullets">
-              <li><strong>Operational ordering flow</strong> for daily use</li>
-              <li><strong>Rules and permissions</strong> for process control</li>
-              <li><strong>Summary and export logic</strong> for reporting</li>
-            </ul>
-            <div class="linksList">
-              <span>Live demo: <a href="https://nekrato.com/menu/" target="_blank" rel="noopener">nekrato.com/menu</a></span>
-              <span>Repository: <a href="https://github.com/vegaFlex/ParadiseFoodOrderApp_README" target="_blank" rel="noopener">github.com/vegaFlex/ParadiseFoodOrderApp_README</a></span>
-            </div>
-          </article>
-        </div>
+    <div class="footer">
+      <div class="ctaRow" style="justify-content:center">
+        <a class="btn btnPrimary" href="mailto:veslin.lilov@gmail.com?subject=Portfolio%20Inquiry" rel="noopener">Contact Me</a>
+        <a class="btn btnSecondary" href="https://www.linkedin.com/in/veselin-lilov-0b7624344/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn btnSecondary" href="https://github.com/vegaFlex" target="_blank" rel="noopener">GitHub</a>
       </div>
-    </section>
-
-    <section class="section" id="skills">
-      <div class="sectionHead">
-        <div>
-          <h2>Skills & Focus</h2>
-          <p>Roles where analysis, product thinking, and technical execution need to work together are where I fit best.</p>
-        </div>
-      </div>
-      <div class="sectionBox">
-        <div class="grid3">
-          <article class="skillCard">
-            <h3>Data Analytics</h3>
-            <p>Python, Pandas, SQL, Excel, KPI analysis, reporting, dashboard logic, and business review workflows.</p>
-          </article>
-          <article class="skillCard">
-            <h3>Machine Learning</h3>
-            <p>Scikit-learn, fraud and risk scoring, classification pipelines, expected loss logic, monitoring, and drift detection.</p>
-          </article>
-          <article class="skillCard">
-            <h3>Engineering</h3>
-            <p>Django, FastAPI, PostgreSQL, REST APIs, admin workflows, deployment, and production-style application structure.</p>
-          </article>
-        </div>
-        <div class="tags">
-          <span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">SQL</span><span class="tag">Scikit-learn</span><span class="tag">FastAPI</span><span class="tag">Django</span><span class="tag">PostgreSQL</span><span class="tag">Power BI</span><span class="tag">Excel</span><span class="tag">JavaScript</span><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Docker</span><span class="tag">GitHub</span><span class="tag">Azure</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="footer" id="contact">
-      <div>
-        <h2>Open to data, analytics, ML, and Python roles.</h2>
-        <p>I am especially interested in work where I can analyze business problems, build useful systems, and own features from idea to working product.</p>
-      </div>
-      <div class="contactLinks">
-        <span>Email: <a href="mailto:veslin.lilov@gmail.com">veslin.lilov@gmail.com</a></span>
-        <span>GitHub: <a href="https://github.com/vegaFlex" target="_blank" rel="noopener">github.com/vegaFlex</a></span>
-        <span>LinkedIn: <a href="https://www.linkedin.com/in/veselin-lilov-0b7624344/" target="_blank" rel="noopener">linkedin.com/in/veselin-lilov-0b7624344</a></span>
-      </div>
-    </section>
+      <div style="margin-top:10px">© <span id="y"></span> Veselin Lilov</div>
+    </div>
   </div>
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
